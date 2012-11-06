@@ -1,0 +1,32 @@
+/* JUST FOR GRID DEMO EXAMPLE - REMOVE FOR DEVELOPMENT */
+section {
+  margin: 20px 0;
+}
+.row {
+  margin-bottom: 20px;
+}
+span {
+  display: block;
+  -webkit-transition: all 0.15s ease-in-out;
+  background: #e1e1e1;
+}
+span:hover {
+  background: #464646;
+  color: #fff;
+}
+span.headline {
+  background: none;
+  color: #464646;
+}
+.row .row {
+  background: #acacac;
+}
+.row form .row {
+  background: none;
+}
+code {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #f9f9f9;
+}

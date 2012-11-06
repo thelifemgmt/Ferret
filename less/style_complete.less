@@ -1,0 +1,199 @@
+/*********************************************
+Main Stylesheet - Site Name
+Last Updated: 9/24/12
+Written by: Sean Stopnik
+Email: sstopnik@redventures.com
+*********************************************/
+
+
+// All Site Settings and Variables
+
+// Grid Settings
+@grid-normal: 960px;
+@grid-wide: 1140px;
+@grid-row-with-spacing: 40px;
+
+
+// Fonts
+@font-light: 'OpenSansLight';
+@font-normal: 'OpenSansReg';
+@font-bold: 'OpenSansSemi';
+.font-light {font-family: 'OpenSansLight'; font-weight: normal;}
+.font-normal {font-family: 'OpenSansReg'; font-weight: normal;}
+.font-bold {font-family: 'OpenSansSemi'; font-weight: normal;}
+
+
+// Base
+@base-bg: #fff;
+@base-font: @font-light;
+@base-color: #707070;
+@base-line-height: 2;
+@base-font-size: 15px;
+@base-font-weight: normal;
+@base-letter-spacing: 1px;
+@link-color: @brand;
+@link-hover: @dark;
+@quote: @gray;
+@quote-author: @dark;
+
+
+// Colors
+@brand: @blue;
+@blue: #3faab9;
+@orange: #fdaa4e;
+@red: #f26a4a;
+@green: #50c690;
+@yellow: #f3de99;
+@gray: #acacac;
+@light-gray: #e1e1e1;
+@dark-gray: #959595;
+@dark: #394240;
+@white: #fff;
+
+
+// Typography
+@headline-color: @dark;
+@headline-font: @font-bold;
+@headline-weight: normal;
+@headline-line-height: 1.5;
+@headline-margin: 15px;
+
+
+// Buttons
+@button-bg: @brand;
+@button-color: #fff;
+@button-font: @font-bold;
+@button-font-weight: normal;
+@button-font-size: 14px;
+@button-bg-alt: @blue;
+@button-submit: @red;
+@button-hover: @dark;
+@button-height: 40px;
+
+
+// Navigation Bar
+@nav-bar-bg: @dark;
+@nav-font: @font-normal;
+@nav-font-size: 15px;
+@nav-font-weight: normal;
+@nav-color: @white;
+@nav-color-hover: @orange;
+@mobile-nav-button: @dark + 20;
+@mobile-nav-bg: @dark;
+@first-section-margin: 80px;
+
+
+// Form Fields
+@input-bg: #fff;
+@input-font: @font-normal;
+@input-font-weight: normal;
+@input-border: #e1e1e1;
+@input-bg-hover: #fff;
+@input-border-hover: #acacac;
+@input-bg-focus: lighten(@yellow, 10%);
+@input-border-focus: darken(@input-bg-focus, 25%);
+@placeholder-color: #898989;
+
+
+// Lists
+@list-item-checkbox: @orange;
+@list-item-multiply: @red;
+@list-item-plus: @blue;
+
+
+// Tabs
+@tab-font: @font-normal;
+@tab-font-size: 14px;
+@tab-font-weight: normal;
+@tab-bg: #f9f9f9;
+@tab-color: @dark-gray;
+@tab-color-hover: @dark;
+@tab-color-active: @red;
+@tab-frame-bg: #fff;
+
+// Tooltips
+@tooltip-bg: @dark;
+@tooltip-color: #fff;
+@tooltip-font: @font-normal;
+@tooltip-weight: normal;
+@tooltip-letter-spacing: 0;
+
+
+// Fancybox
+@fancybox-close: @red url(../images/fancybox_close.png) no-repeat center;
+@fancybox-nav: @dark;
+@fancybox-nav-hover: @blue;
+
+
+// Mix-ins
+.transition (@speed: .15s) {
+  -webkit-transition: all @arguments ease-in-out;
+  -moz-transition: all @arguments ease-in-out;
+  transition: all @arguments ease-in-out;
+}
+.gradient (@origin: top, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+.radius (@radius: 3px) {border-radius: @radius;}
+.shadow {box-shadow: 0 2px 3px rgba(0,0,0,0.3);}
+.glow {box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+.fade {
+	.transition;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  	filter: alpha(opacity=100);
+  	-moz-opacity: 1.0;
+  	-khtml-opacity: 1.0;
+  	opacity: 1.0;
+  	&:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	  	filter: alpha(opacity=60);
+	  	-moz-opacity: 0.6;
+	  	-khtml-opacity: 0.6;
+	  	opacity: 0.6;
+	}
+}
+.top10 {margin-top: 10px;}
+.top20 {margin-top: 20px;}
+.top30 {margin-top: 30px;}
+.top40 {margin-top: 40px;}
+.bottom10 {margin-bottom: 10px;}
+.bottom20 {margin-bottom: 20px;}
+.bottom30 {margin-bottom: 30px;}
+.bottom40 {margin-bottom: 40px;}
+.striped {background-image: url(../images/bg_stripes.png); background-repeat: repeat;}
+@striped: url(../images/bg_stripes.png);
+
+
+
+// All Stylesheets
+
+// Base Styles (Do Not Remove)
+@import "box_grid.less";
+@import "fonts.less";
+@import "style_base.less";
+@import "style_main.less";
+
+
+// Extras (Add or Remove as Needed)
+@import "style_buttons.less"; // Button Styles
+@import "style_nav.less"; // Header Navigation Styles
+@import "style_forms.less"; // Form Styles
+@import "style_tooltips.less"; // Tooltip Styles
+@import "style_tabs.less"; // Content Tabs Styles
+
+
+// Responsive Override Styles
+@import "style_responsive.less";
+
+
+// Fancybox
+@import "fancybox.less"; //
+
+
+// Include this file to support IE6-7
+@import "box_grid_ie6_7.less";

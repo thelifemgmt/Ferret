@@ -1,0 +1,133 @@
+/* Rows */
+.ie6 .row.row {
+  width: 105%;
+}
+/* Box Widths */
+.ie6 .box-1,
+.ie7 .box-1 {
+  width: 40px;
+}
+.ie6 .box-2,
+.ie7 .box-2 {
+  width: 100px;
+}
+.ie6 .box-3,
+.ie7 .box-3 {
+  width: 160px;
+}
+.ie6 .box-4,
+.ie7 .box-4 {
+  width: 220px;
+}
+.ie6 .box-5,
+.ie7 .box-5 {
+  width: 280px;
+}
+.ie6 .box-6,
+.ie7 .box-6 {
+  width: 340px;
+}
+.ie6 .box-7,
+.ie7 .box-7 {
+  width: 400px;
+}
+.ie6 .box-8,
+.ie7 .box-8 {
+  width: 460px;
+}
+.ie6 .box-9,
+.ie7 .box-9 {
+  width: 520px;
+}
+.ie6 .box-10,
+.ie7 .box-10 {
+  width: 580px;
+}
+.ie6 .box-11,
+.ie7 .box-11 {
+  width: 640px;
+}
+.ie6 .box-12,
+.ie7 .box-12 {
+  width: 700px;
+}
+.ie6 .box-13,
+.ie7 .box-13 {
+  width: 760px;
+}
+.ie6 .box-14,
+.ie7 .box-14 {
+  width: 820px;
+}
+.ie6 .box-15,
+.ie7 .box-15 {
+  width: 880px;
+}
+.ie6 .box-16,
+.ie7 .box-16 {
+  width: 940px;
+}
+.ie6 .box-3.sixth,
+.ie7 .box-3.sixth {
+  width: 140px;
+}
+.ie6 .box-4.fifth,
+.ie7 .box-4.fifth {
+  width: 172px;
+}
+.ie6 .box-5.third,
+.ie7 .box-5.third {
+  width: 300px;
+}
+.ie6 .box-10.two-third,
+.ie7 .box-10.two-third {
+  width: 620px;
+}
+.ie6 .box-1,
+.ie7 .box-1,
+.ie6 .box-2,
+.ie7 .box-2,
+.ie6 .box-3,
+.ie7 .box-3,
+.ie6 .box-4,
+.ie7 .box-4,
+.ie6 .box-5,
+.ie7 .box-5,
+.ie6 .box-6,
+.ie7 .box-6,
+.ie6 .box-7,
+.ie7 .box-7,
+.ie6 .box-8,
+.ie7 .box-8,
+.ie6 .box-9,
+.ie7 .box-9,
+.ie6 .box-10,
+.ie7 .box-10,
+.ie6 .box-11,
+.ie7 .box-11,
+.ie6 .box-12,
+.ie7 .box-12,
+.ie6 .box-13,
+.ie7 .box-13,
+.ie6 .box-14,
+.ie7 .box-14,
+.ie6 .box-15,
+.ie7 .box-15,
+.ie6 .box-16,
+.ie7 .box-16,
+.ie6 .box-3.sixth,
+.ie7 .box-3.sixth,
+.ie6 .box-4.fifth,
+.ie7 .box-4.fifth,
+.ie6 .box-5.third,
+.ie7 .box-5.third,
+.ie6 .box-10.two-third,
+.ie7 .box-10.two-third {
+  float: left;
+  padding: 0 10px;
+}
+.i6 .container,
+.ie7 .container,
+.ie8 .container {
+  width: 960px;
+}

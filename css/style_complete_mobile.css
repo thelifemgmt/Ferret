@@ -1,0 +1,550 @@
+/*********************************************
+Main Stylesheet - Site Name
+Last Updated: 9/24/12
+Written by: Sean Stopnik
+Email: sstopnik@redventures.com
+*********************************************/
+.font-light {
+  font-family: 'OpenSansLight';
+  font-weight: normal;
+}
+.font-normal {
+  font-family: 'OpenSansReg';
+  font-weight: normal;
+}
+.font-bold {
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+}
+/* Fonts */
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('../fonts/OpenSans-Light-webfont.eot');
+  src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSansReg';
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSansSemi';
+  src: url('../fonts/OpenSans-Semibold-webfont.eot');
+  src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* html .row {
+  height: 1%;
+}
+/* Rows */
+.row {
+  display: block;
+  width: 100%;
+}
+.row .row {
+  margin: 0 -10px;
+  width: auto;
+}
+.row.with-spacing {
+  margin-bottom: 40px;
+}
+.row.with-half-spacing {
+  margin-bottom: 20px;
+}
+.row.with-large-spacing {
+  margin-bottom: 80px;
+}
+.row img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.row.centered {
+  text-align: center;
+}
+.row.centered div {
+  float: none;
+  display: inline-block;
+  text-align: left;
+  margin: 0 -2px;
+}
+.row:before,
+.row:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.row:after {
+  clear: both;
+}
+/* Box Widths */
+.box-1 {
+  width: 25%;
+}
+.box-2 {
+  width: 50%;
+}
+.box-3 {
+  width: 75%;
+}
+.box-4 {
+  width: 100%;
+}
+.box-1.third {
+  width: 33.33%;
+}
+.box-2.two-third {
+  width: 66.66%;
+}
+.box-1,
+.box-2,
+.box-3,
+.box-4 {
+  float: left;
+  padding: 0 10px;
+}
+/* Clear */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/* Container */
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* HTML5 Fix */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* Base Defaults */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'OpenSansLight';
+  font-size: 15px;
+  line-height: 2;
+  font-weight: normal;
+  color: #707070;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+hr {
+  display: block;
+  border: 0;
+  height: 2px;
+  background: url(../images/hr_horizontal.png) repeat-x;
+  margin: 0 10px 40px;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  text-align: center;
+}
+.bold,
+b,
+strong {
+  font-weight: bold;
+}
+.italic,
+i {
+  font-style: italic;
+}
+.normal {
+  font-weight: normal;
+}
+.noselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.flush {
+  margin: 0;
+}
+.hide {
+  display: none;
+}
+.position {
+  position: relative;
+}
+small {
+  font-size: 73%;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span.headline {
+  color: #394240;
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 240%;
+}
+h2 {
+  font-size: 200%;
+}
+h3 {
+  font-size: 160%;
+}
+h4 {
+  font-size: 120%;
+}
+h5 {
+  font-size: 106%;
+}
+h6 {
+  font-size: 93%;
+}
+span.headline {
+  display: block;
+  font-size: 120%;
+  color: #394240;
+}
+.with-subheadline {
+  margin-bottom: 5px;
+}
+.subheadline {
+  display: block;
+  font-size: 120%;
+  color: #959595;
+}
+a:link,
+a:visited,
+a:active,
+a {
+  text-decoration: none;
+  color: #3faab9;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+}
+a:link:hover,
+a:visited:hover,
+a:active:hover,
+a:hover {
+  color: #394240;
+}
+p {
+  margin: 0 0 15px 0;
+}
+p:last-child {
+  margin: 0;
+}
+p.large {
+  font-size: 110%;
+  line-height: 2.2;
+}
+p,
+span {
+  letter-spacing: 1px;
+}
+/* Lists */
+ul li {
+  margin-bottom: 10px;
+  font-size: 90%;
+  letter-spacing: 1px;
+}
+ul li:last-child {
+  margin-bottom: 0;
+}
+ul.disc {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+ul.square {
+  list-style-type: square;
+  margin-left: 20px;
+}
+ul.checkmark li:before {
+  content: "\2713";
+  color: #fdaa4e;
+  padding-right: 10px;
+}
+ul.plus li:before {
+  content: "\271A";
+  color: #3faab9;
+  padding-right: 10px;
+}
+ul.multiply li:before {
+  content: "\2716";
+  color: #f26a4a;
+  padding-right: 10px;
+}
+ul.with-spacing {
+  margin-bottom: 20px;
+}
+ol li {
+  margin: 0 0 10px 25px;
+  list-style: decimal;
+  font-size: 90%;
+  letter-spacing: 1px;
+}
+ol li:last-child {
+  margin-bottom: 0;
+}
+nav li {
+  margin-bottom: 0;
+}
+/* Blockquote */
+blockquote {
+  border-left: 1px solid #e1e1e1;
+  padding: 0 0 0 20px;
+  color: #acacac;
+}
+blockquote cite {
+  display: block;
+  color: #394240;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 12px;
+}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+/* Placeholder Styles */
+::-webkit-input-placeholder {
+  color: #898989;
+}
+:-moz-placeholder {
+  color: #898989;
+}
+/* Text Select */
+::selection {
+  background: #464646;
+  color: #fff;
+}
+::-moz-selection {
+  background: #464646;
+  color: #fff;
+}
+/* Tables */
+table {
+  width: 100%;
+}
+table th,
+table td {
+  text-align: left;
+}
+/* Section */
+section.first {
+  margin-top: 80px;
+}
+/* JUST FOR GRID DEMO EXAMPLE - REMOVE FOR DEVELOPMENT */
+section {
+  margin: 20px 0;
+}
+.row {
+  margin-bottom: 20px;
+}
+span {
+  display: block;
+  -webkit-transition: all 0.15s ease-in-out;
+  background: #e1e1e1;
+}
+span:hover {
+  background: #464646;
+  color: #fff;
+}
+span.headline {
+  background: none;
+  color: #464646;
+}
+.row .row {
+  background: #acacac;
+}
+.row form .row {
+  background: none;
+}
+pre {
+  display: block;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  border-radius: 3px;
+  background: #f9f9f9;
+}
+code {
+  font-family: monospace;
+  font-size: 14px;
+  color: #3faab9;
+}
+code span {
+  display: inline;
+  background: none;
+  color: #3faab9;
+}
+code span:hover {
+  background: none;
+  color: #3faab9;
+}
