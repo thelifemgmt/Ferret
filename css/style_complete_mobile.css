@@ -476,7 +476,7 @@ blockquote cite:before {
 ::-webkit-input-placeholder {
   color: #898989;
 }
-:-moz-placeholder {
+input:-moz-placeholder {
   color: #898989;
 }
 /* Text Select */

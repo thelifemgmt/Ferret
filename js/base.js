@@ -87,7 +87,7 @@ $('.tooltip').hover(
 
 // Mobile Nav 
 $('.mobile-nav').click(function(){
-	$('header nav ul').slideToggle(100);
+	$('header nav ul').fadeToggle(100);
 });
 $('header nav li a').click(function(){
 	$('header nav ul').fadeOut(100);
