@@ -1083,11 +1083,6 @@ ul.tabs-nav {
 }
 ul.tabs-nav li {
   float: left;
-  color: #959595;
-  font-family: 'OpenSansReg';
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.9;
   padding: 6px 25px;
   border: 1px solid #e1e1e1;
   background: #f9f9f9;
@@ -1098,14 +1093,29 @@ ul.tabs-nav li {
 }
 ul.tabs-nav li:hover {
   cursor: pointer;
+}
+ul.tabs-nav li:hover a {
+  color: #394240;
+}
+ul.tabs-nav li a {
+  display: block;
+  color: #959595;
+  font-family: 'OpenSansReg';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.9;
+}
+ul.tabs-nav li a:hover {
   color: #394240;
 }
 ul.tabs-nav li.active {
   padding-top: 9px;
   border-bottom: 1px solid #fff;
   margin-top: -3px;
-  color: #f26a4a;
   background: #ffffff;
+}
+ul.tabs-nav li.active a {
+  color: #f26a4a;
 }
 .tab-frame {
   float: left;
