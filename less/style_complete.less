@@ -1,17 +1,19 @@
 /*********************************************
 Main Stylesheet - Site Name
-Last Updated: 9/24/12
+Last Updated: 11/07/12
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
 
 
-// All Site Settings and Variables
+// Complete Site Settings
+
 
 // Grid Settings
 @grid-normal: 960px;
 @grid-wide: 1140px;
 @grid-row-with-spacing: 40px;
+
 
 
 // Fonts
@@ -80,6 +82,9 @@ Email: sstopnik@redventures.com
 @nav-color-hover: @orange;
 @mobile-nav-button: @dark + 20;
 @mobile-nav-bg: @dark;
+
+
+// First Section Top Margin to Compensate for Fixed Top Navigation Bar
 @first-section-margin: 80px;
 
 
@@ -111,6 +116,7 @@ Email: sstopnik@redventures.com
 @tab-color-active: @red;
 @tab-frame-bg: #fff;
 
+
 // Tooltips
 @tooltip-bg: @dark;
 @tooltip-color: #fff;
@@ -125,75 +131,35 @@ Email: sstopnik@redventures.com
 @fancybox-nav-hover: @blue;
 
 
-// Mix-ins
-.transition (@speed: .15s) {
-  -webkit-transition: all @arguments ease-in-out;
-  -moz-transition: all @arguments ease-in-out;
-  transition: all @arguments ease-in-out;
-}
-.gradient (@origin: top, @start: #ffffff, @stop: #000000) {
-	background-color: @start;
-	background-image: -webkit-linear-gradient(@origin, @start, @stop);
-	background-image: -moz-linear-gradient(@origin, @start, @stop);
-	background-image: -o-linear-gradient(@origin, @start, @stop);
-	background-image: -ms-linear-gradient(@origin, @start, @stop);
-	background-image: linear-gradient(@origin, @start, @stop);
-}
-.radius (@radius: 3px) {border-radius: @radius;}
-.shadow {box-shadow: 0 2px 3px rgba(0,0,0,0.3);}
-.glow {box-shadow: 0 0 10px rgba(0,0,0,0.5);}
-.fade {
-	.transition;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  	filter: alpha(opacity=100);
-  	-moz-opacity: 1.0;
-  	-khtml-opacity: 1.0;
-  	opacity: 1.0;
-  	&:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	  	filter: alpha(opacity=60);
-	  	-moz-opacity: 0.6;
-	  	-khtml-opacity: 0.6;
-	  	opacity: 0.6;
-	}
-}
-.top10 {margin-top: 10px;}
-.top20 {margin-top: 20px;}
-.top30 {margin-top: 30px;}
-.top40 {margin-top: 40px;}
-.bottom10 {margin-bottom: 10px;}
-.bottom20 {margin-bottom: 20px;}
-.bottom30 {margin-bottom: 30px;}
-.bottom40 {margin-bottom: 40px;}
-.striped {background-image: url(../images/bg_stripes.png); background-repeat: repeat;}
-@striped: url(../images/bg_stripes.png);
 
 
 
-// All Stylesheets
+// All Stylesheets Included
+
 
 // Base Styles (Do Not Remove)
-@import "box_grid.less";
-@import "fonts.less";
-@import "style_base.less";
-@import "style_main.less";
+@import "ferret/box_grid.less";
+@import "ferret/fonts.less";
+@import "ferret/style_base.less";
+@import "ferret/style_mixins.less";
+@import "ferret/style_main.less";
 
 
 // Extras (Add or Remove as Needed)
-@import "style_buttons.less"; // Button Styles
-@import "style_nav.less"; // Header Navigation Styles
-@import "style_forms.less"; // Form Styles
-@import "style_tooltips.less"; // Tooltip Styles
-@import "style_tabs.less"; // Content Tabs Styles
+@import "ferret/style_buttons.less"; // Button Styles
+@import "ferret/style_nav.less"; // Header Navigation Styles
+@import "ferret/style_forms.less"; // Form Styles
+@import "ferret/style_tooltips.less"; // Tooltip Styles
+@import "ferret/style_tabs.less"; // Content Tabs Styles
 
 
 // Responsive Override Styles
-@import "style_responsive.less";
+@import "ferret/style_responsive.less";
 
 
 // Fancybox
-@import "fancybox.less"; //
+@import "ferret/fancybox.less"; //
 
 
 // Include this file to support IE6-7
-@import "box_grid_ie6_7.less";
+@import "ferret/box_grid_ie6_7.less";
