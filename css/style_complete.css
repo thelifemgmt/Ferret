@@ -489,7 +489,7 @@ h4,
 h5,
 h6,
 span.headline {
-  color: #394240;
+  color: #353535;
   font-family: 'OpenSansSemi';
   font-weight: normal;
   margin-bottom: 15px;
@@ -516,7 +516,7 @@ h6 {
 span.headline {
   display: block;
   font-size: 120%;
-  color: #394240;
+  color: #353535;
 }
 .with-subheadline {
   margin-bottom: 5px;
@@ -541,7 +541,7 @@ a:link:hover,
 a:visited:hover,
 a:active:hover,
 a:hover {
-  color: #394240;
+  color: #353535;
 }
 p {
   margin: 0 0 15px 0;
@@ -612,7 +612,7 @@ blockquote {
 }
 blockquote cite {
   display: block;
-  color: #394240;
+  color: #353535;
   font-size: 14px;
   font-style: italic;
   margin-top: 12px;
@@ -747,6 +747,11 @@ code span:hover {
   background: none;
   color: #3faab9;
 }
+.logo {
+  position: absolute;
+  width: 131px;
+  height: 71px;
+}
 /* Buttons */
 .button,
 a.button {
@@ -806,7 +811,7 @@ a.button.flat {
 a.button.reverse {
   border-top: 1px solid #e1e1e1;
   background-color: #e1e1e1;
-  color: #394240;
+  color: #353535;
   text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1);
 }
 .button.small,
@@ -849,8 +854,8 @@ a.button.submit {
 }
 .button:hover,
 a.button:hover {
-  background-color: #394240;
-  border-top: 1px solid #394240;
+  background-color: #353535;
+  border-top: 1px solid #353535;
   color: #ffffff;
 }
 .button.flat:hover,
@@ -863,7 +868,7 @@ header {
   width: 100%;
   height: 60px;
   top: 0;
-  background: #394240;
+  background: #353535;
   z-index: 100;
 }
 header nav ul {
@@ -898,7 +903,7 @@ header nav li a:hover {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background: #4d5654 url(../images/button_mobile_nav.png) no-repeat center center;
+  background: #494949 url(../images/button_mobile_nav.png) no-repeat center center;
   cursor: pointer;
   z-index: 100;
   display: none;
@@ -925,16 +930,16 @@ header nav li a:hover {
     content: '';
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid #394240;
+    border-bottom: 7px solid #353535;
   }
   header nav li {
     float: none;
     display: block;
     height: 60px;
-    border-top: 1px solid #434c4a;
-    border-bottom: 1px solid #2f3836;
+    border-top: 1px solid #3f3f3f;
+    border-bottom: 1px solid #2b2b2b;
     padding: 0;
-    background: #394240;
+    background: #353535;
     margin: 0;
   }
   header nav li:first-child {
@@ -972,7 +977,7 @@ header nav li a:hover {
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 2;
-  color: #394240;
+  color: #353535;
   padding: 6px 10px;
   border: 1px solid #e1e1e1;
   border-radius: 3px;
@@ -1057,7 +1062,7 @@ textarea.inputfield {
   text-align: center;
   padding: 7px 10px;
   color: #ffffff;
-  background: #394240;
+  background: #353535;
   border-radius: 3px;
   z-index: 100;
   display: none;
@@ -1070,7 +1075,7 @@ textarea.inputfield {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 7px solid #394240;
+  border-top: 7px solid #353535;
   left: 50%;
   margin-left: -7px;
 }
@@ -1095,7 +1100,7 @@ ul.tabs-nav li:hover {
   cursor: pointer;
 }
 ul.tabs-nav li:hover a {
-  color: #394240;
+  color: #353535;
 }
 ul.tabs-nav li a {
   display: block;
@@ -1106,7 +1111,7 @@ ul.tabs-nav li a {
   line-height: 1.9;
 }
 ul.tabs-nav li a:hover {
-  color: #394240;
+  color: #353535;
 }
 ul.tabs-nav li.active {
   padding-top: 9px;
@@ -1191,7 +1196,7 @@ ul.tabs-nav li.active a {
   width: 100%;
   z-index: 1100;
   display: none;
-  background: #394240 url(../images/bg_stripes.png) repeat;
+  background: #353535 url(../images/bg_stripes.png) repeat;
 }
 #fancybox-tmp {
   padding: 0;
@@ -1256,7 +1261,7 @@ ul.tabs-nav li.active a {
   display: none;
 }
 #fancybox-close:hover {
-  background-color: #394240;
+  background-color: #353535;
 }
 #fancybox-error {
   color: #444;
@@ -1330,10 +1335,10 @@ ul.tabs-nav li.active a {
   background-color: #3faab9;
 }
 #fancybox-left-ico {
-  background: #394240 url(../images/fancybox_arrow_left.png) no-repeat center;
+  background: #353535 url(../images/fancybox_arrow_left.png) no-repeat center;
 }
 #fancybox-right-ico {
-  background: #394240 url(../images/fancybox_arrow_right.png) no-repeat center;
+  background: #353535 url(../images/fancybox_arrow_right.png) no-repeat center;
 }
 #fancybox-title {
   font-family: inherit;
@@ -1341,7 +1346,7 @@ ul.tabs-nav li.active a {
   z-index: 1102;
 }
 .fancybox-title-inside {
-  color: #394240;
+  color: #353535;
   background: #fff;
   position: relative;
 }
