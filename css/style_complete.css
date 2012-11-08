@@ -1335,9 +1335,6 @@ ul.tabs-nav li.active a {
 #fancybox-right-ico {
   background: #394240 url(../images/fancybox_arrow_right.png) no-repeat center;
 }
-.fancybox-bg {
-  display: none;
-}
 #fancybox-title {
   font-family: inherit;
   font-size: 12px;
