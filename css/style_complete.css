@@ -756,7 +756,6 @@ code span:hover {
 .button,
 a.button {
   float: left;
-  height: 40px;
   padding: 0 30px;
   color: #ffffff;
   font-family: 'OpenSansSemi';
@@ -816,21 +815,18 @@ a.button.reverse {
 }
 .button.small,
 a.button.small {
-  height: 30px;
   font-size: 12px;
   line-height: 30px;
   padding: 0 20px;
 }
 .button.large,
 a.button.large {
-  height: 50px;
   font-size: 16px;
   line-height: 50px;
   padding: 0 40px;
 }
 .button.x-large,
 a.button.x-large {
-  height: 60px;
   font-size: 18px;
   line-height: 60px;
   padding: 0 50px;
@@ -844,7 +840,6 @@ a.button.full-width {
 }
 .button.submit,
 a.button.submit {
-  height: 45px;
   font-family: 'OpenSansSemi';
   letter-spacing: 1px;
   border: 0;
