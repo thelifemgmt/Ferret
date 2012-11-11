@@ -1,6 +1,6 @@
 /*********************************************
-Main Stylesheet - Site Name
-Last Updated: 11/07/12
+Ferret Main Stylesheet
+Last Updated: 11/11/12
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
@@ -15,16 +15,6 @@ Email: sstopnik@redventures.com
 @grid-row-with-spacing: 40px;
 
 
-
-// Fonts
-@font-light: 'OpenSansLight';
-@font-normal: 'OpenSansReg';
-@font-bold: 'OpenSansSemi';
-.font-light {font-family: 'OpenSansLight'; font-weight: normal;}
-.font-normal {font-family: 'OpenSansReg'; font-weight: normal;}
-.font-bold {font-family: 'OpenSansSemi'; font-weight: normal;}
-
-
 // Base
 @base-bg: #fff;
 @base-font: @font-light;
@@ -33,14 +23,19 @@ Email: sstopnik@redventures.com
 @base-font-size: 15px;
 @base-font-weight: normal;
 @base-letter-spacing: 1px;
-@link-color: @brand;
+@link-color: @primary;
 @link-hover: @dark;
 @quote: @gray;
 @quote-author: @dark;
 
 
+// Fonts
+@font-light: 'OpenSansLight';
+@font-normal: 'OpenSansReg';
+@font-bold: 'OpenSansSemi';
+
+
 // Colors
-@brand: @blue;
 @blue: #3faab9;
 @orange: #fdaa4e;
 @red: #f26a4a;
@@ -52,6 +47,10 @@ Email: sstopnik@redventures.com
 @dark: #353535;
 @white: #fff;
 
+@primary: @blue;
+@secondary: @orange;
+@tertiary: @green;
+
 
 // Typography
 @headline-color: @dark;
@@ -62,7 +61,7 @@ Email: sstopnik@redventures.com
 
 
 // Buttons
-@button-bg: @brand;
+@button-bg: @primary;
 @button-color: #fff;
 @button-font: @font-bold;
 @button-font-weight: normal;
@@ -84,14 +83,11 @@ Email: sstopnik@redventures.com
 @mobile-nav-bg: @dark;
 
 
-// First Section Top Margin to Compensate for Fixed Top Navigation Bar
-@first-section-margin: 80px;
-
-
 // Form Fields
 @input-bg: #fff;
 @input-font: @font-normal;
 @input-font-weight: normal;
+@input-color: @dark;
 @input-border: #e1e1e1;
 @input-bg-hover: #fff;
 @input-border-hover: #acacac;
@@ -131,16 +127,25 @@ Email: sstopnik@redventures.com
 @fancybox-nav-hover: @blue;
 
 
+// First Section Top Margin to Compensate for Fixed Top Navigation Bar
+@first-section-margin: 80px;
+
+
+// Extras
+@striped: url(../images/bg_stripes.png);
 
 
 
-// All Stylesheets Included
+
+
+// Included Stylesheets
 
 
 // Base Styles (Do Not Remove)
 @import "ferret/box_grid.less";
-@import "ferret/fonts.less";
+@import "ferret/style_fonts.less";
 @import "ferret/style_base.less";
+@import "ferret/style_typography.less";
 @import "ferret/style_mixins.less";
 @import "ferret/style_main.less";
 
@@ -151,14 +156,15 @@ Email: sstopnik@redventures.com
 @import "ferret/style_forms.less"; // Form Styles
 @import "ferret/style_tooltips.less"; // Tooltip Styles
 @import "ferret/style_tabs.less"; // Content Tabs Styles
-
-
-// Responsive Override Styles
-@import "ferret/style_responsive.less";
+@import "ferret/style_tables.less"; // Table Styles
 
 
 // Fancybox
 @import "ferret/fancybox.less"; //
+
+
+// Responsive Override Styles
+@import "ferret/style_responsive.less";
 
 
 // Include this file to support IE6-7

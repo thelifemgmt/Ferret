@@ -10,7 +10,7 @@
     font-weight: @input-font-weight;
     letter-spacing: @base-letter-spacing;
     line-height: 2;
-    color: @dark;
+    color: @input-color;
     padding: 6px 10px;
     border: 1px solid @input-border;
     .radius;
@@ -24,12 +24,20 @@
 select.inputfield {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	color: @placeholder-color;
 	background: @input-bg url(../images/bg_select_arrow.png) no-repeat right;
 	&:focus {background: @input-bg-focus url(../images/bg_select_arrow.png) no-repeat right;}
 }
 textarea.inputfield {height: 120px;}
+.checkbox {
+	float: left;
+	margin: 0 7px 20px 0;
+	&:focus {outline: none;}
+}
+
+label {float: left; font-size: 12px; line-height: 1.2;}
 
 
-@media only screen and (max-width: 599px), (max-device-width: 599px) {
+@media (max-width: 599px) {
     .inputfield {margin-bottom: 0;}
 }

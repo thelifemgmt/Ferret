@@ -3,7 +3,7 @@
 // Email: sstopnik@redvenutures.com
 
 
-/* Grid Reset */
+/* Box Grid */
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -12,7 +12,7 @@
 }
 
 
-/* Rows */
+// Rows
 .row {
 	display: block;
 	width: 100%;
@@ -30,7 +30,7 @@
 }
 
 
-/* Box Widths */
+// Box Widths
 .box-1 {width: 6.25%;}
 .box-2 {width:12.50%;}
 .box-3 {width: 18.75%;}
@@ -58,46 +58,52 @@
 }
 
 
-/* Clear */
-.clear {clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}
-
-
-/* Container */
+// Container
 .container {position: relative; margin: 0 auto;}
 
 
 /* Media Queries */
-/* Mobile */
-@media only screen and (max-width: 599px), (max-device-width: 599px) {
+// Groupings
+@media (max-width: 767px) {
+	.container {width: 100%;}
+}
+
+@media (max-width: 959px) {
 	* {-webkit-text-size-adjust: none;}
-	.container {width: 100%; padding: 0 10px; overflow: hidden;}
+	.container {padding: 0 10px; overflow: hidden;}
+}
+
+
+// Phones
+@media (max-width: 599px) {
 	.row {margin-bottom: 0 !important;}
 	.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8,
 	.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16,
 	.box-3.sixth, .box-4.fifth, .box-5.third, .box-10.two-third {width: 100%; margin-bottom: 20px;}
 }
 
-/* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-	* {-webkit-text-size-adjust: none;}
-	.container {width: 100%; padding: 0 10px; overflow: hidden;}
+
+// Small Tablets
+@media (min-width: 600px) and (max-width: 767px) {
 	.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7,
 	.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16 {width: 100%;}
 	.box-8, .box-3.sixth, .box-4.fifth {width: 50%;}
 }
 
-/* iPad - Large Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	* {-webkit-text-size-adjust: none;}
-	.container {width: 768px; padding: 0 10px; overflow: hidden;}
+
+// iPad & Large Tablets
+@media (min-width: 768px) and (max-width: 959px) {
+	.container {width: 768px;}
 }
 
-/* Normal Screen */
-@media only screen and (min-width: 960px) and (max-width: 1599px) {
+
+// Desktop
+@media (min-width: 960px) and (max-width: 1599px) {
 	.container {width: @grid-normal;}
 }
 
-/* Large Screen */
-@media only screen and (min-width: 1600px) {
+
+// Large Desktop
+@media (min-width: 1600px) {
 	.container {width: @grid-wide;}
 }

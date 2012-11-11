@@ -41,13 +41,23 @@ header {
 
 
 // Mobile Nav
-@media only screen and (max-width: 959px) {
+// Phones
+@media (max-width: 599px) {
+    header nav ul {width: 100%;}
+}
+
+
+// Tablets
+@media (min-width: 600px) and (max-width: 959px) {
+	header nav ul {width: 50%;}
+}
+
+@media (max-width: 959px) {
 	.mobile-nav {display: block;}
     header nav {
     	position: relative;
     	height: 60px;
 	    ul {
-	    	width: 50%;
 	    	margin-top: 70px;
 	    	display: none;
 		    &:before {
@@ -77,11 +87,9 @@ header {
 	    }
     }
 }
-@media only screen and (min-width: 959px) {
-	header nav ul {display: block !important;}
-}
 
-// Phone
-@media only screen and (max-width: 599px), (max-device-width: 599px) {
-    header nav ul {width: 100%;}
+
+// Desktop
+@media (min-width: 960px) {
+	header nav ul {display: block !important;}
 }
