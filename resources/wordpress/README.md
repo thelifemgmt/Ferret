@@ -1,13 +1,16 @@
-Ferret
-======
+Ferret Wordpress Parent Theme
+=============================
 
-The fast and simple responsive framework for rapid prototyping
----
+A Parent Theme for Wordpress
+----------------------------
 
-Veggies sunt bona vobis, proinde vos postulo esse magis bush tomato endive amaranth garlic azuki bean soko garbanzo cress mung bean radish celery beetroot rutabaga swiss chard. Komatsuna quandong shallot cabbage gourd broccoli salad nori daikon tatsoi brussels sprout sierra leone bologi desert raisin komatsuna melon. Water chestnut potato seakale spinach avocado nori komatsuna tomatillo winter purslane water chestnut. Avocado nori plantain prairie turnip earthnut pea kohlrabi.
+This is a bare-naked parent theme for Wordpress using the Ferret Framework.
 
-* Fully Responsive
-* 100% Customizable
-* Built with LESS
+
+Installation
+------------
+Copy the Ferret folder into your wp-content/themes folder. Upload it to your server. Once uploaded, open your Wordpress admin panel and activate the theme.
+
+
 
 Still in Development
