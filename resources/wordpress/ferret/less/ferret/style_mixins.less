@@ -1,0 +1,75 @@
+// Default Mix-ins
+
+
+// Transitions
+.transition (@speed: .15s) {
+  -webkit-transition: all @arguments ease-in-out;
+  -moz-transition: all @arguments ease-in-out;
+  transition: all @arguments ease-in-out;
+}
+
+
+// Gradients
+.gradient (@origin: top, @start: @light-gray, @stop: @dark) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+
+
+// Rounded Corners
+.radius (@radius: 3px) {border-radius: @radius;}
+
+
+// Effects
+.shadow {box-shadow: 0 2px 3px rgba(0,0,0,0.3);}
+.glow {box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+.fade {
+	.transition;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  	filter: alpha(opacity=100);
+  	-moz-opacity: 1.0;
+  	-khtml-opacity: 1.0;
+  	opacity: 1.0;
+  	&:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	  	filter: alpha(opacity=60);
+	  	-moz-opacity: 0.6;
+	  	-khtml-opacity: 0.6;
+	  	opacity: 0.6;
+	}
+}
+
+
+// Positioning
+.position {position: relative;}
+.left {float: left;}
+.right {float: right;}
+.center {text-align: center;}
+.flush {margin: 0;}
+.top10 {margin-top: 10px;}
+.top20 {margin-top: 20px;}
+.top30 {margin-top: 30px;}
+.top40 {margin-top: 40px;}
+.bottom10 {margin-bottom: 10px;}
+.bottom20 {margin-bottom: 20px;}
+.bottom30 {margin-bottom: 30px;}
+.bottom40 {margin-bottom: 40px;}
+
+
+// Extras
+.clear {clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}
+.normal {font-weight: normal;}
+.noselect {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.hide {display: none;}
+.striped {background-image: url(../images/bg_stripes.png); background-repeat: repeat;}
+section.first {margin-top: @first-section-margin;}

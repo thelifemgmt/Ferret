@@ -1,0 +1,69 @@
+// Typography Default Styles
+
+
+// Headlines
+h1, h2, h3, h4, h5, h6, span.headline {
+	color: @headline-color;
+	font-family: @headline-font;
+	font-weight: @headline-weight;
+	margin-bottom: @headline-margin;
+	line-height: @headline-line-height;
+}
+h1 {font-size: 240%;}
+h2 {font-size: 200%;}
+h3 {font-size: 160%;}
+h4 {font-size: 120%;}
+h5 {font-size: 106%;}
+h6 {font-size: 93%;}
+span.headline {display: block; font-size: 120%; color: @headline-color;}
+
+
+// Subheadlines
+.with-subheadline {margin-bottom: 5px;}
+.subheadline {display: block; font-size: 120%; color: @dark-gray;}
+
+
+// Standard Links
+a:link, a:visited, a:active, a {
+	text-decoration: none;
+	color: @link-color;
+	.transition;
+	outline: none;
+	&:hover {color: @link-hover;}
+}
+
+
+// Paragraphs
+p {
+	margin: 0 0 15px 0;
+	&:last-child {margin: 0;}
+	&.large {font-size: 110%; line-height: 2.2;}
+}
+p, span {letter-spacing: @base-letter-spacing;}
+
+
+// Additional Copy Sizes
+small, .small {font-size: 73%;}
+
+
+// Specialty Characters
+sup {
+	vertical-align: top;
+	font-size: 73%;
+}
+
+
+// Blockquotes
+blockquote {
+    border-left: 1px solid #e1e1e1;
+    padding: 0 0 0 20px;
+    color: @quote;
+    cite {
+    	display: block;
+    	color: @quote-author;
+    	font-size: 14px;
+    	font-style: italic;
+	    margin-top: 12px;
+	    &:before {content: "\2014 \0020";}
+    }
+}

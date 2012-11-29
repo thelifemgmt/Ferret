@@ -1,0 +1,26 @@
+// List Default Styles
+
+
+ul {
+	li {
+		margin-bottom: 10px;
+		font-size: 90%;
+		letter-spacing: @base-letter-spacing;
+		&:last-child {margin-bottom: 0;}
+	}
+	&.disc {list-style-type: disc; margin-left: 20px;}
+	&.square {list-style-type: square; margin-left: 20px;}
+	&.checkmark li:before {content: "\2713"; color: @list-item-checkbox; padding-right: 10px;}
+	&.plus li:before {content: "\271A"; color: @list-item-plus; padding-right: 10px;}
+	&.multiply li:before {content: "\2716"; color: @list-item-multiply; padding-right: 10px;}
+	&.with-spacing {margin-bottom: 20px;}
+}
+ol {
+	li {
+		margin: 0 0 10px 25px;
+		list-style: decimal;
+		font-size: 90%;
+		letter-spacing: @base-letter-spacing;
+		&:last-child {margin-bottom: 0;}
+	}
+}
