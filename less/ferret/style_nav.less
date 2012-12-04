@@ -8,21 +8,23 @@ header {
 	top: 0;
 	background: @nav-bar-bg;
 	z-index: 100;
-	nav ul {float: right;}
-	nav li {
-		float: left;
-		margin: 0 25px;
-		&:first-child {margin-left: 0;}
-		&:last-child {margin-right: 0;}
-		a {
-			display: block;
-			height: 60px;
-			font-family: @nav-font;
-			font-size: @nav-font-size;
-			font-weight: @nav-font-weight;
-			color: @nav-color !important;
-			padding-top: 14px;
-			&:hover {color: @nav-color-hover !important;}
+	nav ul {
+		float: right;
+		li {
+			float: left;
+			margin: 0 25px;
+			&:first-child {margin-left: 0;}
+			&:last-child {margin-right: 0;}
+			a {
+				display: block;
+				height: 60px;
+				font-family: @nav-font;
+				font-size: @nav-font-size;
+				font-weight: @nav-font-weight;
+				color: @nav-color !important;
+				padding-top: 14px;
+				&:hover {color: @nav-color-hover !important;}
+			}
 		}
 	}
 }

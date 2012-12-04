@@ -30,9 +30,9 @@ $siteName = '';
 <!-- Open Graph -->
 
 <?
-if (stristr($_SERVER['SCRIPT_FILENAME'], 'terms_and_conditions') 
-|| stristr($_SERVER['SCRIPT_FILENAME'], 'privacy_policy')
-|| stristr($_SERVER['SCRIPT_FILENAME'], 'my_account')
+if (stristr($_SERVER['SCRIPT_FILENAME'], 'terms-and-conditions') 
+|| stristr($_SERVER['SCRIPT_FILENAME'], 'privacy-policy')
+|| stristr($_SERVER['SCRIPT_FILENAME'], 'my-account')
 || stristr($_SERVER['SCRIPT_FILENAME'], 'legal') ) {
 	echo '<meta name="robots" content="noindex,follow,noodp" />';
 } elseif($metaRobots) {

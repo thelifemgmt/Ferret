@@ -776,17 +776,17 @@ header {
 header nav ul {
   float: right;
 }
-header nav li {
+header nav ul li {
   float: left;
   margin: 0 25px;
 }
-header nav li:first-child {
+header nav ul li:first-child {
   margin-left: 0;
 }
-header nav li:last-child {
+header nav ul li:last-child {
   margin-right: 0;
 }
-header nav li a {
+header nav ul li a {
   display: block;
   height: 60px;
   font-family: 'OpenSansReg';
@@ -795,7 +795,7 @@ header nav li a {
   color: #ffffff !important;
   padding-top: 14px;
 }
-header nav li a:hover {
+header nav ul li a:hover {
   color: #fdaa4e !important;
 }
 .mobile-nav {
