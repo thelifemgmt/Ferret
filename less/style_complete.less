@@ -74,6 +74,7 @@ Email: sstopnik@redventures.com
 
 // Navigation Bar
 @nav-bar-bg: @dark;
+@nav-bar-height: 60px;
 @nav-font: @font-normal;
 @nav-font-size: 15px;
 @nav-font-weight: normal;
@@ -128,7 +129,7 @@ Email: sstopnik@redventures.com
 
 
 // First Section Top Margin to Compensate for Fixed Top Navigation Bar
-@first-section-margin: 80px;
+@first-section-margin: @nav-bar-height;
 
 
 // Extras
@@ -147,7 +148,6 @@ Email: sstopnik@redventures.com
 @import "ferret/style_base.less";
 @import "ferret/style_typography.less";
 @import "ferret/style_mixins.less";
-@import "ferret/style_main.less";
 
 
 // Extras (Add or Remove as Needed)
@@ -158,6 +158,10 @@ Email: sstopnik@redventures.com
 @import "ferret/style_tabs.less"; // Content Tabs Styles
 @import "ferret/style_tables.less"; // Table Styles
 @import "ferret/style_tooltips.less"; // Tooltip Styles
+
+
+// Main Styles
+@import "ferret/style_main.less"; // Main 
 
 
 // Fancybox

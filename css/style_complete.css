@@ -629,35 +629,7 @@ blockquote cite:before {
   background-repeat: repeat;
 }
 section.first {
-  margin-top: 80px;
-}
-/* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
-pre {
-  display: block;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
-  border-radius: 3px;
-  background: #f9f9f9;
-}
-code {
-  font-family: monospace;
-  font-size: 14px;
-  color: #3faab9;
-}
-code span {
-  display: inline;
-  background: none;
-  color: #3faab9;
-}
-code span:hover {
-  background: none;
-  color: #3faab9;
-}
-.logo {
-  position: absolute;
-  width: 131px;
-  height: 71px;
+  margin-top: 60px;
 }
 /* Buttons */
 .button,
@@ -1096,6 +1068,34 @@ table td {
   border-top: 7px solid #353535;
   left: 50%;
   margin-left: -7px;
+}
+/* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
+pre {
+  display: block;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  border-radius: 3px;
+  background: #f9f9f9;
+}
+code {
+  font-family: monospace;
+  font-size: 14px;
+  color: #3faab9;
+}
+code span {
+  display: inline;
+  background: none;
+  color: #3faab9;
+}
+code span:hover {
+  background: none;
+  color: #3faab9;
+}
+.logo {
+  position: absolute;
+  width: 131px;
+  height: 71px;
 }
 /* Fancybox */
 #fancybox-loading {

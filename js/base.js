@@ -11,7 +11,7 @@ $(document).ready(function() {
 	
 	// Scroll To
 	$('a.scroll').click(function(e){
-		var scroll_height = $($(this).attr('href')).offset().top - 80;
+		var scroll_height = $($(this).attr('href')).offset().top - 60;
 		$('html, body').stop().animate({scrollTop: (scroll_height)}, 800);
 		e.preventDefault();
 	});
@@ -27,7 +27,7 @@ $(document).ready(function() {
 	// Tabs
 	$('#tab1').show();
 	$('ul.tabs-nav li').click(function(){ 
-		$('#tabs ul li').removeClass('active');
+		$('.tabs-wrap ul li').removeClass('active');
 		$(this).addClass('active'); 
 		var currentTab = $(this).find("a[href]").attr('href'); 
 		$('.tab-frame').hide();
