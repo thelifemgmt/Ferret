@@ -1,6 +1,54 @@
 // Table Default Styles
 
 
-table {width: 100%;
-	th, td {text-align: left;}
+table {
+	width: 100%;
+	thead {
+		background: @table-header-bg;
+		th {
+			color: @table-header-color;
+			.font-bold;
+			&:first-child {.radius(3px 0 0 0);}
+			&:last-child {.radius(0 3px 0 0);}
+		}
+	}
+	th, td {
+		text-align: left;
+		padding: 5px 10px;
+	}
+	tbody {
+		font-size: @table-font-size;
+		letter-spacing: @base-letter-spacing;
+		tr {
+			.transition;
+			&:nth-child(even) {
+				background: @table-row-bg;
+				&:hover {
+					color: @dark;
+					background: @table-row-bg - 10;
+				}
+			}
+			&:last-child td {
+				&:first-child {.radius(0 0 0 3px);}
+				&:last-child {.radius(0 0 3px 0);}
+			}
+		}
+	}
+	tfoot {
+		background: @table-footer-bg;
+		td {
+			color: @table-footer-color;
+			.font-bold;
+			font-size: 14px;
+			&:first-child {.radius(0 0 0 3px);}
+			&:last-child {.radius(0 0 3px 0);}	
+		}
+	}
+	&.with-footer {
+		tbody {
+			tr:last-child td {
+				.radius(0);
+			}
+		}
+	}
 }

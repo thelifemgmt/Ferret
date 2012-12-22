@@ -1,12 +1,12 @@
 /*********************************************
 Ferret Main Stylesheet
-Last Updated: 11/11/12
+Last Updated: 12/21/12
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
 
 
-// Complete Site Settings
+// Site-wide Settings & Variables
 
 
 // Grid Settings
@@ -33,6 +33,7 @@ Email: sstopnik@redventures.com
 @font-light: 'OpenSansLight';
 @font-normal: 'OpenSansReg';
 @font-bold: 'OpenSansSemi';
+@font-headline: 'OpenSansSemi';
 
 
 // Colors
@@ -73,10 +74,12 @@ Email: sstopnik@redventures.com
 
 
 // Navigation Bar
+@nav-bar-position: fixed;
 @nav-bar-bg: @dark;
 @nav-bar-height: 60px;
-@nav-font: @font-normal;
-@nav-font-size: 15px;
+@nav-spacing: 20px;
+@nav-font: @font-bold;
+@nav-font-size: 12px;
 @nav-font-weight: normal;
 @nav-color: @white;
 @nav-color-hover: @orange;
@@ -89,7 +92,7 @@ Email: sstopnik@redventures.com
 @input-font: @font-normal;
 @input-font-weight: normal;
 @input-color: @dark;
-@input-border: #e1e1e1;
+@input-border: @light-gray;
 @input-bg-hover: #fff;
 @input-border-hover: #acacac;
 @input-bg-focus: lighten(@yellow, 10%);
@@ -112,6 +115,16 @@ Email: sstopnik@redventures.com
 @tab-color-hover: @dark;
 @tab-color-active: @red;
 @tab-frame-bg: #fff;
+
+
+// Tables
+@table-header-color: #fff;
+@table-header-bg: @blue;
+@table-row-bg: #f4f4f4;
+@table-font-size: 14px;
+@table-footer-color: @dark;
+@table-footer-bg: @light-gray;
+@table-border: @light-gray;
 
 
 // Tooltips
@@ -161,7 +174,7 @@ Email: sstopnik@redventures.com
 
 
 // Main Styles
-@import "ferret/style_main.less"; // Main 
+@import "ferret/style_main.less"; // This is the Stylesheet for the Project
 
 
 // Fancybox

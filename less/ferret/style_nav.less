@@ -2,7 +2,7 @@
 
 /* Nav */
 header {
-	position: fixed;
+	position: @nav-bar-position;
 	width: 100%;
 	height: @nav-bar-height;
 	top: 0;
@@ -12,17 +12,16 @@ header {
 		float: right;
 		li {
 			float: left;
-			margin: 0 25px;
+			margin: 0 @nav-spacing;
 			&:first-child {margin-left: 0;}
 			&:last-child {margin-right: 0;}
 			a {
 				display: block;
-				height: 60px;
 				font-family: @nav-font;
 				font-size: @nav-font-size;
 				font-weight: @nav-font-weight;
 				color: @nav-color !important;
-				padding-top: 14px;
+				line-height: @nav-bar-height;
 				&:hover {color: @nav-color-hover !important;}
 			}
 		}
@@ -75,17 +74,17 @@ header {
 		    }
 	    }
 	    li {
-	    	float: none;
+	    	float: none !important;
 	    	display: block;
 		    height: 60px;
 		    border-top: 1px solid @mobile-nav-bg + 10; 
 		    border-bottom: 1px solid @mobile-nav-bg - 10;
 		    padding: 0;
 		    background: @mobile-nav-bg;
-		    margin: 0;
+		    margin: 0 !important;
 		    &:first-child {border-top: 0; border-radius: 3px 3px 0 0;}
 		    &:last-child {border-bottom: 0; border-radius: 0 0 3px 3px;}
-		    a {display: block; width: 100%; font-size: 15px; padding: 14px 20px 0;}
+		    a {display: block; width: 100%; font-size: 15px; padding: 0 20px;}
 	    }
     }
 }
