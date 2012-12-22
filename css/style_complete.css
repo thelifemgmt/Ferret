@@ -1045,7 +1045,6 @@ table tbody tr:nth-child(even) {
   background: #f4f4f4;
 }
 table tbody tr:nth-child(even):hover {
-  color: #353535;
   background: #eaeaea;
 }
 table tbody tr:last-child td:first-child {
@@ -1053,6 +1052,9 @@ table tbody tr:last-child td:first-child {
 }
 table tbody tr:last-child td:last-child {
   border-radius: 0 0 3px 0;
+}
+table tbody tr:hover {
+  color: #353535;
 }
 table tfoot {
   background: #e1e1e1;

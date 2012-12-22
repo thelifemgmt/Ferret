@@ -24,7 +24,6 @@ table {
 			&:nth-child(even) {
 				background: @table-row-bg;
 				&:hover {
-					color: @dark;
 					background: @table-row-bg - 10;
 				}
 			}
@@ -32,6 +31,7 @@ table {
 				&:first-child {.radius(0 0 0 3px);}
 				&:last-child {.radius(0 0 3px 0);}
 			}
+			&:hover {color: @dark;}
 		}
 	}
 	tfoot {
