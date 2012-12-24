@@ -13,8 +13,22 @@
 	background: @button-bg;
 	.radius;
 	box-shadow: inset 0 1px 3px rgba(255,255,255,0.3);
-	.transition;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
+	.transition;
+	-webkit-appearance: none;
+	
+	
+	
+	// Submit Button
+	&.submit {
+		height: @button-height;
+		font-family: @button-font;
+		letter-spacing: @base-letter-spacing;
+		border: 0;
+		border-top: 1px solid @button-submit;
+		background-color: @button-submit;
+		margin: 5px 0 0;
+	}
 	
 	
 	// Colors & Variations
@@ -33,17 +47,6 @@
 	&.large {font-size: @button-font-size + 2; line-height: @button-height + 10; padding: 0 @button-height;}
 	&.x-large {font-size: @button-font-size + 4; line-height: @button-height + 20; padding: 0 @button-height + 10;}
 	&.full-width {width: 100%; padding-left: 0; padding-right: 0; text-align: center;}
-	
-	
-	// Submit Button
-	&.submit {
-		font-family: @button-font;
-		letter-spacing: @base-letter-spacing;
-		border: 0;
-		border-top: 1px solid @button-submit;
-		background-color: @button-submit;
-		margin: 5px 0 0;
-	}
 	
 	
 	// Hover
