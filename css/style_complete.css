@@ -277,7 +277,7 @@ Email: sstopnik@redventures.com
 }
 @media (min-width: 1600px) {
   .container {
-    width: 1140px;
+    width: 1280px;
   }
 }
 /* Fonts */
@@ -762,6 +762,10 @@ a.button.reverse {
   background-color: #e1e1e1;
   color: #353535;
   text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+.button.oval,
+a.button.oval {
+  border-radius: 20px;
 }
 .button.small,
 a.button.small {
