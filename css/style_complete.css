@@ -951,11 +951,13 @@ select.inputfield:focus {
 textarea.inputfield {
   height: 120px;
 }
-.checkbox {
+.checkbox,
+.radio-button {
   float: left;
   margin: 0 7px 20px 0;
 }
-.checkbox:focus {
+.checkbox:focus,
+.radio-button:focus {
   outline: none;
 }
 label {
@@ -1085,6 +1087,7 @@ ul.tabs-nav li.active a {
 }
 .tab-frame {
   float: left;
+  width: 100%;
   margin-bottom: 20px;
   background: #ffffff;
   display: none;
