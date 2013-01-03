@@ -20,6 +20,7 @@
     margin-bottom: 20px;
     &:hover {border-color: @input-border-hover;}
     &:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
+    @media (max-width: 599px) {margin-bottom: 0;}
 }
 select.inputfield {
 	-webkit-appearance: none;
@@ -38,6 +39,7 @@ textarea.inputfield {height: 120px;}
 	-webkit-appearance: none;
 	margin: 0 7px 20px 0;
 	cursor: pointer;
+	@media (max-width: 599px) {margin-bottom: 0;}
 }
 .checkbox {
 	.radius;
@@ -47,15 +49,8 @@ textarea.inputfield {height: 120px;}
 	.radius(50%);
 	&:checked {background: url(../images/bg_radio_button.png) no-repeat center center;}
 }
-
-
 label {
 	float: left;
 	font-size: 12px;
 	line-height: 1.3;
-}
-
-
-@media (max-width: 599px) {
-    .inputfield {margin-bottom: 0;}
 }

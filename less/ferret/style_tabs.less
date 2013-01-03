@@ -6,6 +6,7 @@ ul.tabs-nav {
     width: 100%;
     border-bottom: 1px solid @light-gray;
     margin: 5px 0 20px;
+    @media (max-width: 599px) {border: none;}
     li {
 	    float: left;
 	    padding: 6px 25px;
@@ -32,6 +33,15 @@ ul.tabs-nav {
 		    margin-top: -3px;
 		    background: @tab-frame-bg;
 		    a {color: @tab-color-active;}
+		}
+		@media (max-width: 599px) {
+			border: none;
+    		border-right: 1px solid @light-gray;
+    		padding: 2px 12px;
+    		background: none;
+    		&:first-child {padding-left: 0;}
+    		&:last-child {padding-right: 0; border: none;}
+    		&.active {padding-top: 2px; margin-top: 0; background: none;}
 		}
     }
 }

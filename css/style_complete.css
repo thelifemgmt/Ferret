@@ -939,6 +939,11 @@ header nav ul li a:hover {
   border-color: #ebc855;
   background: #f8edc7;
 }
+@media (max-width: 599px) {
+  .inputfield {
+    margin-bottom: 0;
+  }
+}
 select.inputfield {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -962,6 +967,12 @@ textarea.inputfield {
   margin: 0 7px 20px 0;
   cursor: pointer;
 }
+@media (max-width: 599px) {
+  .checkbox,
+  .radio-button {
+    margin-bottom: 0;
+  }
+}
 .checkbox {
   border-radius: 3px;
 }
@@ -978,11 +989,6 @@ label {
   float: left;
   font-size: 12px;
   line-height: 1.3;
-}
-@media (max-width: 599px) {
-  .inputfield {
-    margin-bottom: 0;
-  }
 }
 ul li {
   margin-bottom: 10px;
@@ -1063,6 +1069,11 @@ ul.tabs-nav {
   border-bottom: 1px solid #e1e1e1;
   margin: 5px 0 20px;
 }
+@media (max-width: 599px) {
+  ul.tabs-nav {
+    border: none;
+  }
+}
 ul.tabs-nav li {
   float: left;
   padding: 6px 25px;
@@ -1098,6 +1109,26 @@ ul.tabs-nav li.active {
 }
 ul.tabs-nav li.active a {
   color: #f26a4a;
+}
+@media (max-width: 599px) {
+  ul.tabs-nav li {
+    border: none;
+    border-right: 1px solid #e1e1e1;
+    padding: 2px 12px;
+    background: none;
+  }
+  ul.tabs-nav li:first-child {
+    padding-left: 0;
+  }
+  ul.tabs-nav li:last-child {
+    padding-right: 0;
+    border: none;
+  }
+  ul.tabs-nav li.active {
+    padding-top: 2px;
+    margin-top: 0;
+    background: none;
+  }
 }
 .tab-frame {
   float: left;
@@ -1181,17 +1212,7 @@ table.with-footer tbody tr:last-child td {
     opacity: 1;
   }
 }
-@-moz-keyframes toolTip {
-  0% {
-    bottom: 18px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 25px;
-    opacity: 1;
-  }
-}
-@-ms-keyframes toolTip {
+@keyframes toolTip {
   0% {
     bottom: 18px;
     opacity: 0;
@@ -1206,8 +1227,7 @@ table.with-footer tbody tr:last-child td {
 }
 .tooltip span {
   -webkit-animation: toolTip 0.3s ease-in;
-  -moz-animation: toolTip 0.3s ease-in;
-  -ms-animation: toolTip 0.3s ease-in;
+  animation: toolTip 0.3s ease-in;
   position: absolute;
   bottom: 25px;
   width: 220%;
@@ -1236,6 +1256,11 @@ table.with-footer tbody tr:last-child td {
   border-top: 7px solid #353535;
   left: 50%;
   margin-left: -7px;
+}
+@media (max-width: 599px) {
+  .tooltip span {
+    display: none !important;
+  }
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
 pre {
@@ -1453,30 +1478,7 @@ code span:hover {
 }
 /* Media Queries */
 @media (max-width: 599px) {
-  ul.tabs-nav {
-    border: none;
-  }
-  ul.tabs-nav li {
-    border: none;
-    border-right: 1px solid #e1e1e1;
-    padding: 2px 12px;
-    background: none;
-  }
-  ul.tabs-nav li:first-child {
-    padding-left: 0;
-  }
-  ul.tabs-nav li:last-child {
-    padding-right: 0;
-    border: none;
-  }
-  ul.tabs-nav li.active {
-    padding-top: 2px;
-    margin-top: 0;
-    background: none;
-  }
-  .tooltip span {
-    display: none !important;
-  }
+  
 }
 @media (min-width: 600px) and (max-width: 767px) {
   
