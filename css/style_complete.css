@@ -954,16 +954,30 @@ textarea.inputfield {
 .checkbox,
 .radio-button {
   float: left;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  -webkit-appearance: none;
   margin: 0 7px 20px 0;
+  cursor: pointer;
 }
-.checkbox:focus,
-.radio-button:focus {
-  outline: none;
+.checkbox {
+  border-radius: 3px;
+}
+.checkbox:checked {
+  background: url(../images/bg_checkbox.png) no-repeat center center;
+}
+.radio-button {
+  border-radius: 50%;
+}
+.radio-button:checked {
+  background: url(../images/bg_radio_button.png) no-repeat center center;
 }
 label {
   float: left;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 @media (max-width: 599px) {
   .inputfield {
