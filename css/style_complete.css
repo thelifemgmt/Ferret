@@ -483,6 +483,7 @@ button {
   cursor: pointer;
   border: 0;
   margin: 0;
+  -webkit-appearance: none;
 }
 .bold,
 b,
@@ -506,6 +507,9 @@ input:-moz-placeholder {
 ::-moz-selection {
   background: #464646;
   color: #fff;
+}
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
 }
 h1,
 h2,

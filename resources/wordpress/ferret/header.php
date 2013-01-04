@@ -27,8 +27,11 @@
 <meta name="description" content="<?php bloginfo('description'); ?>"/>
 <meta name="keywords" content="<?php bloginfo('description'); ?>"/>
 
-<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico"/> 
-<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/touch_icon.png" type="image/png"/>
+<link rel="shortcut icon" sizes="256x256" href="images/favicon.ico"/> 
+<link rel="apple-touch-icon-precomposed" href="images/touch_icon.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch_icon_72x72.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch_icon_114x114.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch_icon_144x144.png"/>
 
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style_complete.css" media="screen"/>
 

@@ -45,10 +45,11 @@ hr {
 	&.flush {margin: 0;}
 }
 input, select {vertical-align: middle;}
-input[type=button], input[type=submit], button {cursor: pointer; border: 0; margin: 0;}
+input[type=button], input[type=submit], button {cursor: pointer; border: 0; margin: 0; -webkit-appearance: none;}
 .bold, b, strong {font-weight: bold;}
 .italic, i {font-style: italic;}
 ::-webkit-input-placeholder {color: @placeholder-color;}
 input:-moz-placeholder {color: @placeholder-color;}
 ::selection {background: #464646; color: #fff;}
 ::-moz-selection {background: #464646; color: #fff;}
+.ie7 img {-ms-interpolation-mode: bicubic;}

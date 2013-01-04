@@ -57,8 +57,11 @@ echo "\n";
 <link rel="canonical" href="<?= $canonicalURL ?>"/>
 <? } ?>
 
-<link rel="shortcut icon" href="/images/favicon.ico"/> 
-<link rel="apple-touch-icon-precomposed" href="/images/touch_icon.png" type="image/png"/>
+<link rel="shortcut icon" sizes="256x256" href="/images/favicon.ico"/> 
+<link rel="apple-touch-icon-precomposed" href="/images/touch_icon.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch_icon_72x72.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch_icon_114x114.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch_icon_144x144.png"/>
 
 <link rel="stylesheet" href="/css/style_complete.css" media="screen"/>
 <?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" type="text/css" media="screen"/>'); ?>
