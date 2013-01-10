@@ -12,11 +12,10 @@
 	border-top: 1px solid @button-bg;
 	background: @button-bg;
 	.radius;
-	box-shadow: inset 0 1px 3px rgba(255,255,255,0.3);
+	box-shadow: inset 0 1px 2px rgba(255,255,255,0.3);
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
 	.transition;
 	-webkit-appearance: none;
-	
 	
 	
 	// Submit Button
@@ -40,6 +39,7 @@
 	&.striped {background-image: @striped;}
 	&.flat {box-shadow: none; border: none; text-shadow: none;}
 	&.reverse {border-top: 1px solid @light-gray; background-color: @light-gray; color: @dark; text-shadow: -1px -1px 0 rgba(255,255,255,0.1);}
+	&.oval {.radius(@button-height / 2);}
 	
 	
 	// Sizes

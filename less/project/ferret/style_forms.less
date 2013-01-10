@@ -4,20 +4,20 @@
 .inputfield {
     float: left;
     width: 100%;
-    height: 40px;
+    height: @input-height;
     font-family: @input-font;
-    font-size: 14px;
+    font-size: @input-font-size;
     font-weight: @input-font-weight;
     letter-spacing: @base-letter-spacing;
     line-height: 2;
     color: @input-color;
-    padding: 6px 10px;
+    padding: ((@input-height - @input-font-size * 2) / 2) 10px;
     border: 1px solid @input-border;
     .radius;
     background: @input-bg;
     box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
     .transition;
-    margin-bottom: 20px;
+    margin-bottom: @input-margin-bottom;
     &:hover {border-color: @input-border-hover;}
     &:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
     @media (max-width: 599px) {margin-bottom: 0;}
@@ -29,28 +29,29 @@ select.inputfield {
 	background: @input-bg url(../images/bg_select_arrow.png) no-repeat right;
 	&:focus {background: @input-bg-focus url(../images/bg_select_arrow.png) no-repeat right;}
 }
-textarea.inputfield {height: 120px;}
+textarea.inputfield {height: @input-textarea-height;}
 .checkbox, .radio-button {
 	float: left;
-	width: 15px;
-	height: 15px;
+	width: @input-checkbox-size;
+	height: @input-checkbox-size;
 	border: 1px solid @input-border;
-	background: #fff;
+	background: @input-checkbox-bg;
 	-webkit-appearance: none;
-	margin: 0 7px 20px 0;
+	margin: 0 7px @input-margin-bottom 0;
 	cursor: pointer;
+	&:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
 	@media (max-width: 599px) {margin-bottom: 0;}
 }
 .checkbox {
 	.radius;
-	&:checked {background: url(../images/bg_checkbox.png) no-repeat center center;}
+	&:checked {background: @input-checkbox-checked no-repeat center center;}
 }
 .radio-button {
 	.radius(50%);
-	&:checked {background: url(../images/bg_radio_button.png) no-repeat center center;}
+	&:checked {background: @input-radio-checked no-repeat center center;}
 }
 label {
 	float: left;
-	font-size: 12px;
+	font-size: @input-label-font-size;
 	line-height: 1.3;
 }

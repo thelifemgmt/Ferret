@@ -3,8 +3,8 @@
 require '/usr/share/www/base_packages/lessphp/lessc.inc.php';
 
 // LESS Compiler
-$inputFile = "less/style_complete.less";
-$outputFile = "css/style_complete.css";
+$inputFile = "less/ferret.less";
+$outputFile = "css/ferret.css";
 
 $less = new lessc;
 

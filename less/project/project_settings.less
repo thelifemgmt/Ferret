@@ -1,17 +1,10 @@
-/*********************************************
-Ferret Main Stylesheet
-Last Updated: 12/21/12
-Written by: Sean Stopnik
-Email: sstopnik@redventures.com
-*********************************************/
-
-
-// Site-wide Settings & Variables
+// Project Settings & Variables
 
 
 // Grid Settings
-@grid-normal: 960px;
-@grid-wide: 1140px;
+@grid-boxes: 16; // Sets the max number of boxes per row (up to 24)
+@grid-normal: 960px; // Sets Container Width
+@grid-wide: 1280px; // Sets Wide Screen Container Width
 @grid-row-with-spacing: 40px;
 
 
@@ -25,8 +18,6 @@ Email: sstopnik@redventures.com
 @base-letter-spacing: 1px;
 @link-color: @primary;
 @link-hover: @dark;
-@quote: @gray;
-@quote-author: @dark;
 
 
 // Fonts
@@ -54,11 +45,22 @@ Email: sstopnik@redventures.com
 
 
 // Typography
+@headline-h1-size: 240%;
+@headline-h2-size: 200%;
+@headline-h3-size: 160%;
+@headline-h4-size: 120%;
+@headline-h5-size: 106%;
+@headline-h6-size: 93%;
+@headline-span-headline-size: 120%;
+@headline-sub-headline-size: 120%;
+@headline-sub-headline-color: @dark-gray;
 @headline-color: @dark;
 @headline-font: @font-bold;
 @headline-weight: normal;
 @headline-line-height: 1.5;
 @headline-margin: 15px;
+@paragraph-margin: 20px;
+@paragraph-large-font-size: 110%;
 
 
 // Buttons
@@ -69,7 +71,7 @@ Email: sstopnik@redventures.com
 @button-font-size: 14px;
 @button-bg-alt: @blue;
 @button-submit: @red;
-@button-hover: @dark;
+@button-hover: #353535;
 @button-height: 40px;
 
 
@@ -83,13 +85,18 @@ Email: sstopnik@redventures.com
 @nav-font-weight: normal;
 @nav-color: @white;
 @nav-color-hover: @orange;
-@mobile-nav-button: @dark + 20;
 @mobile-nav-bg: @dark;
+@mobile-nav-button: @dark + 20;
+@mobile-nav-button-height: 40px;
+@mobile-nav-menu-height: 60px;
+@mobile-nav-font-size: 12px;
 
 
 // Form Fields
 @input-bg: #fff;
+@input-height: 40px;
 @input-font: @font-normal;
+@input-font-size: 14px;
 @input-font-weight: normal;
 @input-color: @dark;
 @input-border: @light-gray;
@@ -97,31 +104,58 @@ Email: sstopnik@redventures.com
 @input-border-hover: #acacac;
 @input-bg-focus: lighten(@yellow, 10%);
 @input-border-focus: darken(@input-bg-focus, 25%);
+@input-margin-bottom: 20px;
+@input-textarea-height: 120px;
+@input-checkbox-size: 15px; // Checkbox & Radio Buttons
+@input-checkbox-bg: #fff;
+@input-checkbox-checked: url(../images/bg_checkbox.png); // Chrome Only
+@input-radio-checked: url(../images/bg_radio_button.png); // Chrome Only
+@input-label-font-size: 12px;
 @placeholder-color: #898989;
+
+
+// Borders
+@border-color: #e1e1e1;
+
+
+// Blockquotes
+@quote-color: @gray;
+@quote-font-size: 93%;
+@quote-author-font-style: italic;
+@quote-author-color: @dark;
+@quote-author-before: "\2014 \0020";
 
 
 // Lists
 @list-item-checkbox: @orange;
 @list-item-multiply: @red;
 @list-item-plus: @blue;
+@list-item-margin-bottom: 10px;
+@list-font-size: 90%;
+@list-definition-title-color: @dark;
 
 
 // Tabs
 @tab-font: @font-normal;
 @tab-font-size: 14px;
 @tab-font-weight: normal;
+@tab-letter-spacing: 0;
 @tab-bg: #f9f9f9;
 @tab-color: @dark-gray;
 @tab-color-hover: @dark;
 @tab-color-active: @red;
 @tab-frame-bg: #fff;
+@tab-border-color: #e1e1e1;
+@tab-spacing: 25px;
 
 
 // Tables
 @table-header-color: #fff;
 @table-header-bg: @blue;
+@table-header-font-size: 14px;
 @table-row-bg: #f4f4f4;
 @table-font-size: 14px;
+@table-footer-font-size: 14px;
 @table-footer-color: @dark;
 @table-footer-bg: @light-gray;
 @table-border: @light-gray;
@@ -131,8 +165,10 @@ Email: sstopnik@redventures.com
 @tooltip-bg: @dark;
 @tooltip-color: #fff;
 @tooltip-font: @font-normal;
+@tooltip-font-size: 80%;
 @tooltip-weight: normal;
 @tooltip-letter-spacing: 0;
+@tooltip-border-radius: 3px;
 
 
 // Fancybox
@@ -147,43 +183,3 @@ Email: sstopnik@redventures.com
 
 // Extras
 @striped: url(../images/bg_stripes.png);
-
-
-
-
-
-// Included Stylesheets
-
-
-// Base Styles (Do Not Remove)
-@import "ferret/box_grid.less";
-@import "ferret/style_fonts.less";
-@import "ferret/style_base.less";
-@import "ferret/style_typography.less";
-@import "ferret/style_mixins.less";
-
-
-// Extras (Add or Remove as Needed)
-@import "ferret/style_buttons.less"; // Button Styles
-@import "ferret/style_nav.less"; // Header Navigation Styles
-@import "ferret/style_forms.less"; // Form Styles
-@import "ferret/style_lists.less"; // List Styles
-@import "ferret/style_tabs.less"; // Content Tabs Styles
-@import "ferret/style_tables.less"; // Table Styles
-@import "ferret/style_tooltips.less"; // Tooltip Styles
-
-
-// Main Styles
-@import "ferret/style_main.less"; // This is the Stylesheet for the Project
-
-
-// Fancybox
-@import "ferret/fancybox.less"; //
-
-
-// Responsive Override Styles
-@import "ferret/style_responsive.less";
-
-
-// Include this file to support IE6-7
-@import "ferret/box_grid_ie6_7.less";

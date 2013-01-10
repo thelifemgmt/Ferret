@@ -3,8 +3,8 @@
 
 ul {
 	li {
-		margin-bottom: 10px;
-		font-size: 90%;
+		margin-bottom: @list-item-margin-bottom;
+		font-size: @list-font-size;
 		letter-spacing: @base-letter-spacing;
 		&:last-child {margin-bottom: 0;}
 	}
@@ -25,14 +25,26 @@ ul {
 		}
 		
 	}
-	&.with-spacing {margin-bottom: 20px;}
+	&.with-spacing {margin-bottom: @paragraph-margin;}
 }
 ol {
 	li {
-		margin: 0 0 10px 25px;
+		margin: 0 0 @list-item-margin-bottom 25px;
 		list-style: decimal;
-		font-size: 90%;
+		font-size: @list-font-size;
 		letter-spacing: @base-letter-spacing;
+		&:last-child {margin-bottom: 0;}
+	}
+}
+dl {
+	font-size: @list-font-size;
+	dt {
+		color: @list-definition-title-color;
+		.font-bold;
+	}
+	dd {
+		letter-spacing: @base-letter-spacing;
+		margin-bottom: @list-item-margin-bottom;
 		&:last-child {margin-bottom: 0;}
 	}
 }

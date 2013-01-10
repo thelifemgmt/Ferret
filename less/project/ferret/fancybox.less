@@ -105,7 +105,13 @@
 	line-height: 0;
 	vertical-align: top;
 }
-#fancybox-frame {width: 100%; height: 100%; border: none; display: block;}
+#fancybox-frame {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+	overflow: auto;
+}
 #fancybox-left, #fancybox-right {
 	position: absolute;
 	top: 0;
@@ -152,4 +158,4 @@
 	position: relative;
 }
 // IE6, IE7, IE8
-.fancybox-ie .fancybox-bg { background: transparent !important; }
+.fancybox-ie .fancybox-bg {background: transparent !important;}

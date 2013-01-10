@@ -1,6 +1,6 @@
 /*********************************************
-Ferret Main Stylesheet
-Last Updated: 12/21/12
+Ferret Framework Main Stylesheet
+Last Updated: 1/9/13
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
@@ -59,7 +59,7 @@ Email: sstopnik@redventures.com
   width: 6.25%;
 }
 .box-2 {
-  width: 12.50%;
+  width: 12.5%;
 }
 .box-3 {
   width: 18.75%;
@@ -103,17 +103,44 @@ Email: sstopnik@redventures.com
 .box-16 {
   width: 100%;
 }
-.box-3.sixth {
-  width: 16.66%;
+.box-17 {
+  width: 106.25%;
 }
-.box-4.fifth {
+.box-18 {
+  width: 112.5%;
+}
+.box-19 {
+  width: 118.75%;
+}
+.box-20 {
+  width: 125%;
+}
+.box-21 {
+  width: 131.25%;
+}
+.box-22 {
+  width: 137.5%;
+}
+.box-23 {
+  width: 143.75%;
+}
+.box-24 {
+  width: 150%;
+}
+.box-half {
+  width: 50%;
+}
+.box-3rd {
+  width: 33.333333333333336%;
+}
+.box-2-3rd {
+  width: 66.66666666666667%;
+}
+.box-5th {
   width: 20%;
 }
-.box-5.third {
-  width: 33.33%;
-}
-.box-10.two-third {
-  width: 66.66%;
+.box-6th {
+  width: 16.666666666666668%;
 }
 .box-1,
 .box-2,
@@ -130,7 +157,20 @@ Email: sstopnik@redventures.com
 .box-13,
 .box-14,
 .box-15,
-.box-16 {
+.box-16,
+.box-17,
+.box-18,
+.box-19,
+.box-20,
+.box-21,
+.box-22,
+.box-23,
+.box-24,
+.box-half,
+.box-3rd,
+.box-2-3rd,
+.box-5th,
+.box-6th {
   float: left;
   padding: 0 10px;
 }
@@ -173,10 +213,19 @@ Email: sstopnik@redventures.com
   .box-14,
   .box-15,
   .box-16,
-  .box-3.sixth,
-  .box-4.fifth,
-  .box-5.third,
-  .box-10.two-third {
+  .box-17,
+  .box-18,
+  .box-19,
+  .box-20,
+  .box-21,
+  .box-22,
+  .box-23,
+  .box-24,
+  .box-half,
+  .box-3rd,
+  .box-2-3rd,
+  .box-5th,
+  .box-6th {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -189,6 +238,7 @@ Email: sstopnik@redventures.com
   .box-5,
   .box-6,
   .box-7,
+  .box-8,
   .box-9,
   .box-10,
   .box-11,
@@ -196,12 +246,22 @@ Email: sstopnik@redventures.com
   .box-13,
   .box-14,
   .box-15,
-  .box-16 {
+  .box-16,
+  .box-17,
+  .box-18,
+  .box-19,
+  .box-20,
+  .box-21,
+  .box-22,
+  .box-23,
+  .box-24,
+  .box-3rd,
+  .box-2-3rd {
     width: 100%;
   }
-  .box-8,
-  .box-3.sixth,
-  .box-4.fifth {
+  .box-half,
+  .box-5th,
+  .box-6th {
     width: 50%;
   }
 }
@@ -217,7 +277,7 @@ Email: sstopnik@redventures.com
 }
 @media (min-width: 1600px) {
   .container {
-    width: 1140px;
+    width: 1280px;
   }
 }
 /* Fonts */
@@ -423,6 +483,8 @@ button {
   cursor: pointer;
   border: 0;
   margin: 0;
+  -webkit-appearance: none;
+  outline: none;
 }
 .bold,
 b,
@@ -436,7 +498,7 @@ i {
 ::-webkit-input-placeholder {
   color: #898989;
 }
-input:-moz-placeholder {
+input[type="text"]:-moz-placeholder {
   color: #898989;
 }
 ::selection {
@@ -446,6 +508,9 @@ input:-moz-placeholder {
 ::-moz-selection {
   background: #464646;
   color: #fff;
+}
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
 }
 h1,
 h2,
@@ -644,7 +709,7 @@ a.button {
   border-top: 1px solid #3faab9;
   background: #3faab9;
   border-radius: 3px;
-  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -702,6 +767,10 @@ a.button.reverse {
   background-color: #e1e1e1;
   color: #353535;
   text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+.button.oval,
+a.button.oval {
+  border-radius: 20px;
 }
 .button.small,
 a.button.small {
@@ -875,6 +944,11 @@ header nav ul li a:hover {
   border-color: #ebc855;
   background: #f8edc7;
 }
+@media (max-width: 599px) {
+  .inputfield {
+    margin-bottom: 0;
+  }
+}
 select.inputfield {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -887,22 +961,45 @@ select.inputfield:focus {
 textarea.inputfield {
   height: 120px;
 }
-.checkbox {
+.checkbox,
+.radio-button {
   float: left;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  -webkit-appearance: none;
   margin: 0 7px 20px 0;
+  cursor: pointer;
 }
-.checkbox:focus {
+.checkbox:focus,
+.radio-button:focus {
   outline: none;
+  border-color: #ebc855;
+  background: #f8edc7;
+}
+@media (max-width: 599px) {
+  .checkbox,
+  .radio-button {
+    margin-bottom: 0;
+  }
+}
+.checkbox {
+  border-radius: 3px;
+}
+.checkbox:checked {
+  background: url(../images/bg_checkbox.png) no-repeat center center;
+}
+.radio-button {
+  border-radius: 50%;
+}
+.radio-button:checked {
+  background: url(../images/bg_radio_button.png) no-repeat center center;
 }
 label {
   float: left;
   font-size: 12px;
-  line-height: 1.2;
-}
-@media (max-width: 599px) {
-  .inputfield {
-    margin-bottom: 0;
-  }
+  line-height: 1.3;
 }
 ul li {
   margin-bottom: 10px;
@@ -961,12 +1058,32 @@ ol li {
 ol li:last-child {
   margin-bottom: 0;
 }
+dl {
+  font-size: 90%;
+}
+dl dt {
+  color: #353535;
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+}
+dl dd {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+dl dd:last-child {
+  margin-bottom: 0;
+}
 /* Tabs */
 ul.tabs-nav {
   float: left;
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
   margin: 5px 0 20px;
+}
+@media (max-width: 599px) {
+  ul.tabs-nav {
+    border: none;
+  }
 }
 ul.tabs-nav li {
   float: left;
@@ -1004,8 +1121,29 @@ ul.tabs-nav li.active {
 ul.tabs-nav li.active a {
   color: #f26a4a;
 }
+@media (max-width: 599px) {
+  ul.tabs-nav li {
+    border: none;
+    border-right: 1px solid #e1e1e1;
+    padding: 2px 12px;
+    background: none;
+  }
+  ul.tabs-nav li:first-child {
+    padding-left: 0;
+  }
+  ul.tabs-nav li:last-child {
+    padding-right: 0;
+    border: none;
+  }
+  ul.tabs-nav li.active {
+    padding-top: 2px;
+    margin-top: 0;
+    background: none;
+  }
+}
 .tab-frame {
   float: left;
+  width: 100%;
   margin-bottom: 20px;
   background: #ffffff;
   display: none;
@@ -1085,17 +1223,7 @@ table.with-footer tbody tr:last-child td {
     opacity: 1;
   }
 }
-@-moz-keyframes toolTip {
-  0% {
-    bottom: 18px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 25px;
-    opacity: 1;
-  }
-}
-@-ms-keyframes toolTip {
+@keyframes toolTip {
   0% {
     bottom: 18px;
     opacity: 0;
@@ -1110,8 +1238,7 @@ table.with-footer tbody tr:last-child td {
 }
 .tooltip span {
   -webkit-animation: toolTip 0.3s ease-in;
-  -moz-animation: toolTip 0.3s ease-in;
-  -ms-animation: toolTip 0.3s ease-in;
+  animation: toolTip 0.3s ease-in;
   position: absolute;
   bottom: 25px;
   width: 220%;
@@ -1140,6 +1267,11 @@ table.with-footer tbody tr:last-child td {
   border-top: 7px solid #353535;
   left: 50%;
   margin-left: -7px;
+}
+@media (max-width: 599px) {
+  .tooltip span {
+    display: none !important;
+  }
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
 pre {
@@ -1357,30 +1489,7 @@ code span:hover {
 }
 /* Media Queries */
 @media (max-width: 599px) {
-  ul.tabs-nav {
-    border: none;
-  }
-  ul.tabs-nav li {
-    border: none;
-    border-right: 1px solid #e1e1e1;
-    padding: 2px 12px;
-    background: none;
-  }
-  ul.tabs-nav li:first-child {
-    padding-left: 0;
-  }
-  ul.tabs-nav li:last-child {
-    padding-right: 0;
-    border: none;
-  }
-  ul.tabs-nav li.active {
-    padding-top: 2px;
-    margin-top: 0;
-    background: none;
-  }
-  .tooltip span {
-    display: none !important;
-  }
+  
 }
 @media (min-width: 600px) and (max-width: 767px) {
   
@@ -1511,19 +1620,37 @@ code span:hover {
 .ie7 .box-15,
 .ie6 .box-16,
 .ie7 .box-16,
-.ie6 .box-3.sixth,
-.ie7 .box-3.sixth,
-.ie6 .box-4.fifth,
-.ie7 .box-4.fifth,
-.ie6 .box-5.third,
-.ie7 .box-5.third,
-.ie6 .box-10.two-third,
-.ie7 .box-10.two-third {
+.ie6 .box-17,
+.ie7 .box-17,
+.ie6 .box-18,
+.ie7 .box-18,
+.ie6 .box-19,
+.ie7 .box-19,
+.ie6 .box-20,
+.ie7 .box-20,
+.ie6 .box-21,
+.ie7 .box-21,
+.ie6 .box-22,
+.ie7 .box-22,
+.ie6 .box-23,
+.ie7 .box-23,
+.ie6 .box-24,
+.ie7 .box-24,
+.ie6 .box-half,
+.ie7 .box-half,
+.ie6 .box-3rd,
+.ie7 .box-3rd,
+.ie6 .box-2-3rd,
+.ie7 .box-2-3rd,
+.ie6 .box-5th,
+.ie7 .box-5th,
+.ie6 .box-6th,
+.ie7 .box-6th {
   float: left;
   padding: 0 10px;
 }
-.i6 .container,
-.ie7 .container,
-.ie8 .container {
+.i6.container,
+.ie7.container,
+ie8.container {
   width: 960px;
 }

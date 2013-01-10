@@ -20,6 +20,7 @@
     margin-bottom: 20px;
     &:hover {border-color: @input-border-hover;}
     &:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
+    @media (max-width: 599px) {margin-bottom: 0;}
 }
 select.inputfield {
 	-webkit-appearance: none;
@@ -29,15 +30,28 @@ select.inputfield {
 	&:focus {background: @input-bg-focus url(../images/bg_select_arrow.png) no-repeat right;}
 }
 textarea.inputfield {height: 120px;}
-.checkbox {
+.checkbox, .radio-button {
 	float: left;
+	width: 15px;
+	height: 15px;
+	border: 1px solid @input-border;
+	background: #fff;
+	-webkit-appearance: none;
 	margin: 0 7px 20px 0;
-	&:focus {outline: none;}
+	cursor: pointer;
+	&:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
+	@media (max-width: 599px) {margin-bottom: 0;}
 }
-
-label {float: left; font-size: 12px; line-height: 1.2;}
-
-
-@media (max-width: 599px) {
-    .inputfield {margin-bottom: 0;}
+.checkbox {
+	.radius;
+	&:checked {background: url(../images/bg_checkbox.png) no-repeat center center;}
+}
+.radio-button {
+	.radius(50%);
+	&:checked {background: url(../images/bg_radio_button.png) no-repeat center center;}
+}
+label {
+	float: left;
+	font-size: 12px;
+	line-height: 1.3;
 }

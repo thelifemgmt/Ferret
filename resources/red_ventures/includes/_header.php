@@ -63,8 +63,8 @@ echo "\n";
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch_icon_114x114.png"/>
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch_icon_144x144.png"/>
 
-<link rel="stylesheet" href="/css/style_complete.css" media="screen"/>
-<?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" type="text/css" media="screen"/>'); ?>
+<link rel="stylesheet" href="/css/ferret.css" media="screen"/>
+<?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" media="screen"/>'); ?>
 
 <script src="/js/modernizr.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>

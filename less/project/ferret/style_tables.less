@@ -8,6 +8,7 @@ table {
 		th {
 			color: @table-header-color;
 			.font-bold;
+			font-size: @table-header-font-size;
 			&:first-child {.radius(3px 0 0 0);}
 			&:last-child {.radius(0 3px 0 0);}
 		}
@@ -39,7 +40,7 @@ table {
 		td {
 			color: @table-footer-color;
 			.font-bold;
-			font-size: 14px;
+			font-size: @table-footer-font-size;
 			&:first-child {.radius(0 0 0 3px);}
 			&:last-child {.radius(0 0 3px 0);}	
 		}

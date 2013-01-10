@@ -1,0 +1,126 @@
+// The Box Grid - Version 2.0
+// Written by: Sean Stopnik
+// Email: sstopnik@redvenutures.com
+
+
+/* Box Grid */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	html .row {height: 1%;}
+}
+
+
+// Rows
+.row {
+	display: block;
+	width: 100%;
+	.row {margin:0 -10px; width: auto;}
+	&.with-spacing {margin-bottom: @grid-row-with-spacing;}
+	&.with-less-spacing {margin-bottom: @grid-row-with-spacing / 2;}
+	&.with-more-spacing {margin-bottom: @grid-row-with-spacing * 2;}
+	img {display: block; max-width: 100%; height: auto;}
+	&.centered {
+		text-align: center;
+		div {float: none; display: inline-block; text-align: left; margin: 0 -2px;}
+	}
+	&:before, &:after {content: ""; display: block; height: 0; overflow: hidden; visibility: hidden;}
+	&:after {clear: both;}
+}
+
+
+// Box Widths
+.box-1 {width: 100% / @grid-boxes;}
+.box-2 {width: 100% / @grid-boxes * 2;}
+.box-3 {width: 100% / @grid-boxes * 3;}
+.box-4 {width: 100% / @grid-boxes * 4;}
+.box-5 {width: 100% / @grid-boxes * 5;}
+.box-6 {width: 100% / @grid-boxes * 6;}
+.box-7 {width: 100% / @grid-boxes * 7;}
+.box-8 {width: 100% / @grid-boxes * 8;}
+.box-9 {width: 100% / @grid-boxes * 9;}
+.box-10 {width: 100% / @grid-boxes * 10;}
+.box-11 {width: 100% / @grid-boxes * 11;}
+.box-12 {width: 100% / @grid-boxes * 12;}
+.box-13 {width: 100% / @grid-boxes * 13;}
+.box-14 {width: 100% / @grid-boxes * 14;}
+.box-15 {width: 100% / @grid-boxes * 15;}
+.box-16 {width: 100% / @grid-boxes * 16;}
+.box-17 {width: 100% / @grid-boxes * 17;}
+.box-18 {width: 100% / @grid-boxes * 18;}
+.box-19 {width: 100% / @grid-boxes * 19;}
+.box-20 {width: 100% / @grid-boxes * 20;}
+.box-21 {width: 100% / @grid-boxes * 21;}
+.box-22 {width: 100% / @grid-boxes * 22;}
+.box-23 {width: 100% / @grid-boxes * 23;}
+.box-24 {width: 100% / @grid-boxes * 24;}
+.box-half {width: 50%;}
+.box-3rd {width: 100% / 3;}
+.box-2-3rd {width: 100% / 3 * 2;}
+.box-5th {width: 100% / 5;}
+.box-6th {width: 100% / 6;}
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8,
+.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16,
+.box-17, .box-18, .box-19, .box-20, .box-21, .box-22, .box-23, .box-24,
+.box-half, .box-3rd, .box-2-3rd, .box-5th, .box-6th {
+	float: left;
+	padding: 0 10px;
+}
+
+
+// Container
+.container {position: relative; margin: 0 auto;}
+
+
+/* Media Queries */
+// Groupings
+@media (max-width: 767px) {
+	.container {width: 100%;}
+}
+
+@media (max-width: 959px) {
+	* {-webkit-text-size-adjust: none;}
+	.container {padding: 0 10px; overflow: hidden;}
+}
+
+
+// Phones
+@media (max-width: 599px) {
+	.row {margin-bottom: 0 !important;}
+	.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8,
+	.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16,
+	.box-17, .box-18, .box-19, .box-20, .box-21, .box-22, .box-23, .box-24,
+	.box-half, .box-3rd, .box-2-3rd, .box-5th, .box-6th {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+
+// Small Tablets
+@media (min-width: 600px) and (max-width: 767px) {
+	.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8,
+	.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16,
+	.box-17, .box-18, .box-19, .box-20, .box-21, .box-22, .box-23, .box-24,
+	.box-3rd, .box-2-3rd {width: 100%;}
+	.box-half, .box-5th, .box-6th {width: 50%;}
+}
+
+
+// iPad & Large Tablets
+@media (min-width: 768px) and (max-width: 959px) {
+	.container {width: 768px;}
+}
+
+
+// Desktop
+@media (min-width: 960px) and (max-width: 1599px) {
+	.container {width: @grid-normal;}
+}
+
+
+// Large Desktop
+@media (min-width: 1600px) {
+	.container {width: @grid-wide;}
+}
