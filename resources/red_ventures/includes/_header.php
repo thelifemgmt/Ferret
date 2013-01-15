@@ -67,7 +67,7 @@ echo "\n";
 <?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" media="screen"/>'); ?>
 
 <script src="/js/modernizr.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 <script src="/js/fancybox.min.js"></script>
 <script src="/js/placeholder.min.js"></script>
 
