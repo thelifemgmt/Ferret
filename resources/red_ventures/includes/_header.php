@@ -1,6 +1,6 @@
 <?php
 $currentUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-$page = basename($_SERVER['SCRIPT_NAME']);
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 $active = ' class="active"';
 $siteName = '';
 ?>
@@ -51,7 +51,7 @@ if ($metaKeywords) {
 echo "\n";
 ?>
 
-<?= $GLOBALS['hailoJs']; // global via base_core.inc ?>
+<?= $GLOBALS['hailoJs']; ?>
 
 <? if ($canonicalURL = RV_Web_PageMeta::get_canonical_url()) { ?>
 <link rel="canonical" href="<?= $canonicalURL ?>"/>
@@ -75,4 +75,4 @@ echo "\n";
 <? include_once(INCLUDE_DIR . "/ga_async.inc"); ?>
 
 </head>
-<body id="top" <?php echo ($page != 'index.html') ? 'class="subpage"' : '' ?>>
+<body id="top" <?php echo ($page != 'index') ? (isset($bodyClass) ? 'class="subpage '.$bodyClass.'"' : 'class="subpage"') : (isset($bodyClass) ? 'class="'.$bodyClass.'"' : '') ?>>
