@@ -1,6 +1,6 @@
 /*********************************************
 Ferret Framework Main Stylesheet
-Last Updated: 1/9/13
+Last Updated: 1/28/13
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
@@ -177,6 +177,9 @@ Email: sstopnik@redventures.com
 .container {
   position: relative;
   margin: 0 auto;
+}
+.ie8 .container {
+  width: 960px;
 }
 /* Media Queries */
 @media (max-width: 767px) {
@@ -1664,8 +1667,8 @@ code span:hover {
   float: left;
   padding: 0 10px;
 }
-.i6.container,
-.ie7.container,
-ie8.container {
+.i6 .container,
+.ie7 .container,
+.ie8 .container {
   width: 960px;
 }
