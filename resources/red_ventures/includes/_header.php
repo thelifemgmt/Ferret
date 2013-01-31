@@ -69,7 +69,6 @@ echo "\n";
 <script src="/js/modernizr.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="/js/fancybox.min.js"></script>
-<script src="/js/placeholder.min.js"></script>
 
 <? echo RV_webTools::get_js_enabled_script($siteParams->CompanyID); ?>
 <? include_once(INCLUDE_DIR . "/ga_async.inc"); ?>

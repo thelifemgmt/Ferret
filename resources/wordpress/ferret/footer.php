@@ -12,9 +12,10 @@
 <script src="<?php bloginfo('template_url'); ?>/js/base.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/functions.js"></script>
 
-<!--[if lt IE 9 ]>
+<!--[if lt IE 10 ]>
+<script src="<?php bloginfo('template_url'); ?>/js/placeholder.min.js"></script>
 <script>
-Placeholder.init();
+	Placeholder.init();
 </script>
 <![endif]-->
 
