@@ -1323,10 +1323,10 @@ code span:hover {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  margin-left: -20px;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
   cursor: pointer;
   overflow: hidden;
   z-index: 1104;
@@ -1338,7 +1338,7 @@ code span:hover {
   left: 0;
   width: 32px;
   height: 32px;
-  background: url(../images/fancybox/fancybox_loading.gif);
+  background: url(../images/fancybox/fancybox_loading.gif) no-repeat center center;
 }
 #fancybox-overlay {
   position: absolute;
