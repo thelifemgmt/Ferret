@@ -1336,9 +1336,9 @@ code span:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 480px;
-  background-image: url(../images/fancybox/fancybox_loading.png);
+  width: 32px;
+  height: 32px;
+  background: url(../images/fancybox/fancybox_loading.gif);
 }
 #fancybox-overlay {
   position: absolute;
