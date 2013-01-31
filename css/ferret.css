@@ -1338,7 +1338,7 @@ code span:hover {
   left: 0;
   width: 40px;
   height: 480px;
-  background-image: url(../images/fancybox_loading.png);
+  background-image: url(../images/fancybox/fancybox_loading.png);
 }
 #fancybox-overlay {
   position: absolute;
@@ -1406,7 +1406,7 @@ code span:hover {
   right: -20px;
   width: 40px;
   height: 40px;
-  background: #f26a4a url(../images/fancybox_close.png) no-repeat center;
+  background: #f26a4a url(../images/fancybox/fancybox_close.png) no-repeat center;
   cursor: pointer;
   z-index: 1103;
   display: none;
@@ -1487,10 +1487,10 @@ code span:hover {
   background-color: #3faab9;
 }
 #fancybox-left-ico {
-  background: #353535 url(../images/fancybox_arrow_left.png) no-repeat center;
+  background: #353535 url(../images/fancybox/fancybox_arrow_left.png) no-repeat center;
 }
 #fancybox-right-ico {
-  background: #353535 url(../images/fancybox_arrow_right.png) no-repeat center;
+  background: #353535 url(../images/fancybox/fancybox_arrow_right.png) no-repeat center;
 }
 #fancybox-title {
   font-family: inherit;
