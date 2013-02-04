@@ -44,10 +44,13 @@ Email: sstopnik@redventures.com
   text-align: left;
   margin: 0 -2px;
 }
-.row.no-gutter [class*="box-"] {
+.row.no-gutters {
+  padding: 0 10px;
+}
+.row.no-gutters [class*="box-"] {
   padding: 0;
 }
-.row.large-gutter [class*="box-"] {
+.row.large-gutters [class*="box-"] {
   padding: 0 20px;
 }
 .row:before,
@@ -1122,34 +1125,12 @@ table.with-footer tbody tr:last-child td {
   border-radius: 0;
 }
 /* Tooltip */
-@-webkit-keyframes toolTip {
-  0% {
-    bottom: 18px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 25px;
-    opacity: 1;
-  }
-}
-@keyframes toolTip {
-  0% {
-    bottom: 18px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 25px;
-    opacity: 1;
-  }
-}
 .tooltip {
   position: relative;
 }
 .tooltip span {
-  -webkit-animation: toolTip 0.3s ease-in;
-  animation: toolTip 0.3s ease-in;
   position: absolute;
-  bottom: 25px;
+  bottom: 18px;
   width: 220%;
   left: -60%;
   font-family: 'OpenSansReg';
@@ -1163,7 +1144,13 @@ table.with-footer tbody tr:last-child td {
   background: #353535;
   border-radius: 3px;
   z-index: 100;
-  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.tooltip span:hover {
+  background: #353535;
 }
 .tooltip span:after {
   position: absolute;
@@ -1181,6 +1168,10 @@ table.with-footer tbody tr:last-child td {
   .tooltip span {
     display: none !important;
   }
+}
+.tooltip:hover span {
+  bottom: 25px;
+  opacity: 1;
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
 pre {

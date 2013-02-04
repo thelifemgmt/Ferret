@@ -34,20 +34,7 @@ $(document).ready(function() {
 		$(currentTab).fadeIn(600);
 		return false;
 	});
-	
-	
-	// Tooltips
-	$('a.tooltip').click(function(e){
-		e.preventDefault();
-	});
-	$('.tooltip').hover(
-		function(){
-		$(this).find('span').stop().show();
-		},
-		function(){
-		$(this).find('span').stop().fadeOut(100);
-	});
-	
+
 	
 	// Mobile Nav 
 	$('.mobile-nav').click(function(){
