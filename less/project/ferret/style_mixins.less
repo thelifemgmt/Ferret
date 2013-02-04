@@ -3,9 +3,9 @@
 
 // Transitions
 .transition (@speed: .15s) {
-  -webkit-transition: all @arguments ease-in-out;
-  -moz-transition: all @arguments ease-in-out;
-  transition: all @arguments ease-in-out;
+  -webkit-transition: all @speed ease-in-out;
+  -moz-transition: all @speed ease-in-out;
+  transition: all @speed ease-in-out;
 }
 
 
@@ -25,20 +25,20 @@
 
 
 // Effects
-.shadow {box-shadow: 0 2px 3px rgba(0,0,0,0.3);}
-.glow {box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+.shadow (@x: 0, @y: 2px, @blur: 3px, @color: rgba(0,0,0,0.1)) {
+	box-shadow: @arguments;
+}
+.glow (@x: 0, @y: 0, @blur: 10px, @color: rgba(0,0,0,0.3)) {
+	box-shadow: @arguments;
+}
 .fade {
 	.transition;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   	filter: alpha(opacity=100);
-  	-moz-opacity: 1.0;
-  	-khtml-opacity: 1.0;
   	opacity: 1.0;
   	&:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	  	filter: alpha(opacity=60);
-	  	-moz-opacity: 0.6;
-	  	-khtml-opacity: 0.6;
 	  	opacity: 0.6;
 	}
 }
@@ -46,7 +46,7 @@
 
 // Positioning
 .position {position: relative;}
-.left {float: left;}
+.left, .floated {float: left;}
 .right {float: right;}
 .center {text-align: center;}
 .flush {margin: 0;}

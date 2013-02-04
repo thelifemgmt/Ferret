@@ -46,11 +46,11 @@ Email: sstopnik@redventures.com
 }
 .row:before,
 .row:after {
-  content: "";
   display: block;
   height: 0;
   overflow: hidden;
   visibility: hidden;
+  content: "";
 }
 .row:after {
   clear: both;
@@ -103,30 +103,6 @@ Email: sstopnik@redventures.com
 .box-16 {
   width: 100%;
 }
-.box-17 {
-  width: 106.25%;
-}
-.box-18 {
-  width: 112.5%;
-}
-.box-19 {
-  width: 118.75%;
-}
-.box-20 {
-  width: 125%;
-}
-.box-21 {
-  width: 131.25%;
-}
-.box-22 {
-  width: 137.5%;
-}
-.box-23 {
-  width: 143.75%;
-}
-.box-24 {
-  width: 150%;
-}
 .box-half {
   width: 50%;
 }
@@ -142,35 +118,7 @@ Email: sstopnik@redventures.com
 .box-6th {
   width: 16.666666666666668%;
 }
-.box-1,
-.box-2,
-.box-3,
-.box-4,
-.box-5,
-.box-6,
-.box-7,
-.box-8,
-.box-9,
-.box-10,
-.box-11,
-.box-12,
-.box-13,
-.box-14,
-.box-15,
-.box-16,
-.box-17,
-.box-18,
-.box-19,
-.box-20,
-.box-21,
-.box-22,
-.box-23,
-.box-24,
-.box-half,
-.box-3rd,
-.box-2-3rd,
-.box-5th,
-.box-6th {
+[class*="box-"] {
   float: left;
   padding: 0 10px;
 }
@@ -200,69 +148,16 @@ Email: sstopnik@redventures.com
   .row {
     margin-bottom: 0 !important;
   }
-  .box-1,
-  .box-2,
-  .box-3,
-  .box-4,
-  .box-5,
-  .box-6,
-  .box-7,
-  .box-8,
-  .box-9,
-  .box-10,
-  .box-11,
-  .box-12,
-  .box-13,
-  .box-14,
-  .box-15,
-  .box-16,
-  .box-17,
-  .box-18,
-  .box-19,
-  .box-20,
-  .box-21,
-  .box-22,
-  .box-23,
-  .box-24,
-  .box-half,
-  .box-3rd,
-  .box-2-3rd,
-  .box-5th,
-  .box-6th {
+  [class*="box-"] {
     width: 100%;
     margin-bottom: 20px;
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
-  .box-1,
-  .box-2,
-  .box-3,
-  .box-4,
-  .box-5,
-  .box-6,
-  .box-7,
-  .box-8,
-  .box-9,
-  .box-10,
-  .box-11,
-  .box-12,
-  .box-13,
-  .box-14,
-  .box-15,
-  .box-16,
-  .box-17,
-  .box-18,
-  .box-19,
-  .box-20,
-  .box-21,
-  .box-22,
-  .box-23,
-  .box-24,
-  .box-3rd,
-  .box-2-3rd {
+  [class*="box-"] {
     width: 100%;
   }
-  .box-half,
+  .box--half,
   .box-5th,
   .box-6th {
     width: 50%;
@@ -618,33 +513,24 @@ blockquote cite {
 blockquote cite:before {
   content: "\2014 \0020";
 }
-.shadow {
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-}
-.glow {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 .fade {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
-  -moz-opacity: 1.0;
-  -khtml-opacity: 1.0;
   opacity: 1.0;
 }
 .fade:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=60);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 .position {
   position: relative;
 }
-.left {
+.left,
+.floated {
   float: left;
 }
 .right {
