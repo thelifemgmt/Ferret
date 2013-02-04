@@ -43,6 +43,16 @@
 			margin: 0 -2px;
 		}
 	}
+	&.no-gutter {
+		[class*="box-"] {
+			padding: 0;
+		}
+	}
+	&.large-gutter {
+		[class*="box-"] {
+			padding: 0 @grid-gutter-width * 2;
+		}
+	}
 	
 	// Auto Clearing
 	&:before, &:after {
