@@ -127,7 +127,7 @@ Email: sstopnik@redventures.com
 .box-6th {
   width: 16.666666666666668%;
 }
-[class*="box-"] {
+[class^="box-"] {
   float: left;
   padding: 0 10px;
 }
@@ -209,6 +209,13 @@ Email: sstopnik@redventures.com
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('../fonts/OpenSans-Bold-webfont.eot');
+  src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .font-light {
   font-family: 'OpenSansLight';
   font-weight: normal;
@@ -217,8 +224,12 @@ Email: sstopnik@redventures.com
   font-family: 'OpenSansReg';
   font-weight: normal;
 }
-.font-bold {
+.font-semi {
   font-family: 'OpenSansSemi';
+  font-weight: normal;
+}
+.font-bold {
+  font-family: 'OpenSansBold';
   font-weight: normal;
 }
 .font-headline {
@@ -436,7 +447,7 @@ h5,
 h6,
 span.headline {
   color: #353535;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-weight: normal;
   margin-bottom: 15px;
   line-height: 1.5;
@@ -469,6 +480,8 @@ span.headline {
 }
 .subheadline {
   display: block;
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
   font-size: 120%;
   color: #959595;
 }
@@ -609,7 +622,7 @@ a.button {
   float: left;
   padding: 0 30px;
   color: #ffffff;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-weight: normal;
   font-size: 14px;
   line-height: 40px;
@@ -626,7 +639,7 @@ a.button {
 .button.submit,
 a.button.submit {
   height: 40px;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   letter-spacing: 1px;
   border: 0;
   border-top: 1px solid #f26a4a;
@@ -678,6 +691,12 @@ a.button.reverse {
 .button.oval,
 a.button.oval {
   border-radius: 20px;
+}
+.button.mini,
+a.button.mini {
+  font-size: 10px;
+  line-height: 22px;
+  padding: 0 12px;
 }
 .button.small,
 a.button.small {
@@ -738,7 +757,7 @@ header nav ul li:last-child {
 }
 header nav ul li a {
   display: block;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-size: 12px;
   font-weight: normal;
   color: #ffffff !important;
@@ -970,7 +989,7 @@ dl {
 }
 dl dt {
   color: #353535;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-weight: normal;
 }
 dl dd {
@@ -1067,7 +1086,7 @@ table thead {
 }
 table thead th {
   color: #ffffff;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-weight: normal;
   font-size: 14px;
 }
@@ -1111,7 +1130,7 @@ table tfoot {
 }
 table tfoot td {
   color: #353535;
-  font-family: 'OpenSansSemi';
+  font-family: 'OpenSansBold';
   font-weight: normal;
   font-size: 14px;
 }
@@ -1174,33 +1193,47 @@ table.with-footer tbody tr:last-child td {
   opacity: 1;
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
-pre {
+section {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  background: #acacac;
+}
+.row form .row {
+  background: none;
+}
+span {
   display: block;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
-  border-radius: 3px;
-  background: #f9f9f9;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  background: #e1e1e1;
 }
-code {
-  font-family: monospace;
-  font-size: 14px;
-  color: #3faab9;
+span:hover {
+  color: #fff;
+  background: #353535;
 }
-code span {
-  display: inline;
+span.headline {
+  color: #353535;
   background: none;
-  color: #3faab9;
 }
-code span:hover {
-  background: none;
-  color: #3faab9;
-}
-.logo {
+span.logo {
   position: absolute;
-  width: 131px;
-  height: 71px;
+  top: 5px;
+  left: 10px;
+  font-size: 24px;
+  font-family: 'OpenSansBold';
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  background: none;
 }
+/* END */
 /* Fancybox */
 #fancybox-loading {
   position: fixed;
