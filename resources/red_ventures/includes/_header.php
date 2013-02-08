@@ -1,4 +1,8 @@
 <?php
+// Auto Compiler
+include_once(RV_LandingPage::find('/includes/_auto_compiler.php'));
+
+// Page Variables
 $currentUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 $active = ' class="active"';
@@ -24,38 +28,12 @@ $siteName = '';
 <meta property="og:description" content="<?= $metaDescription ?>"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="<?= $currentUrl ?>"/>
-<meta property="og:site_name" content="<?= $headerTitle ?>"/>
+<meta property="og:site_name" content="<?= $siteName ?>"/>
 <meta property="fb:app_id" content=""/>
-<meta property="og:image" content="images/fb_icon.png"/>
+<meta property="og:image" content="/images/fb_icon.png"/>
 <!-- Open Graph -->
 
-<?
-if (stristr($_SERVER['SCRIPT_FILENAME'], 'terms-and-conditions') 
-|| stristr($_SERVER['SCRIPT_FILENAME'], 'privacy-policy')
-|| stristr($_SERVER['SCRIPT_FILENAME'], 'my-account')
-|| stristr($_SERVER['SCRIPT_FILENAME'], 'legal') ) {
-	echo '<meta name="robots" content="noindex,follow,noodp" />';
-} elseif($metaRobots) {
-	echo '<meta name="robots" content="' . $metaRobots . '" />';	
-} else {
-	echo '<meta name="robots" content="index,follow,noodp" />';
-}
-echo "\n";
-if($metaDescription) {
-	echo '<meta name="description" content="' . $metaDescription . '"/>';
-}
-echo "\n";
-if ($metaKeywords) {
-	echo '<meta name="keywords" content="' . $metaKeywords . '"/>';
-}
-echo "\n";
-?>
-
-<?= $GLOBALS['hailoJs']; ?>
-
-<? if ($canonicalURL = RV_Web_PageMeta::get_canonical_url()) { ?>
-<link rel="canonical" href="<?= $canonicalURL ?>"/>
-<? } ?>
+<?php include_once(RV_LandingPage::find('/includes/_seo_meta_tags.php')); ?>
 
 <link rel="shortcut icon" sizes="256x256" href="/images/favicon.ico"/> 
 <link rel="apple-touch-icon-precomposed" href="/images/touch_icon.png"/>
@@ -66,8 +44,8 @@ echo "\n";
 <link rel="stylesheet" href="/css/ferret.css" media="screen"/>
 <?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" media="screen"/>'); ?>
 
-<script src="/js/modernizr.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="/global_js/modernizr.js"></script>
+<script src="/global_js/jQuery/jquery-1.8.3.min.js"></script>
 <script src="/js/fancybox.min.js"></script>
 
 <? echo RV_webTools::get_js_enabled_script($siteParams->CompanyID); ?>
