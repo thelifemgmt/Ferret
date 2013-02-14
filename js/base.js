@@ -41,7 +41,7 @@ $(document).ready(function() {
 		$('header nav ul').fadeToggle(100);
 	});
 	$('header nav li a').click(function(){
-		$('header nav ul').fadeOut(100);
+		$('header nav ul').hide();
 	});
 
 });// End Document Ready
