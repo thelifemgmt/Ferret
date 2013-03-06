@@ -12,7 +12,7 @@
 		letter-spacing: @tooltip-letter-spacing;
 		font-size: @tooltip-font-size;
 		font-weight: @tooltip-weight;
-		line-height: 1.6;
+		line-height: 1.8;
 		text-align: center;
 		padding: 7px 10px;
 		color: @tooltip-color;
@@ -20,6 +20,7 @@
 		.radius(@tooltip-border-radius);
 		z-index: 100;
 		opacity: 0;
+		visibility: hidden;
 		.transition;
 		&:hover {background: @tooltip-bg;}
 		&:after {
@@ -40,6 +41,7 @@
 		span {
 			bottom: 25px;
 			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

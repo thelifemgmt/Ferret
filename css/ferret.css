@@ -629,7 +629,7 @@ a.button {
   border-top: 1px solid #3faab9;
   background: #3faab9;
   border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -964,6 +964,7 @@ ul.inline li {
   border-right: 1px solid #acacac;
   padding-right: 10px;
   margin-left: 10px;
+  font-size: 80%;
 }
 ul.inline li:first-child {
   margin: 0;
@@ -1152,11 +1153,11 @@ table.with-footer tbody tr:last-child td {
   bottom: 18px;
   width: 220%;
   left: -60%;
-  font-family: 'OpenSansReg';
+  font-family: 'OpenSansSemi';
   letter-spacing: 0;
-  font-size: 80%;
+  font-size: 85%;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: center;
   padding: 7px 10px;
   color: #ffffff;
@@ -1164,6 +1165,7 @@ table.with-footer tbody tr:last-child td {
   border-radius: 3px;
   z-index: 100;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -1191,6 +1193,7 @@ table.with-footer tbody tr:last-child td {
 .tooltip:hover span {
   bottom: 25px;
   opacity: 1;
+  visibility: visible;
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
 section {
