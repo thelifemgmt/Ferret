@@ -10,7 +10,7 @@
 
 <!--Scripts-->
 <script src="/js/base.js"></script>
-<script src="/js/functions.js"></script>
+<script src="/js/app.js"></script>
 
 <!--[if lt IE 10 ]>
 <script src="js/placeholder.min.js"></script>
