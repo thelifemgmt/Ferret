@@ -98,20 +98,18 @@
 .ie8 .container {width: @grid-normal;}
 
 
-/* Media Queries */
 // Mobile Grouping
-@media (max-width: 767px) {
+@media @mobile {
 	.container {width: 100%;}
 }
-@media (max-width: 959px) {
+@media @device {
 	* {-webkit-text-size-adjust: none;}
 	.container {padding: 0 10px; overflow: hidden;}
 }
 
 
 // Mobile Phone
-@media (max-width: 599px) {
-	.row {margin-bottom: 0 !important;}
+@media @mobile {
 	[class*="box-"] {
 		width: 100%;
 		margin-bottom: 20px;
@@ -120,7 +118,7 @@
 
 
 // Small Tablets
-@media (min-width: 600px) and (max-width: 767px) {
+@media @small-tablet {
 	[class*="box-"] {
 		width: 100%;
 	}
@@ -133,18 +131,18 @@
 
 
 // iPad & Large Tablets
-@media (min-width: 768px) and (max-width: 959px) {
+@media @tablet {
 	.container {width: 768px;}
 }
 
 
 // Desktop
-@media (min-width: 960px) and (max-width: 1599px) {
+@media @desktop {
 	.container {width: @grid-normal;}
 }
 
 
 // Large Desktop
-@media (min-width: 1600px) {
+@media @large-desktop {
 	.container {width: @grid-wide;}
 }

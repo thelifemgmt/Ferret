@@ -8,21 +8,86 @@ header {
 	top: 0;
 	background: @nav-bar-bg;
 	z-index: 100;
-	nav ul {
-		float: right;
-		li {
-			float: left;
-			margin: 0 @nav-spacing;
-			&:first-child {margin-left: 0;}
-			&:last-child {margin-right: 0;}
-			a {
-				display: block;
-				font-family: @nav-font;
-				font-size: @nav-font-size;
-				font-weight: @nav-font-weight;
-				color: @nav-color !important;
-				line-height: @nav-bar-height;
-				&:hover {color: @nav-color-hover !important;}
+	nav {
+		// Media
+		@media @device {
+			position: relative;
+			height: @nav-bar-height;
+		}
+		ul {
+			float: @nav-position;
+			
+			// Media
+			@media @mobile {
+				width: 100%;
+			}
+			@media @all-tablet {
+				width: 50%;
+			}
+			@media @device {
+				margin-top: @nav-bar-height + 10;
+				display: none;
+			}
+			@media @all-desktop {
+				display: block !important;
+			}
+			&:before {
+				
+				// Media
+				@media @device {
+					.triangle(up, 7px, @mobile-nav-bg);
+				    top: @nav-bar-height + 3;
+				    right: 13px;
+				}
+			}
+			li {
+				float: left;
+				margin: 0 @nav-spacing;
+				
+				// Media
+				@media @device {
+					float: none !important;
+					display: block;
+				    height: @mobile-nav-menu-height;
+				    border-top: 1px solid @mobile-nav-bg + 10; 
+				    border-bottom: 1px solid @mobile-nav-bg - 10;
+				    padding: 0;
+				    background: @mobile-nav-bg;
+				    margin: 0 !important;
+				}
+				&:first-child {
+					margin-left: 0;
+					
+					// Media
+					@media @device {
+						border-top: 0; .radius(3px 3px 0 0);
+					}
+				}
+				&:last-child {
+					margin-right: 0;
+					
+					// Media
+					@media @device {
+						border-bottom: 0; .radius(0 0 3px 3px);
+					}
+				}
+				a {
+					display: block;
+					font-family: @nav-font;
+					font-size: @nav-font-size;
+					font-weight: @nav-font-weight;
+					color: @nav-color !important;
+					line-height: @nav-bar-height;
+					
+					// Media
+					@media @device {
+						display: block;
+				    	width: 100%;
+				    	font-size: @mobile-nav-font-size;
+				    	padding: 0 20px;
+					}
+					&:hover {color: @nav-color-hover !important;}
+				}
 			}
 		}
 	}
@@ -34,68 +99,13 @@ header {
 	width: @mobile-nav-button-height;
 	height: @mobile-nav-button-height;
 	border-radius: 50%;
-	background: @mobile-nav-button url(../images/button_mobile_nav.png) no-repeat center center; 
+	background: @mobile-nav-button url(../images/ferret/button_mobile_nav.png) no-repeat center center; 
 	cursor: pointer;
 	z-index: 100;
 	display: none;
-}
-
-
-// Mobile Nav
-// Phones
-@media (max-width: 599px) {
-    header nav ul {width: 100%;}
-}
-
-
-// Tablets
-@media (min-width: 600px) and (max-width: 959px) {
-	header nav ul {width: 50%;}
-}
-
-@media (max-width: 959px) {
-	.mobile-nav {display: block;}
-    header nav {
-    	position: relative;
-    	height: @nav-bar-height;
-	    ul {
-	    	margin-top: @nav-bar-height + 10;
-	    	display: none;
-		    &:before {
-			    position: absolute;
-			    top: @nav-bar-height + 3;
-			    right: 13px;
-			    width: 0;
-			    height: 0;
-			    content: '';
-			    border-left: 7px solid transparent;
-			    border-right: 7px solid transparent;
-			    border-bottom: 7px solid @mobile-nav-bg;
-		    }
-		    li {
-		    	float: none !important;
-		    	display: block;
-			    height: @mobile-nav-menu-height;
-			    border-top: 1px solid @mobile-nav-bg + 10; 
-			    border-bottom: 1px solid @mobile-nav-bg - 10;
-			    padding: 0;
-			    background: @mobile-nav-bg;
-			    margin: 0 !important;
-			    &:first-child {border-top: 0; .radius(3px 3px 0 0);}
-			    &:last-child {border-bottom: 0; .radius(0 0 3px 3px);}
-			    a {
-			    	display: block;
-			    	width: 100%;
-			    	font-size: @mobile-nav-font-size;
-			    	padding: 0 20px;
-			    }
-		    }
-	    }
-    }
-}
-
-
-// Desktop
-@media (min-width: 960px) {
-	header nav ul {display: block !important;}
+	
+	// Media
+	@media @device {
+		display: block;
+	}
 }
