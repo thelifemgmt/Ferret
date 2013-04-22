@@ -10,7 +10,7 @@
 
 
 // Gradients
-.gradient (@origin: top, @start: @light-gray, @stop: @dark) {
+.gradient(@origin: top, @start: @light-gray, @stop: @dark) {
 	background-color: @start;
 	background-image: -webkit-linear-gradient(@origin, @start, @stop);
 	background-image: -moz-linear-gradient(@origin, @start, @stop);
@@ -21,7 +21,27 @@
 
 
 // Rounded Corners
-.radius (@radius: 3px) {border-radius: @radius;}
+.radius(@radius: 3px) {
+	border-radius: @radius;
+}
+
+
+// Rotate
+.rotate(@rotate) {
+	-webkit-transform: rotate(@rotate);
+    transform: rotate(@rotate);
+}
+
+
+// Width and Height
+.size(@size) {
+	width: @size;
+	height: @size;
+}
+.size(@width, @height) {
+	width: @width;
+	height: @height;
+}
 
 
 // Triangle
