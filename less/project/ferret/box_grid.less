@@ -94,8 +94,14 @@
 
 
 // Container
-.container {position: relative; margin: 0 auto;}
-.ie8 .container {width: @grid-normal;}
+.container {
+	position: relative;
+	margin: 0 auto;
+	
+	.ie8 & {
+		width: @grid-normal;
+	}
+}
 
 
 // Mobile Grouping

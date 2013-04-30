@@ -10,7 +10,7 @@
 
 
 // Gradients
-.gradient(@origin: top, @start: @light-gray, @stop: @dark) {
+.gradient(@origin: top, @start: #e1e1e1, @stop: #353535) {
 	background-color: @start;
 	background-image: -webkit-linear-gradient(@origin, @start, @stop);
 	background-image: -moz-linear-gradient(@origin, @start, @stop);
@@ -84,13 +84,12 @@
 .glow (@x: 0, @y: 0, @blur: 10px, @color: rgba(0,0,0,0.3)) {
 	box-shadow: @arguments;
 }
-.fade {
+.fade(@fade: 0.6) {
 	.transition;
-  	filter: alpha(opacity=100);
   	opacity: 1.0;
+  	
   	&:hover {
-	  	filter: alpha(opacity=60);
-	  	opacity: 0.6;
+	  	opacity: @fade;
 	}
 }
 
