@@ -1,6 +1,6 @@
 /*********************************************
 Ferret Framework Main Stylesheet
-Last Updated: 1/28/13
+Last Updated: 5/1/13
 Written by: Sean Stopnik
 Email: sstopnik@redventures.com
 *********************************************/
@@ -232,7 +232,6 @@ Email: sstopnik@redventures.com
   font-family: 'OpenSansBold';
   font-weight: normal;
 }
-/* Reset */
 html,
 body,
 div,
@@ -346,7 +345,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* HTML5 Tags */
 article,
 aside,
 details,
@@ -360,18 +358,12 @@ nav,
 section {
   display: block;
 }
-/* Defaults */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 body {
+  color: #707070;
   font-family: 'OpenSansLight';
   font-size: 15px;
-  line-height: 2;
   font-weight: normal;
-  color: #707070;
+  line-height: 2;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -391,8 +383,8 @@ input,
 select {
   vertical-align: middle;
 }
-input[type=button],
-input[type=submit],
+input[type='button'],
+input[type='submit'],
 button {
   cursor: pointer;
   border: 0;
@@ -412,25 +404,16 @@ i {
 ::-webkit-input-placeholder {
   color: #898989;
 }
-input[type="text"]:-moz-placeholder {
-  color: #898989;
-}
-input[type="tel"]:-moz-placeholder {
-  color: #898989;
-}
-input[type="email"]:-moz-placeholder {
-  color: #898989;
-}
+input[type='text']:-moz-placeholder,
+input[type='tel']:-moz-placeholder,
+input[type='email']:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #898989;
 }
-::selection {
-  background: #464646;
-  color: #fff;
-}
+::selection,
 ::-moz-selection {
-  background: #464646;
-  color: #fff;
+  background: #353535;
+  color: #ffffff;
 }
 .ie7 img {
   -ms-interpolation-mode: bicubic;
@@ -483,7 +466,7 @@ span.headline {
 }
 a {
   text-decoration: none;
-  color: #3faab9;
+  color: #48b2c1;
   font-family: 'OpenSansReg';
   font-weight: normal;
   -webkit-transition: all 0.15s ease-in-out;
@@ -516,19 +499,19 @@ sup {
   vertical-align: top;
   font-size: 73%;
 }
-blockquote {
+.pull-quote {
   border-left: 1px solid #e1e1e1;
   padding: 0 0 0 20px;
   color: #acacac;
 }
-blockquote cite {
+.pull-quote cite {
   display: block;
   color: #353535;
   font-size: 93%;
   font-style: italic;
   margin-top: 12px;
 }
-blockquote cite:before {
+.pull-quote cite:before {
   content: "\2014 \0020";
 }
 .position {
@@ -599,60 +582,95 @@ blockquote cite:before {
 section.first {
   margin-top: 60px;
 }
-/* Buttons */
 .button,
 a.button {
   float: left;
   padding: 0 25px;
-  color: #ffffff;
   font-family: 'OpenSansBold';
   font-weight: normal;
   font-size: 14px;
   line-height: 40px;
-  border-top: 1px solid #3faab9;
-  background: #3faab9;
   border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-shadow: 0 1px 0 #3fabbb;
+  box-shadow: 0 4px 0 #3693a0;
+  background-color: #48b2c1;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   -webkit-appearance: none;
 }
+.button:hover,
+a.button:hover {
+  background-color: #3da4b3;
+}
 .button.submit,
 a.button.submit {
-  height: 40px;
-  font-family: 'OpenSansBold';
-  letter-spacing: 1px;
   border: 0;
-  border-top: 1px solid #f26a4a;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #f15e3c;
+  box-shadow: 0 4px 0 #ef431a;
   background-color: #f26a4a;
   margin: 5px 0 0;
 }
+.button.submit:hover,
+a.button.submit:hover {
+  background-color: #f05632;
+}
 .button.orange,
 a.button.orange {
-  border-top: 1px solid #fdaa4e;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #fda33f;
+  box-shadow: 0 4px 0 #fc921c;
   background-color: #fdaa4e;
+}
+.button.orange:hover,
+a.button.orange:hover {
+  background-color: #fd9e35;
 }
 .button.red,
 a.button.red {
-  border-top: 1px solid #f26a4a;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #f15e3c;
+  box-shadow: 0 4px 0 #ef431a;
   background-color: #f26a4a;
+}
+.button.red:hover,
+a.button.red:hover {
+  background-color: #f05632;
 }
 .button.blue,
 a.button.blue {
-  border-top: 1px solid #3faab9;
-  background-color: #3faab9;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #3fabbb;
+  box-shadow: 0 4px 0 #3693a0;
+  background-color: #48b2c1;
+}
+.button.blue:hover,
+a.button.blue:hover {
+  background-color: #3da4b3;
 }
 .button.green,
 a.button.green {
-  border-top: 1px solid #50c690;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #44c289;
+  box-shadow: 0 4px 0 #38ab76;
   background-color: #50c690;
+}
+.button.green:hover,
+a.button.green:hover {
+  background-color: #3ebe84;
 }
 .button.light,
 a.button.light {
-  border-top: 1px solid #acacac;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #a4a4a4;
+  box-shadow: 0 4px 0 #939393;
   background-color: #acacac;
+}
+.button.light:hover,
+a.button.light:hover {
+  background-color: #9f9f9f;
 }
 .button.striped,
 a.button.striped {
@@ -660,16 +678,19 @@ a.button.striped {
 }
 .button.flat,
 a.button.flat {
-  box-shadow: none;
-  border: none;
   text-shadow: none;
+  box-shadow: none;
 }
 .button.reverse,
 a.button.reverse {
-  border-top: 1px solid #e1e1e1;
+  color: #555555;
+  text-shadow: 0 1px 0 #d9d9d9;
+  box-shadow: 0 4px 0 #c8c8c8;
   background-color: #e1e1e1;
-  color: #353535;
-  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+.button.reverse:hover,
+a.button.reverse:hover {
+  background-color: #d4d4d4;
 }
 .button.oval,
 a.button.oval {
@@ -705,16 +726,6 @@ a.button.full-width {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
-}
-.button:hover,
-a.button:hover {
-  background-color: #353535;
-  border-top: 1px solid #353535;
-  color: #ffffff;
-}
-.button.flat:hover,
-a.button.flat:hover {
-  border: none;
 }
 input[type='submit'].button {
   height: 40px;
@@ -959,7 +970,7 @@ ul.checkmark li:before {
 }
 ul.plus li:before {
   content: "\271A";
-  color: #3faab9;
+  color: #48b2c1;
   padding-right: 10px;
 }
 ul.multiply li:before {
@@ -1046,8 +1057,8 @@ ul.tabs-nav li:hover a {
 ul.tabs-nav li a {
   display: block;
   color: #959595;
-  font-family: 'OpenSansReg';
-  font-size: 14px;
+  font-family: 'OpenSansSemi';
+  font-size: 12px;
   font-weight: normal;
   line-height: 1.9;
   letter-spacing: 0;
@@ -1098,7 +1109,7 @@ table {
   width: 100%;
 }
 table thead {
-  background: #3faab9;
+  background: #48b2c1;
 }
 table thead th {
   color: #ffffff;
@@ -1416,14 +1427,14 @@ span.logo {
   top: 50%;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
+  margin-top: -40px;
   cursor: pointer;
   z-index: 1102;
   display: block;
 }
 #fancybox-left-ico:hover,
 #fancybox-right-ico:hover {
-  background-color: #3faab9;
+  background-color: #48b2c1;
 }
 #fancybox-left-ico {
   background: #353535 url(../images/fancybox/fancybox_arrow_left.png) no-repeat center;

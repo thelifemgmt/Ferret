@@ -41,6 +41,7 @@ a {
 	.font-normal;
 	.transition;
 	outline: none;
+	
 	&:hover {color: @link-hover;}
 }
 
@@ -48,7 +49,9 @@ a {
 // Paragraphs
 p {
 	margin: 0 0 @paragraph-margin 0;
+	
 	&:last-child {margin: 0;}
+	
 	&.large {font-size: @paragraph-large-font-size; line-height: 2.2;}
 }
 p, span {letter-spacing: @base-letter-spacing;}
@@ -66,16 +69,18 @@ sup {
 
 
 // Blockquotes
-blockquote {
+.pull-quote {
     border-left: 1px solid @border-color;
     padding: 0 0 0 20px;
     color: @quote-color;
+    
     cite {
     	display: block;
     	color: @quote-author-color;
     	font-size: @quote-font-size;
     	font-style: @quote-author-font-style;
 	    margin-top: 12px;
+	    
 	    &:before {content: @quote-author-before;}
     }
 }
