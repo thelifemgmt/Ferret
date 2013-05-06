@@ -22,7 +22,9 @@
 		opacity: 0;
 		visibility: hidden;
 		.transition;
+		
 		&:hover {background: @tooltip-bg;}
+		
 		&:after {
 			position: absolute;
 			content: "";
@@ -35,8 +37,13 @@
 			left: 50%;
 			margin-left: -7px;
 		}
-		@media (max-width: 599px) {display: none !important;}
+		
+		// Media
+		@media @mobile {
+			display: none !important;
+		}
 	}
+	
 	&:hover {
 		span {
 			bottom: 25px;

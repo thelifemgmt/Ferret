@@ -11,6 +11,10 @@
 	&:hover {
 		background-color: darken(@btn-bg, 5%);
 	}
+	
+	&:active {
+		background-color: darken(@btn-bg, 8%);
+	}
 }
 .button, a.button {
 	float: left;
@@ -67,13 +71,10 @@
 	&.large {font-size: @button-font-size + 2; line-height: @button-height + 10; padding: 0 @button-height + 5;}
 	&.x-large {font-size: @button-font-size + 4; line-height: @button-height + 20; padding: 0 @button-height;}
 	&.full-width {width: 100%; padding-left: 0; padding-right: 0; text-align: center;}
-
-
-	// Hover
-	&:hover {
-		
-	}
 }
+
+
+// Submit
 input[type='submit'].button {
 	height: @button-height;
 	&.small {height: @button-height - 10;}

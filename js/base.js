@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 	
 	// Scroll To
-	$('a.scroll').click(function(e){
+	$('a.scroll').on('click', function(e){
 		var scroll_height = $($(this).attr('href')).offset().top - 60;
 		$('html, body').stop().animate({scrollTop: (scroll_height)}, 800);
 		e.preventDefault();
@@ -18,7 +18,7 @@ $(document).ready(function() {
 	
 	
 	// Select Fields
-	$('select.inputfield').change(function(){
+	$('select.inputfield').on('change', function(){
 		var optionColor = $('.inputfield').css('color');
 		$(this).css('color', optionColor);
 	});
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	
 	// Tabs
 	$('#tab1').show();
-	$('ul.tabs-nav li').click(function(){ 
+	$('ul.tabs-nav li').on('click', function(){ 
 		$('.tabs-wrap ul li').removeClass('active');
 		$(this).addClass('active'); 
 		var currentTab = $(this).find("a[href]").attr('href'); 
@@ -37,13 +37,21 @@ $(document).ready(function() {
 
 	
 	// Mobile Nav 
-	$('.mobile-nav').click(function(){
-		$('header nav ul').fadeToggle(100);
+	$(function() {
+		var $nav = $('.mobile-nav');
+		var $menu = $('header nav ul');
+		var $menuLink = $('header nav li a');
+		var $self = $(this);
+		
+		$nav.on('click', function(){
+			$nav.toggleClass('active');
+			$menu.fadeToggle(100);
+		});
+		$menuLink.on('click', function(){
+			$nav.removeClass('active');
+			$menu.hide();
+		});
 	});
-	$('header nav li a').click(function(){
-		$('header nav ul').hide();
-	});
-
 });// End Document Ready
 
 

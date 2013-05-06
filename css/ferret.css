@@ -212,26 +212,6 @@ Email: sstopnik@redventures.com
   font-weight: normal;
   font-style: normal;
 }
-.font-light {
-  font-family: 'OpenSansLight';
-  font-weight: normal;
-}
-.font-normal {
-  font-family: 'OpenSansReg';
-  font-weight: normal;
-}
-.font-semi {
-  font-family: 'OpenSansSemi';
-  font-weight: normal;
-}
-.font-bold {
-  font-family: 'OpenSansBold';
-  font-weight: normal;
-}
-.font-headline {
-  font-family: 'OpenSansBold';
-  font-weight: normal;
-}
 html,
 body,
 div,
@@ -604,6 +584,10 @@ a.button {
 a.button:hover {
   background-color: #3da4b3;
 }
+.button:active,
+a.button:active {
+  background-color: #399aa7;
+}
 .button.submit,
 a.button.submit {
   border: 0;
@@ -617,6 +601,10 @@ a.button.submit {
 a.button.submit:hover {
   background-color: #f05632;
 }
+.button.submit:active,
+a.button.submit:active {
+  background-color: #ef4b24;
+}
 .button.orange,
 a.button.orange {
   color: #ffffff;
@@ -627,6 +615,10 @@ a.button.orange {
 .button.orange:hover,
 a.button.orange:hover {
   background-color: #fd9e35;
+}
+.button.orange:active,
+a.button.orange:active {
+  background-color: #fd9726;
 }
 .button.red,
 a.button.red {
@@ -639,6 +631,10 @@ a.button.red {
 a.button.red:hover {
   background-color: #f05632;
 }
+.button.red:active,
+a.button.red:active {
+  background-color: #ef4b24;
+}
 .button.blue,
 a.button.blue {
   color: #ffffff;
@@ -649,6 +645,10 @@ a.button.blue {
 .button.blue:hover,
 a.button.blue:hover {
   background-color: #3da4b3;
+}
+.button.blue:active,
+a.button.blue:active {
+  background-color: #399aa7;
 }
 .button.green,
 a.button.green {
@@ -661,6 +661,10 @@ a.button.green {
 a.button.green:hover {
   background-color: #3ebe84;
 }
+.button.green:active,
+a.button.green:active {
+  background-color: #3ab37c;
+}
 .button.light,
 a.button.light {
   color: #ffffff;
@@ -671,6 +675,10 @@ a.button.light {
 .button.light:hover,
 a.button.light:hover {
   background-color: #9f9f9f;
+}
+.button.light:active,
+a.button.light:active {
+  background-color: #989898;
 }
 .button.striped,
 a.button.striped {
@@ -691,6 +699,10 @@ a.button.reverse {
 .button.reverse:hover,
 a.button.reverse:hover {
   background-color: #d4d4d4;
+}
+.button.reverse:active,
+a.button.reverse:active {
+  background-color: #cdcdcd;
 }
 .button.oval,
 a.button.oval {
@@ -855,6 +867,13 @@ header nav ul li a:hover {
   cursor: pointer;
   z-index: 100;
   display: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.mobile-nav.active {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 @media (max-width: 959px) {
   .mobile-nav {
@@ -1243,10 +1262,11 @@ section {
 }
 span {
   display: block;
+  border-radius: 3px;
+  background: #e1e1e1;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-  background: #e1e1e1;
 }
 span:hover {
   color: #fff;
