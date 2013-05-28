@@ -112,6 +112,9 @@ Email: sstopnik@redventures.com
 .box-16 {
   width: 100%;
 }
+.box-full {
+  width: 100%;
+}
 .box-half {
   width: 50%;
 }
@@ -178,9 +181,9 @@ Email: sstopnik@redventures.com
     width: 960px;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1280px) {
   .container {
-    width: 1280px;
+    width: 1200px;
   }
 }
 /* Fonts */
@@ -473,7 +476,7 @@ span {
 }
 small,
 .small {
-  font-size: 73%;
+  font-size: 80%;
 }
 sup {
   vertical-align: top;
@@ -482,7 +485,7 @@ sup {
 .pull-quote {
   border-left: 1px solid #e1e1e1;
   padding: 0 0 0 20px;
-  color: #acacac;
+  color: #a3a3a3;
 }
 .pull-quote cite {
   display: block;
