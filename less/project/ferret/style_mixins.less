@@ -47,10 +47,19 @@
 }
 
 
+// Backface Visibility
+.backface() {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
 // Translate3d
 .translate3d(@translate3d) {
 	-webkit-transform: translate3d(@translate3d);
 	transform: translate3d(@translate3d);
+	.backface;
 }
 
 
