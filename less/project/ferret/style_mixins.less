@@ -3,9 +3,9 @@
 
 // Transitions
 .transition(@speed: .15s) {
-  -webkit-transition: all @speed ease-in-out;
-  -moz-transition: all @speed ease-in-out;
-  transition: all @speed ease-in-out;
+	-webkit-transition: all @speed ease-in-out;
+	-moz-transition: all @speed ease-in-out;
+	transition: all @speed ease-in-out;
 }
 
 
@@ -29,21 +29,28 @@
 // Rotate
 .rotate(@rotate) {
 	-webkit-transform: rotate(@rotate);
-    transform: rotate(@rotate);
+	transform: rotate(@rotate);
 }
 
 
 // Scale
 .scale(@scale) {
 	-webkit-transform: scale(@scale);
-    transform: scale(@scale);
+	transform: scale(@scale);
 }
 
 
 // Translate
 .translate(@translate) {
 	-webkit-transform: translate(@translate);
-    transform: translate(@translate);
+	transform: translate(@translate);
+}
+
+
+// Translate3d
+.translate3d(@translate3d) {
+	-webkit-transform: translate3d(@translate3d);
+	transform: translate3d(@translate3d);
 }
 
 
@@ -60,34 +67,34 @@
 
 // Triangle
 .triangle-base() {
-    position: absolute;
-    width: 0;
-    height: 0;
-    content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	content: '';
 }
 .triangle(@direction, @size, @color) when (@direction = up) {
-    .triangle-base();
-    border-left: @size solid transparent;
-    border-right: @size solid transparent;
-    border-bottom: @size solid @color;
+	.triangle-base();
+	border-left: @size solid transparent;
+	border-right: @size solid transparent;
+	border-bottom: @size solid @color;
 }
 .triangle(@direction, @size, @color) when (@direction = down) {
-    .triangle-base();
-    border-left: @size solid transparent;
-    border-right: @size solid transparent;
-    border-top: @size solid @color;
+	.triangle-base();
+	border-left: @size solid transparent;
+	border-right: @size solid transparent;
+	border-top: @size solid @color;
 }
 .triangle(@direction, @size, @color) when (@direction = left) {
-    .triangle-base();
-    border-top: @size solid transparent;
-    border-bottom: @size solid transparent;
-    border-right: @size solid @color;
+	.triangle-base();
+	border-top: @size solid transparent;
+	border-bottom: @size solid transparent;
+	border-right: @size solid @color;
 }
 .triangle(@direction, @size, @color) when (@direction = right) {
-    .triangle-base();
-    border-top: @size solid transparent;
-    border-bottom: @size solid transparent;
-    border-left: @size solid @color;
+	.triangle-base();
+	border-top: @size solid transparent;
+	border-bottom: @size solid transparent;
+	border-left: @size solid @color;
 }
 
 
