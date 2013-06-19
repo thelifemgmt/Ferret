@@ -3,12 +3,6 @@
 
 $(document).ready(function() {
 	
-	//Fancybox
-	$("a.fancybox").fancybox({
-		'titlePosition' : 'inside'
-	});
-	
-	
 	// Scroll To
 	$('a.scroll').on('click', function(e){
 		var scroll_height = $($(this).attr('href')).offset().top - 60;
@@ -26,10 +20,10 @@ $(document).ready(function() {
 	
 	// Tabs
 	$('#tab1').show();
-	$('ul.tabs-nav li').on('click', function(){ 
+	$('ul.tabs-nav li').on('click', function(){
 		$('.tabs-wrap ul li').removeClass('active');
-		$(this).addClass('active'); 
-		var currentTab = $(this).find("a[href]").attr('href'); 
+		$(this).addClass('active');
+		var currentTab = $(this).find("a[href]").attr('href');
 		$('.tab-frame').hide();
 		$(currentTab).fadeIn(600);
 		return false;
@@ -41,7 +35,6 @@ $(document).ready(function() {
 		var $nav = $('.mobile-nav');
 		var $menu = $('header nav ul');
 		var $menuLink = $('header nav li a');
-		var $self = $(this);
 		
 		$nav.on('click', function(){
 			$nav.toggleClass('active');
@@ -51,6 +44,11 @@ $(document).ready(function() {
 			$nav.removeClass('active');
 			$menu.hide();
 		});
+	});
+	
+	//Fancybox
+	$("a.fancybox").fancybox({
+		'titlePosition' : 'inside'
 	});
 });// End Document Ready
 
