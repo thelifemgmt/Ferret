@@ -1291,6 +1291,247 @@ span.logo {
   background: none;
 }
 /* END */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+}
+.fancybox-skin {
+  position: relative;
+  color: #353535;
+  text-shadow: none;
+  border-radius: 3px;
+  background: #ffffff;
+}
+.fancybox-opened {
+  z-index: 8030;
+}
+.fancybox-outer,
+.fancybox-inner {
+  position: relative;
+}
+.fancybox-inner {
+  overflow: hidden;
+}
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch;
+}
+.fancybox-error {
+  color: #444;
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+.fancybox-image,
+.fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span {
+  background-image: url(../images/fancybox/fancybox_sprite.png);
+}
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url(../images/fancybox/fancybox_loading.gif) no-repeat center center;
+}
+.fancybox-close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 8040;
+  background-color: #f26a4a;
+  background-position: 0 -80px;
+}
+.fancybox-close:hover {
+  background-color: #353535;
+}
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 8040;
+}
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  cursor: pointer;
+  z-index: 8040;
+  background-color: #353535;
+}
+.fancybox-prev {
+  left: 0;
+  height: 100%;
+  opacity: 0;
+}
+.fancybox-prev span {
+  background-position: 0 0;
+}
+.fancybox-prev:hover {
+  left: -35px;
+  opacity: 1;
+}
+.fancybox-prev:hover span {
+  background-color: #48b2c1;
+}
+.fancybox-next {
+  right: 0;
+  height: 100%;
+  opacity: 0;
+}
+.fancybox-next span {
+  right: 0;
+  background-position: 0 -40px;
+}
+.fancybox-next:hover {
+  right: -35px;
+  opacity: 1;
+}
+.fancybox-next:hover span {
+  background-color: #48b2c1;
+}
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+}
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto;
+}
+.fancybox-lock body {
+  overflow: hidden !important;
+}
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll;
+}
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: rgba(0, 0, 0, 0.6) url(../images/ferret/bg_stripes.png);
+}
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.fancybox-title {
+  visibility: hidden;
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+  font-size: 11px;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -40px;
+  z-index: 8050;
+  text-align: center;
+}
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 5px 20px;
+  background: #353535;
+  border-radius: 3px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  padding: 10px;
+  background: #353535;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #fancybox-loading,
+  .fancybox-close,
+  .fancybox-prev span,
+  .fancybox-next span {
+    background-image: url(../images/fancybox/fancybox_sprite@2x.png);
+    background-size: 44px 152px;
+  }
+  #fancybox-loading div {
+    background-image: url(../images/fancybox/fancybox_loading@2x.gif);
+    background-size: 24px 24px;
+  }
+}
 /* Rows */
 .ie6 .row.row {
   width: 105%;
