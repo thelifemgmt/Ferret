@@ -47,9 +47,5 @@ $(document).ready(function() {
 	});
 	
 	//Fancybox
-	$("a.fancybox").fancybox({
-		'titlePosition' : 'inside'
-	});
+	$("a.fancybox").fancybox();
 });// End Document Ready
-
-
