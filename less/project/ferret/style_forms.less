@@ -15,7 +15,6 @@
     border: 1px solid @input-border;
     .radius;
     background: @input-bg;
-    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
     .transition;
     margin-bottom: @input-margin-bottom;
     &:hover {border-color: @input-border-hover;}
@@ -41,8 +40,7 @@
 }
 .checkbox, .radio-button {
 	float: left;
-	width: @input-checkbox-size;
-	height: @input-checkbox-size;
+	.size(@input-checkbox-size);
 	border: 1px solid @input-border;
 	background: @input-checkbox-bg;
 	-webkit-appearance: none;
@@ -59,15 +57,19 @@
 .checkbox {
 	.radius;
 	
-	&:checked {background: @input-checkbox-checked no-repeat center center;}
+	&:checked {
+		background: @input-checkbox-checked no-repeat center center;
+	}
 }
 .radio-button {
 	.radius(50%);
 	
-	&:checked {background: @input-radio-checked no-repeat center center;}
+	&:checked {
+		background: @input-radio-checked no-repeat center center;
+	}
 }
 label {
 	float: left;
 	font-size: @input-label-font-size;
-	line-height: 1.3;
+	line-height: 1.5;
 }

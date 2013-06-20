@@ -115,15 +115,20 @@
 	opacity: 0;
 	
 	span {
+		left: -10px;
 		background-position: 0 0;
 	}
 	
 	&:hover {
-		left: -35px;
+		left: -25px;
 		opacity: 1;
 		
 		span {
-			background-color: @fancybox-nav-hover;
+			background-color: @fancybox-nav;
+			
+			&:hover {
+				background-color: @fancybox-nav-hover;
+			}
 		}
 	}
 }
@@ -133,16 +138,20 @@
 	opacity: 0;
 	
 	span {
-		right: 0;
+		right: -10px;
 		background-position: 0 -40px;
 	}
 	
 	&:hover {
-		right: -35px;
+		right: -25px;
 		opacity: 1;
 		
 		span {
-			background-color: @fancybox-nav-hover;
+			background-color: @fancybox-nav;
+			
+			&:hover {
+				background-color: @fancybox-nav-hover;
+			}
 		}
 	}
 }
@@ -182,7 +191,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: rgba(0,0,0,.6) @striped;
+	background: rgba(0,0,0,.6);
 	
 	&-fixed {
 		position: fixed;

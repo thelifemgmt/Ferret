@@ -385,13 +385,13 @@ i {
   font-style: italic;
 }
 ::-webkit-input-placeholder {
-  color: #898989;
+  color: #acacac;
 }
 input[type='text']:-moz-placeholder,
 input[type='tel']:-moz-placeholder,
 input[type='email']:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #898989;
+  color: #acacac;
 }
 ::selection,
 ::-moz-selection {
@@ -887,18 +887,17 @@ header nav ul li a:hover {
 .inputfield {
   float: left;
   width: 100%;
-  height: 40px;
+  height: 45px;
   font-family: 'OpenSansReg';
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 2;
   color: #353535;
-  padding: 6px 10px;
+  padding: 8.5px 10px;
   border: 1px solid #e1e1e1;
   border-radius: 3px;
   background: #ffffff;
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -915,14 +914,14 @@ header nav ul li a:hover {
 select.inputfield {
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: #898989;
+  color: #acacac;
   background: #ffffff url(../images/ferret/bg_select_arrow.png) no-repeat right;
 }
 select.inputfield:focus {
   background: #f8edc7 url(../images/ferret/bg_select_arrow.png) no-repeat right;
 }
 textarea.inputfield {
-  height: 120px;
+  height: 140px;
 }
 @media (max-width: 599px) {
   .inputfield {
@@ -932,8 +931,8 @@ textarea.inputfield {
 .checkbox,
 .radio-button {
   float: left;
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border: 1px solid #e1e1e1;
   background: #ffffff;
   -webkit-appearance: none;
@@ -967,7 +966,7 @@ textarea.inputfield {
 label {
   float: left;
   font-size: 12px;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 ul li {
   margin-bottom: 10px;
@@ -1412,13 +1411,17 @@ span.logo {
   opacity: 0;
 }
 .fancybox-prev span {
+  left: -10px;
   background-position: 0 0;
 }
 .fancybox-prev:hover {
-  left: -35px;
+  left: -25px;
   opacity: 1;
 }
 .fancybox-prev:hover span {
+  background-color: #353535;
+}
+.fancybox-prev:hover span:hover {
   background-color: #48b2c1;
 }
 .fancybox-next {
@@ -1427,14 +1430,17 @@ span.logo {
   opacity: 0;
 }
 .fancybox-next span {
-  right: 0;
+  right: -10px;
   background-position: 0 -40px;
 }
 .fancybox-next:hover {
-  right: -35px;
+  right: -25px;
   opacity: 1;
 }
 .fancybox-next:hover span {
+  background-color: #353535;
+}
+.fancybox-next:hover span:hover {
   background-color: #48b2c1;
 }
 .fancybox-tmp {
@@ -1467,7 +1473,7 @@ span.logo {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: rgba(0, 0, 0, 0.6) url(../images/ferret/bg_stripes.png);
+  background: rgba(0, 0, 0, 0.6);
 }
 .fancybox-overlay-fixed {
   position: fixed;
