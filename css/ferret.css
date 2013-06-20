@@ -938,6 +938,13 @@ textarea.inputfield {
   -webkit-appearance: none;
   margin: 0 7px 20px 0;
   cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.checkbox:hover,
+.radio-button:hover {
+  border-color: #acacac;
 }
 .checkbox:focus,
 .radio-button:focus {

@@ -46,8 +46,17 @@
 	-webkit-appearance: none;
 	margin: 0 7px @input-margin-bottom 0;
 	cursor: pointer;
+	.transition;
 	
-	&:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
+	&:hover {
+		border-color: @input-border-hover;
+	}
+	
+	&:focus {
+		outline: none;
+		border-color: @input-border-focus;
+		background: @input-bg-focus;
+	}
 	
 	// Media
     @media @mobile {
