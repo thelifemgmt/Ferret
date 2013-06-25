@@ -155,6 +155,17 @@
 section.first {margin-top: @first-section-margin;}
 
 
+// Retina Images
+.background-image(@image, @extension: jpg, @width: 100%, @height: 100%) {
+	background-image: ~"url(@{image}.@{extension})";
+	
+	@media @retina {
+		background-image: ~"url(@{image}@2x.@{extension})";
+		background-size: @width @height;
+	}
+}
+
+
 // Media Queries
 @mobile: ~"(max-width: 599px)";
 @small-tablet: ~"(min-width: 600px) and (max-width: 767px)";
