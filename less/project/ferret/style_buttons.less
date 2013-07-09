@@ -32,37 +32,64 @@
 	
 	// Submit Button
 	&.submit {
+		.font-semi;
+		letter-spacing: @base-letter-spacing;
 		border: 0;
-		.btn-bg(@btn-bg: @button-submit);
+		.btn-bg(@button-submit);
 		margin: 5px 0 0;
 	}
 	
 	
 	// Colors & Variations
 	&.orange {
-		.btn-bg(@btn-bg: @orange);
+		.btn-bg(@orange);
 	}
+	
 	&.red {
-		.btn-bg(@btn-bg: @red);
+		.btn-bg(@red);
 	}
+	
 	&.blue {
-		.btn-bg(@btn-bg: @blue);
+		.btn-bg(@blue);
 	}
+	
 	&.green {
-		.btn-bg(@btn-bg: @green);
+		.btn-bg(@green);
 	}
+	
 	&.light {
-		.btn-bg(@btn-bg: @gray);
+		.btn-bg(@gray);
 	}
+	
 	&.striped {background-image: @striped;}
+	
 	&.flat {
 		text-shadow: none;
 		box-shadow: none;
 	}
+	
 	&.reverse {
-		.btn-bg(@btn-bg: @light-gray, @btn-color: #555);
+		.btn-bg(@light-gray, #555);
 	}
+	
 	&.oval {.radius(@button-height / 2);}
+	
+	&.primary {
+		.btn-bg(@primary);
+	}
+	
+	&.secondary {
+		.btn-bg(@secondary);
+	}
+	
+	&.tertiary {
+		.btn-bg(@tertiary);
+	}
+	
+	&.disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
 	
 	
 	// Sizes

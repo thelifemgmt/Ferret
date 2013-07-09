@@ -593,6 +593,9 @@ a.button:active {
 }
 .button.submit,
 a.button.submit {
+  font-family: 'OpenSansSemi';
+  font-weight: normal;
+  letter-spacing: 1px;
   border: 0;
   color: #ffffff;
   text-shadow: 0 1px 0 #f15e3c;
@@ -710,6 +713,56 @@ a.button.reverse:active {
 .button.oval,
 a.button.oval {
   border-radius: 20px;
+}
+.button.primary,
+a.button.primary {
+  color: #ffffff;
+  text-shadow: 0 1px 0 #3fabbb;
+  box-shadow: 0 4px 0 #3693a0;
+  background-color: #48b2c1;
+}
+.button.primary:hover,
+a.button.primary:hover {
+  background-color: #3da4b3;
+}
+.button.primary:active,
+a.button.primary:active {
+  background-color: #399aa7;
+}
+.button.secondary,
+a.button.secondary {
+  color: #ffffff;
+  text-shadow: 0 1px 0 #fda33f;
+  box-shadow: 0 4px 0 #fc921c;
+  background-color: #fdaa4e;
+}
+.button.secondary:hover,
+a.button.secondary:hover {
+  background-color: #fd9e35;
+}
+.button.secondary:active,
+a.button.secondary:active {
+  background-color: #fd9726;
+}
+.button.tertiary,
+a.button.tertiary {
+  color: #ffffff;
+  text-shadow: 0 1px 0 #44c289;
+  box-shadow: 0 4px 0 #38ab76;
+  background-color: #50c690;
+}
+.button.tertiary:hover,
+a.button.tertiary:hover {
+  background-color: #3ebe84;
+}
+.button.tertiary:active,
+a.button.tertiary:active {
+  background-color: #3ab37c;
+}
+.button.disabled,
+a.button.disabled {
+  opacity: .5;
+  pointer-events: none;
 }
 .button.mini,
 a.button.mini {

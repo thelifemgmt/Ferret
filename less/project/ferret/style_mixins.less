@@ -63,6 +63,13 @@
 }
 
 
+// Anitmation
+.animate(@name, @speed: .2s, @ease: ease-in, @delay: .5s, @when: both) {
+	-webkit-animation: @name @speed @ease @delay @when;
+	animation: @name @speed @ease @delay @when;
+}
+
+
 // Width and Height
 .size(@size) {
 	width: @size;

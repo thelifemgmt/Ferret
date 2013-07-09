@@ -1,6 +1,6 @@
 // The Box Grid - Version 2.0
 // Written by: Sean Stopnik
-// Email: sstopnik@redvenutures.com
+// Email: thelifemgmt@gmail.com
 
 
 /* Box Grid */
@@ -69,14 +69,14 @@
 
 // Box Widths
 @iterations: 1;
-.gridLoop (@index) when (@index =< @grid-boxes) {
-	(~".box-@{index}") {
+.grid-loop (@index) when (@index =< @grid-boxes) {
+	.box-@{index} {
 		width: 100% / @grid-boxes * @index;
 	}
-	.gridLoop(@index + 1);
+	.grid-loop(@index + 1);
 }
-.gridLoop (@grid-boxes) {}
-.gridLoop (@iterations);
+.grid-loop (@grid-boxes) {}
+.grid-loop (@iterations);
 .box- {
 	&full {width: 100%;}
 	&half {width: 50%;}
