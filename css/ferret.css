@@ -295,7 +295,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+main {
   margin: 0;
   padding: 0;
   border: 0;
@@ -338,7 +339,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+main {
   display: block;
 }
 body {
@@ -761,7 +763,7 @@ a.button.tertiary:active {
 }
 .button.disabled,
 a.button.disabled {
-  opacity: .5;
+  opacity: .6;
   pointer-events: none;
 }
 .button.mini,
@@ -1046,7 +1048,7 @@ ul.square {
 }
 ul.checkmark li:before {
   content: "\2713";
-  color: #fdaa4e;
+  color: #50c690;
   padding-right: 10px;
 }
 ul.plus li:before {
@@ -1271,8 +1273,8 @@ table.with-footer tbody tr:last-child td {
   background: #353535;
   border-radius: 3px;
   z-index: 100;
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -1282,13 +1284,13 @@ table.with-footer tbody tr:last-child td {
 }
 .tooltip span:after {
   position: absolute;
-  content: "";
-  bottom: -7px;
   width: 0;
   height: 0;
+  content: '';
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #353535;
+  bottom: -7px;
   left: 50%;
   margin-left: -7px;
 }
@@ -1299,8 +1301,8 @@ table.with-footer tbody tr:last-child td {
 }
 .tooltip:hover span {
   bottom: 25px;
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 /* JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT */
 section {

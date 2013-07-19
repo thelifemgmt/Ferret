@@ -3,6 +3,7 @@
 /* Tooltip */
 .tooltip {
 	position: relative;
+	
 	span {
 		position: absolute;
 		bottom: 18px;
@@ -19,21 +20,17 @@
 		background: @tooltip-bg;
 		.radius(@tooltip-border-radius);
 		z-index: 100;
-		opacity: 0;
 		visibility: hidden;
+		opacity: 0;
 		.transition;
 		
-		&:hover {background: @tooltip-bg;}
+		&:hover {
+			background: @tooltip-bg;
+		}
 		
 		&:after {
-			position: absolute;
-			content: "";
+			.triangle(down, 7px, @tooltip-bg);
 			bottom: -7px;
-			width: 0;
-			height: 0;
-			border-left: 7px solid transparent;
-			border-right: 7px solid transparent;
-			border-top: 7px solid @tooltip-bg;
 			left: 50%;
 			margin-left: -7px;
 		}
@@ -47,8 +44,8 @@
 	&:hover {
 		span {
 			bottom: 25px;
-			opacity: 1;
 			visibility: visible;
+			opacity: 1;
 		}
 	}
 }

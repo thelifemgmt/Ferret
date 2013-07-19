@@ -1,7 +1,7 @@
 // Default Functions
 
 
-$(document).ready(function() {
+$(function() {
 	
 	// Scroll To
 	$('a.scroll').on('click', function(e){
@@ -48,4 +48,4 @@ $(document).ready(function() {
 	
 	//Fancybox
 	$("a.fancybox").fancybox();
-});// End Document Ready
+});
