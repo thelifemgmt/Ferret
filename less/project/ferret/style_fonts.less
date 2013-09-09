@@ -1,52 +1,59 @@
-//Fontface Fonts
-
-
-/* Fonts */
-@font-face {
-    font-family: 'OpenSansLight';
-    src: url('../fonts/OpenSans-Light-webfont.eot');
-    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+// Fontface Fonts
+.font-face-mixin(@font-name, @font-path, @font-file) {
+	@font-face {
+	    font-family: '@{font-name}';
+	    src: url('@{font-path}/@{font-file}.eot');
+	    src: url('@{font-path}/@{font-file}?#iefix') format('embedded-opentype'),
+	         url('@{font-path}/@{font-file}.woff') format('woff'),
+	         url('@{font-path}/@{font-file}.ttf') format('truetype'),
+	         url('@{font-path}/@{font-file}.svg#@{font-name}') format('svg');
+	}	
 }
 
-@font-face {
-    font-family: 'OpenSansReg';
-    src: url('../fonts/OpenSans-Regular-webfont.eot');
-    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+.font-face {
+	.font-face-mixin('OpenSansLight', '../fonts', 'OpenSans-Light-webfont');
 }
 
-@font-face {
-    font-family: 'OpenSansSemi';
-    src: url('../fonts/OpenSans-Semibold-webfont.eot');
-    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+.font-face {
+	.font-face-mixin('OpenSansReg', '../fonts', 'OpenSans-Regular-webfont');
 }
 
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('../fonts/OpenSans-Bold-webfont.eot');
-    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+.font-face {
+	.font-face-mixin('OpenSansSemi', '../fonts', 'OpenSans-Semibold-webfont');
 }
-.font-light() {font-family: 'OpenSansLight'; font-weight: normal;}
-.font-normal() {font-family: 'OpenSansReg'; font-weight: normal;}
-.font-semi() {font-family: 'OpenSansSemi'; font-weight: normal;}
-.font-bold() {font-family: 'OpenSansBold'; font-weight: normal;}
-.font-headline() {font-family: 'OpenSansBold'; font-weight: normal;}
+
+.font-face {
+	.font-face-mixin('OpenSansBold', '../fonts', 'OpenSans-Bold-webfont');
+}
+
+
+// Font Mixins
+.font-styles() {
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font-light() {
+	font-family: 'OpenSansLight';
+	.font-styles;
+}
+
+.font-reg() {
+	font-family: 'OpenSansReg';
+	.font-styles;
+}
+
+.font-semi() {
+	font-family: 'OpenSansSemi';
+	.font-styles;
+}
+
+.font-bold() {
+	font-family: 'OpenSansBold';
+	.font-styles;
+}
+
+.font-headline() {
+	font-family: 'OpenSansBold';
+	.font-styles;
+}

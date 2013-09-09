@@ -2,43 +2,54 @@
 
 /* Forms */
 .inputfield {
-    float: left;
-    width: 100%;
-    height: @input-height;
-    font-family: @input-font;
-    font-size: @input-font-size;
-    font-weight: @input-font-weight;
-    letter-spacing: @base-letter-spacing;
-    line-height: 2;
-    color: @input-color;
-    padding: ((@input-height - @input-font-size * 2) / 2) 10px;
-    border: 1px solid @input-border;
-    .radius;
-    background: @input-bg;
-    .transition;
-    margin-bottom: @input-margin-bottom;
-    &:hover {border-color: @input-border-hover;}
-    &:focus {outline: none; border-color: @input-border-focus; background: @input-bg-focus;}
-    
-    select& {
+	float: left;
+	width: 100%;
+	height: @input-height;
+	font-family: @input-font;
+	font-size: @input-font-size;
+	font-weight: @input-font-weight;
+	letter-spacing: @base-letter-spacing;
+	line-height: 2;
+	color: @input-color;
+	padding: ((@input-height - @input-font-size * 2) / 2) 10px;
+	border: 1px solid @input-border;
+	.radius;
+	background: @input-bg;
+	.transition;
+	margin-bottom: @input-margin-bottom;
+	
+	&:hover {
+		border-color: @input-border-hover;
+	}
+	
+	&:focus {
+		outline: none;
+		border-color: @input-border-focus;
+		background: @input-bg-focus;
+	}
+	
+	select& {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		color: @placeholder-color;
 		background: @input-bg url(../images/ferret/bg_select_arrow.png) no-repeat right;
 		
-		&:focus {background: @input-bg-focus url(../images/ferret/bg_select_arrow.png) no-repeat right;}    
-    }
-    
-    textarea& {
+		&:focus {
+			background: @input-bg-focus url(../images/ferret/bg_select_arrow.png) no-repeat right;
+		}
+	}
+	
+	textarea& {
 	    height: @input-textarea-height;
-    }
-    
-    // Media
-    @media @mobile {
-    	margin-bottom: 0;
-    }
+	}
+	
+	// Media
+	@media @mobile {
+		margin-bottom: 0;
+	}
 }
-.checkbox, .radio-button {
+.checkbox,
+.radio-button {
 	float: left;
 	.size(@input-checkbox-size);
 	border: 1px solid @input-border;

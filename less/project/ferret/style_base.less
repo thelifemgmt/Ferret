@@ -12,6 +12,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
+
 hr {
 	display: block;
 	border: 0;
@@ -22,20 +23,30 @@ hr {
 	
 	&.flush {margin: 0;}
 }
-input, select {
+
+input,
+select {
 	vertical-align: middle;
 }
-input[type='button'], input[type='submit'], button {
+
+input[type='button'],
+input[type='submit'],
+button {
 	cursor: pointer;
 	border: 0;
 	margin: 0;
 	-webkit-appearance: none;
 	outline: none;
 }
-.bold, b, strong {
+
+.bold,
+b,
+strong {
 	font-weight: bold;
 }
-.italic, i {
+
+.italic,
+i {
 	font-style: italic;
 }
 
@@ -44,8 +55,11 @@ input[type='button'], input[type='submit'], button {
 ::-webkit-input-placeholder {
 	color: @placeholder-color;
 }
-input[type='text'], input[type='tel'], 
-input[type='email'], textarea {
+
+input[type='text'],
+input[type='tel'], 
+input[type='email'],
+textarea {
 	&:-moz-placeholder {
 		color: @placeholder-color;
 	}
@@ -53,7 +67,8 @@ input[type='email'], textarea {
 
 
 // User Select
-::selection, ::-moz-selection {
+::selection,
+::-moz-selection {
 	background: @user-select-bg;
 	color: @user-select-color;
 }

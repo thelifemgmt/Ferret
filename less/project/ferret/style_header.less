@@ -1,6 +1,7 @@
-// Nav Default Styles
+// Demo Header Styles (OUT OF DATE CODE - NOT RECOMMENDED FOR USE)
 
-/* Nav */
+
+// Header and Nav
 header {
 	position: @nav-bar-position;
 	width: 100%;
@@ -8,12 +9,15 @@ header {
 	top: 0;
 	background: @nav-bar-bg;
 	z-index: 100;
+	
 	nav {
+		
 		// Media
 		@media @device {
 			position: relative;
 			height: @nav-bar-height;
 		}
+		
 		ul {
 			float: @nav-position;
 			
@@ -21,16 +25,21 @@ header {
 			@media @mobile {
 				width: 100%;
 			}
-			@media @all-tablet {
+			
+			@media @small-tablet {
 				width: 50%;
 			}
+			
 			@media @device {
 				margin-top: @nav-bar-height + 10;
 				display: none;
 			}
-			@media @all-desktop {
+			
+			@media @desktop {
 				display: block !important;
+				width: auto;
 			}
+			
 			&:before {
 				
 				// Media
@@ -40,6 +49,7 @@ header {
 				    right: 13px;
 				}
 			}
+			
 			li {
 				float: left;
 				margin: 0 @nav-spacing;
@@ -55,6 +65,7 @@ header {
 				    background: @mobile-nav-bg;
 				    margin: 0 !important;
 				}
+				
 				&:first-child {
 					margin-left: 0;
 					
@@ -63,6 +74,7 @@ header {
 						border-top: 0; .radius(3px 3px 0 0);
 					}
 				}
+				
 				&:last-child {
 					margin-right: 0;
 					
@@ -71,6 +83,7 @@ header {
 						border-bottom: 0; .radius(0 0 3px 3px);
 					}
 				}
+				
 				a {
 					display: block;
 					font-family: @nav-font;
@@ -86,12 +99,15 @@ header {
 				    	font-size: @mobile-nav-font-size;
 				    	padding: 0 20px;
 					}
+					
 					&:hover {color: @nav-color-hover !important;}
 				}
 			}
 		}
 	}
 }
+
+// Mobile
 .mobile-nav {
 	position: absolute;
 	top: ((@nav-bar-height - @mobile-nav-button-height) / 2);

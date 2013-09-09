@@ -1,7 +1,4 @@
 <?php
-// Auto Compiler
-include_once(RV_LandingPage::find('/includes/_auto_compiler.php'));
-
 // Page Variables
 $currentUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
@@ -19,9 +16,6 @@ $siteName = '';
 <title><?= $headerTitle ?></title>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<![endif]-->
 
 <!-- Open Graph -->
 <meta property="og:title" content="<?= $headerTitle ?>"/>
@@ -32,6 +26,16 @@ $siteName = '';
 <meta property="fb:app_id" content=""/>
 <meta property="og:image" content="/images/fb_icon.png"/>
 <!-- Open Graph -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image:src" content="">
+<meta name="twitter:domain" content="">
+<!-- Twitter Card -->
 
 <?php include_once(RV_LandingPage::find('/includes/_seo_meta_tags.php')); ?>
 
@@ -45,8 +49,20 @@ $siteName = '';
 <?= RV_LandingPage::try_find_web_tag('css/experience.css','<link rel="stylesheet" href="/##PATH##" media="screen"/>'); ?>
 
 <script src="/global_js/modernizr.js"></script>
-<script src="/global_js/jQuery/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="/js/fancybox.min.js"></script>
+<script>
+	$(function() {
+    <?
+    	if($_SESSION['bad_fields']) {
+			foreach($_SESSION['bad_fields'] as $fieldName) {
+	?>
+				$(".<?= $fieldName ?>").addClass('error');
+	<?		}
+		} 
+	?>
+	});
+</script>
 
 <? echo RV_webTools::get_js_enabled_script($siteParams->CompanyID); ?>
 <? include_once(INCLUDE_DIR . "/ga_async.inc"); ?>

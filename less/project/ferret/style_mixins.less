@@ -75,6 +75,7 @@
 	width: @size;
 	height: @size;
 }
+
 .size(@width, @height) {
 	width: @width;
 	height: @height;
@@ -88,24 +89,28 @@
 	height: 0;
 	content: '';
 }
+
 .triangle(@direction, @size, @color) when (@direction = up) {
 	.triangle-base();
 	border-left: @size solid transparent;
 	border-right: @size solid transparent;
 	border-bottom: @size solid @color;
 }
+
 .triangle(@direction, @size, @color) when (@direction = down) {
 	.triangle-base();
 	border-left: @size solid transparent;
 	border-right: @size solid transparent;
 	border-top: @size solid @color;
 }
+
 .triangle(@direction, @size, @color) when (@direction = left) {
 	.triangle-base();
 	border-top: @size solid transparent;
 	border-bottom: @size solid transparent;
 	border-right: @size solid @color;
 }
+
 .triangle(@direction, @size, @color) when (@direction = right) {
 	.triangle-base();
 	border-top: @size solid transparent;
@@ -118,9 +123,11 @@
 .shadow(@x: 0, @y: 2px, @blur: 3px, @color: rgba(0,0,0,0.1)) {
 	box-shadow: @arguments;
 }
+
 .glow(@x: 0, @y: 0, @blur: 10px, @color: rgba(0,0,0,0.3)) {
 	box-shadow: @arguments;
 }
+
 .fade(@fade: 0.6) {
 	.transition;
   	opacity: 1.0;
@@ -133,33 +140,58 @@
 
 // Positioning
 .position {position: relative;}
-.left, .floated {float: left;}
+
+.left,
+.floated {float: left;}
+
 .right {float: right;}
+
 .center {text-align: center;}
+
 .flush {margin: 0;}
+
 .top10 {margin-top: 10px;}
+
 .top20 {margin-top: 20px;}
+
 .top30 {margin-top: 30px;}
+
 .top40 {margin-top: 40px;}
+
 .bottom10 {margin-bottom: 10px;}
+
 .bottom20 {margin-bottom: 20px;}
+
 .bottom30 {margin-bottom: 30px;}
+
 .bottom40 {margin-bottom: 40px;}
 
 
 // Extras
-.clear {clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}
+.clear {
+	clear: both;
+	display: block;
+	.size(0);
+	overflow: hidden;
+	visibility: hidden;
+}
+
 .normal {font-weight: normal;}
+
 .noselect {
 	-webkit-user-select: none;
-	-khtml-user-select: none;
 	-moz-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
-.hide {display: none;}
-.striped {background-image: url(../images/ferret/bg_stripes.png); background-repeat: repeat;}
-section.first {margin-top: @first-section-margin;}
+
+.hidden {display: none;}
+
+.striped {
+	background-image: url(../images/ferret/bg_stripes.png);
+	background-repeat: repeat;
+}
+
+.first-section {margin-top: @first-section-margin;}
 
 
 // Retina Images
@@ -173,13 +205,11 @@ section.first {margin-top: @first-section-margin;}
 }
 
 
-// Media Queries
-@mobile: ~"(max-width: 599px)";
-@small-tablet: ~"(min-width: 600px) and (max-width: 767px)";
-@tablet: ~"(min-width: 768px) and (max-width: 959px)";
-@all-tablet: ~"(min-width: 600px) and (max-width: 959px)";
-@device: ~"(max-width: 959px)";
-@desktop: ~"(min-width: 960px) and (max-width: 1599px)";
+// Media Queries for Mobile First Design
+@mobile: ~"(max-width: 599px)"; // Only Phone
+@small-tablet: ~"(min-width: 600px)";
+@tablet: ~"(min-width: 768px)";
+@device: ~"(max-width: 959px)"; // All Devices
+@desktop: ~"(min-width: 960px)";
 @large-desktop: ~"(min-width: 1280px)";
-@all-desktop: ~"(min-width: 960px)";
 @retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";

@@ -1,7 +1,7 @@
 // Button Default Styles
 
 
-// Buttons
+// Button Base Mixin
 .btn-bg(@btn-bg: @button-bg, @btn-color: @button-color) {
 	color: @btn-color;
 	text-shadow: 0 1px 0 darken(@btn-bg, 3%);
@@ -16,7 +16,11 @@
 		background-color: darken(@btn-bg, 8%);
 	}
 }
-.button, a.button {
+
+
+// Button Base
+.button,
+a.button {
 	float: left;
 	padding: 0 @button-height - 15;
 	color: @button-color;

@@ -2,19 +2,44 @@
 
 
 // Headlines
-h1, h2, h3, h4, h5, h6, span.headline {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span.headline {
 	color: @headline-color;
 	font-family: @headline-font;
 	font-weight: @headline-weight;
 	margin-bottom: @headline-margin;
 	line-height: @headline-line-height;
 }
-h1 {font-size: @headline-h1-size;}
-h2 {font-size: @headline-h2-size;}
-h3 {font-size: @headline-h3-size;}
-h4 {font-size: @headline-h4-size;}
-h5 {font-size: @headline-h5-size;}
-h6 {font-size: @headline-h6-size;}
+
+h1 {
+	font-size: @headline-h1-size;
+}
+
+h2 {
+	font-size: @headline-h2-size;
+}
+
+h3 {
+	font-size: @headline-h3-size;
+}
+
+h4 {
+	font-size: @headline-h4-size;
+}
+
+h5 {
+	font-size: @headline-h5-size;
+}
+
+h6 {
+	font-size: @headline-h6-size;
+}
+
 span.headline {
 	display: block;
 	font-size: @headline-span-headline-size;
@@ -26,6 +51,7 @@ span.headline {
 .with-subheadline {
 	margin-bottom: 5px;
 }
+
 .subheadline {
 	display: block;
 	.font-semi;
@@ -38,11 +64,13 @@ span.headline {
 a {
 	text-decoration: none;
 	color: @link-color;
-	.font-normal;
+	.font-reg;
 	.transition;
 	outline: none;
 	
-	&:hover {color: @link-hover;}
+	&:hover {
+		color: @link-hover;
+	}
 }
 
 
@@ -50,15 +78,27 @@ a {
 p {
 	margin: 0 0 @paragraph-margin 0;
 	
-	&:last-child {margin: 0;}
+	&:last-child {
+		margin: 0;
+	}
 	
-	&.large {font-size: @paragraph-large-font-size; line-height: 2.2;}
+	&.large {
+		font-size: @paragraph-large-font-size;
+		line-height: 2.2;
+	}
 }
-p, span {letter-spacing: @base-letter-spacing;}
+
+p,
+span {
+	letter-spacing: @base-letter-spacing;
+}
 
 
 // Additional Copy Sizes
-small, .small {font-size: 80%;}
+small,
+.small {
+	font-size: 80%;
+}
 
 
 // Specialty Characters

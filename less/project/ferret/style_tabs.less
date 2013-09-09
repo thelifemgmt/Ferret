@@ -22,7 +22,9 @@ ul.tabs-nav {
 	    
 	    &:hover {
 	    	cursor: pointer;
-	    	a {color: @tab-color-hover;}
+	    	a {
+	    		color: @tab-color-hover;
+	    	}
 	    }
 		
 		a {
@@ -34,7 +36,9 @@ ul.tabs-nav {
 	    	line-height: 1.9;
 	    	letter-spacing: @tab-letter-spacing;
 	    	
-	    	&:hover {color: @tab-color-hover;}
+	    	&:hover {
+	    		color: @tab-color-hover;
+	    	}
 	    }
 	    
 	    &.active {
@@ -43,7 +47,9 @@ ul.tabs-nav {
 		    margin-top: -3px;
 		    background: @tab-frame-bg;
 		    
-		    a {color: @tab-color-active;}
+		    a {
+		    	color: @tab-color-active;
+		    }
 		}
 		
 		// Media
@@ -53,13 +59,24 @@ ul.tabs-nav {
     		padding: 2px 12px;
     		background: none;
     		
-    		&:first-child {padding-left: 0;}
+    		&:first-child {
+    			padding-left: 0;
+    		}
     		
-    		&:last-child {padding-right: 0; border: none;}
+    		&:last-child {
+    			padding-right: 0;
+    			border: none;
+    		}
     		
-    		&.active {padding-top: 2px; margin-top: 0; background: none;}
+    		&.active {
+    			padding-top: 2px;
+    			margin-top: 0;
+    			background: none;
+    		}
     		
-    		a {font-size: 90%;}
+    		a {
+    			font-size: 90%;
+    		}
 		}
     }
 }
