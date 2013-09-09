@@ -16,7 +16,6 @@
 	.radius;
 	background: @input-bg;
 	.transition;
-	margin-bottom: @input-margin-bottom;
 	
 	&:hover {
 		border-color: @input-border-hover;
@@ -43,9 +42,8 @@
 	    height: @input-textarea-height;
 	}
 	
-	// Media
-	@media @mobile {
-		margin-bottom: 0;
+	@media @small-tablet {
+		margin-bottom: @input-margin-bottom;
 	}
 }
 .checkbox,
@@ -55,7 +53,7 @@
 	border: 1px solid @input-border;
 	background: @input-checkbox-bg;
 	-webkit-appearance: none;
-	margin: 0 7px @input-margin-bottom 0;
+	margin: 0 7px 0 0;
 	cursor: pointer;
 	.transition;
 	
@@ -69,10 +67,9 @@
 		background: @input-bg-focus;
 	}
 	
-	// Media
-    @media @mobile {
-    	margin-bottom: 0;
-    }
+	@media @small-tablet {
+		margin-bottom: @input-margin-bottom;
+	}
 }
 .checkbox {
 	.radius;

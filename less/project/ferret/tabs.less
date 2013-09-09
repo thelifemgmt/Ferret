@@ -1,15 +1,13 @@
 // Tabs Default Styles
 
-/* Tabs */
+// Tabs
 ul.tabs-nav {
     float: left;
     width: 100%;
-    border-bottom: 1px solid @tab-border-color;
     margin: 5px 0 20px;
     
-    // Media
-    @media @mobile {
-    	border: none;
+    @media @small-tablet {
+    	border-bottom: 1px solid @tab-border-color;
     }
     
     li {
@@ -52,7 +50,6 @@ ul.tabs-nav {
 		    }
 		}
 		
-		// Media
 		@media @mobile {
 			border: none;
     		border-right: 1px solid @tab-border-color;

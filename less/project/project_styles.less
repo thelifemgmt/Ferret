@@ -2,7 +2,7 @@
 
 
 // JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT
-@import 'ferret/style_header'; // OUT OF DATE CODE
+@import 'ferret/header'; // OUT OF DATE CODE
 
 section {
 	padding: 20px 0;
@@ -10,16 +10,17 @@ section {
 	margin-bottom: 20px;
 }
 .row {
-	margin-bottom: 20px;
 	
-	// Media
-	@media @mobile {
-		margin-bottom: 0;
+	@media @small-tablet {
+		margin-bottom: 20px;
 	}
+	
 	.row {
 		background: #acacac;
 	}
+	
 	form {
+		
 		.row {
 			background: none;
 		}
