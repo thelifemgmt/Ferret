@@ -16,11 +16,12 @@ Ferret works in all modern browsers, and even not so modern browsers like IE 8. 
 
 Still in Development
 
-Update
+Updated (9/12/13)
 ---
 
-* Updated Grid
+* Updated grid
 * Updated Media Queries for mobile first design
-* Minor edits to other styles
+* Relocated all component LESS files and component specific variables
+* Other minor updates
 
 Full recode in the works

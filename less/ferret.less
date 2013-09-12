@@ -1,40 +1,64 @@
 /*********************************************
 Ferret Framework Main Stylesheet
-Last Updated: 9/8/13
+Last Updated: 9/12/13
 Written by: Sean Stopnik
 Email: thelifemgmt@gmail.com
 *********************************************/
 
 
-// Project Settings & Variables (Do Not Remove)
-@import "project/project_settings.less"; // Located in the Project Folder
+// Project Settings & Variables (Do NOT Remove)
+@import "project/project_settings.less";
 
 
-// Base Styles (Do Not Remove)
-@import "project/ferret/box_grid.less";
+// Base (Do NOT Remove)
+@import "project/ferret/mixins.less";
+@import "project/ferret/grid/box_grid.less";
 @import "project/ferret/fonts.less";
 @import "project/ferret/reset.less";
 @import "project/ferret/base.less";
 @import "project/ferret/typography.less";
-@import "project/ferret/mixins.less";
 
 
-// Extras (Add or Remove as Needed)
-@import "project/ferret/buttons.less"; // Button Styles
-@import "project/ferret/forms.less"; // Form Styles
-@import "project/ferret/lists.less"; // List Styles
-@import "project/ferret/tabs.less"; // Content Tabs Styles
-@import "project/ferret/tables.less"; // Table Styles
-@import "project/ferret/tooltips.less"; // Tooltip Styles
+// Compontents
+
+// Buttons (Remove if Not Needed)
+@import "project/ferret/components/buttons.less"; // Button Styles
+@import "project/ferret/components/variables/buttons_variables.less"; // Button Variables
 
 
-// Main Project Specific CSS and Overrides
+// Forms (Remove if Not Needed)
+@import "project/ferret/components/forms.less"; // Form Styles
+@import "project/ferret/components/variables/forms_variables.less"; // Form Variables
+
+
+// Lists (Remove if Not Needed)
+@import "project/ferret/components/lists.less"; // List Styles
+@import "project/ferret/components/variables/lists_variables.less"; // list Variables
+
+
+// Tabs (Remove if Not Needed)
+@import "project/ferret/components/tabs.less"; // Tabs Styles
+@import "project/ferret/components/variables/tabs_variables.less"; // Tabs Variables
+
+
+// Tables (Remove if Not Needed)
+@import "project/ferret/components/tables.less"; // Tables Styles
+@import "project/ferret/components/variables/tables_variables.less"; // Tables Variables
+
+
+// Tooltips (Remove if Not Needed)
+@import "project/ferret/components/tooltips.less"; // Tooltip Styles
+@import "project/ferret/components/variables/tooltips_variables.less"; // Tooltip Variables
+
+
+// Main Project Specific CSS
 @import "project/project_styles.less"; // Located in the Project Folder
 
 
-// Fancybox Styles (Remove if Not Needed)
-@import "project/ferret/fancybox.less";
+// Fancybox Styles (Remove if Not Using Fancybox)
+@import "project/ferret/components/fancybox.less"; // Fancybox Styles
+@import "project/ferret/components/variables/fancybox_variables.less"; // Fancybox Variables
 
 
-// Include this file ONLY if supporting IE6-7
-@import "project/ferret/box_grid_ie6_7.less";
+// IE 6-7 Support (Include this File ONLY if supporting IE 6-7)
+//@import "project/ferret/grid/box_grid_ie6_7.less";

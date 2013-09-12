@@ -1,6 +1,4 @@
 // Forms Default Styles
-
-/* Forms */
 .inputfield {
 	float: left;
 	width: 100%;
@@ -46,6 +44,7 @@
 		margin-bottom: @input-margin-bottom;
 	}
 }
+
 .checkbox,
 .radio-button {
 	float: left;
@@ -71,6 +70,7 @@
 		margin-bottom: @input-margin-bottom;
 	}
 }
+
 .checkbox {
 	.radius;
 	
@@ -78,6 +78,7 @@
 		background: @input-checkbox-checked no-repeat center center;
 	}
 }
+
 .radio-button {
 	.radius(50%);
 	
@@ -85,8 +86,24 @@
 		background: @input-radio-checked no-repeat center center;
 	}
 }
+
 label {
 	float: left;
 	font-size: @input-label-font-size;
 	line-height: 1.5;
+}
+
+
+// Placeholder
+::-webkit-input-placeholder {
+	color: @placeholder-color;
+}
+
+input[type='text'],
+input[type='tel'], 
+input[type='email'],
+textarea {
+	&:-moz-placeholder {
+		color: @placeholder-color;
+	}
 }
