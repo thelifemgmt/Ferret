@@ -117,4 +117,38 @@ Ferret has several included components to help you with quick development. Compo
 * Pull Quotes
 * and more...
 
+
+
+<b>Buttons</b>
+
+Buttons are very easy to create. Add a class of <i>.button</i> to any anchor or button tag. There a several default button styles already included in Ferret. Here are a few examples, or refer to the Ferret Demo for more.
+
+Default button:
+
+	<a class="button" href="">This is a Button</a>
+	
+Small button:
+
+	<a class="button small" href="">This is a Small Button</a>
+	
+Large button:
+
+	<a class="button large" href="">This is a Large Button</a>
+	
+X-large button:
+
+	<a class="button x-large" href="">This is an X-large Button</a>	
+
+Oval button:
+
+	<a class="button oval" href="">This is an Oval Button</a>
+
+
+Full-width button
+
+	<a class="button full-width" href="">This is a Full-width Button</a>
+
+
+---
+
 By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> file inside the <i>less/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once down, recompile your LESS folder, and your good to go.
