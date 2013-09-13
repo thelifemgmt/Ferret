@@ -399,7 +399,7 @@ main {
 body {
   color: #707070;
   font-family: 'OpenSansLight';
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 2;
   background: #ffffff;
@@ -470,13 +470,13 @@ h3 {
   font-size: 160%;
 }
 h4 {
-  font-size: 120%;
+  font-size: 140%;
 }
 h5 {
-  font-size: 106%;
+  font-size: 120%;
 }
 h6 {
-  font-size: 93%;
+  font-size: 100%;
 }
 span.headline {
   display: block;
@@ -889,7 +889,7 @@ textarea:-moz-placeholder {
 }
 ul li {
   margin-bottom: 10px;
-  font-size: 90%;
+  font-size: 95%;
   letter-spacing: 1px;
 }
 ul li:last-child {
@@ -924,7 +924,6 @@ ul.inline li {
   border-right: 1px solid #acacac;
   padding-right: 10px;
   margin-left: 10px;
-  font-size: 80%;
 }
 ul.inline li:first-child {
   margin: 0;
@@ -939,7 +938,7 @@ ul.with-spacing {
 ol li {
   margin: 0 0 10px 25px;
   list-style: decimal;
-  font-size: 90%;
+  font-size: 95%;
   letter-spacing: 1px;
 }
 ol li:last-child {
@@ -949,7 +948,7 @@ ol.with-spacing {
   margin-bottom: 20px;
 }
 dl {
-  font-size: 90%;
+  font-size: 95%;
 }
 dl dt {
   color: #353535;
@@ -1121,17 +1120,17 @@ table.with-footer tbody tr:last-child td {
   left: -60%;
   font-family: 'OpenSansSemi';
   letter-spacing: 0;
-  font-size: 85%;
+  font-size: 80%;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.6;
   text-align: center;
-  padding: 7px 10px;
+  padding: 8px 10px;
   color: #ffffff;
   background: #353535;
   border-radius: 3px;
   z-index: 100;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -1158,8 +1157,8 @@ table.with-footer tbody tr:last-child td {
 }
 .tooltip:hover span {
   bottom: 25px;
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 header {
   position: fixed;
