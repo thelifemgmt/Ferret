@@ -114,18 +114,7 @@ Ferret has several included components to help you with quick development. Compo
 * Modal
 * Buttons
 * Forms
+* Pull Quotes
 * and more...
 
 By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> file inside the <i>less/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once down, recompile your LESS folder, and your good to go.
-
-
-
-
-
-
-
-
-
-
-
-
