@@ -38,6 +38,7 @@ When setting up Ferret for your project, first start with the <i>project_setting
 You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can change your box count to any amount between 1 and 24. Most common box counts are 12, 16, or 24 of course, but its totally up to you.
 
 
+
 <b>Basic Grid Use</b>
 
 The grid is very simple to use. Start with a row, and insert your boxes (or columns) inside.
@@ -45,12 +46,13 @@ The grid is very simple to use. Start with a row, and insert your boxes (or colu
 	<div class="row">
 		<div class="box-8">
 			YOUR CONTENT
-		</div>
+		</div><!--/.box-8-->
 		
 		<div class="box-8">
 			YOUR CONTENT
 		</div><!--/.box-8-->
-	</div>
+	</div><!--/.row-->
+
 
 
 <b>Nested Grid Rows</b>
@@ -65,9 +67,10 @@ You can also nest boxes inside boxes. When doing so, you must always start your 
 				<div class="box-16">
 					NESTED ROW CONTENT
 				</div><!--/.box-16-->
-			</div>
-		</div>
-	</div>
+			</div><!--/.row-->
+		</div><!--/.box-16-->
+	</div><!--/.row-->
+
 
 
 <b>Add Row Spacing</b>
@@ -79,24 +82,25 @@ Default spacing:
 	<div class="row with-spacing">
 		<div class="box-16">
 			YOUR CONTENT
-		</div>
-	</div>
+		</div><!--/.box-16-->
+	</div><!--/.row-->
 
 More spacing:
 
 	<div class="row with-more-spacing">
 		<div class="box-16">
 			YOUR CONTENT
-		</div>
-	</div>
+		</div><!--/.box-16-->
+	</div><!--/.row-->
 
 or less spacing:
 
 	<div class="row with-less-spacing">
 		<div class="box-16">
 			YOUR CONTENT
-		</div>
-	</div>
+		</div><!--/.box-16-->
+	</div><!--/.row-->
+
 
 
 <b>Components</b>
