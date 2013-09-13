@@ -25,3 +25,36 @@ Updated (9/12/13)
 * Other minor updates
 
 Full recode in the works
+
+How to Use
+---
+
+<b>Grid</b>
+
+The grid is very simple to use. Start with a row, and insert your boxes (or columns) inside.
+
+<div class="row">
+	<div class="box-8">
+		YOUR CONTENT
+	</div><!--/.box-8-->
+	
+	<div class="box-8">
+		YOUR CONTENT
+	</div><!--/.box-8-->
+</div><!--/.row-->
+
+<b>Nested Row</b>
+
+You can also nest boxes inside boxes. When doing so, you must always start your nested content with a new row.
+
+<div class="row">
+	<div class="box-16">
+		YOUR CONTENT
+		
+		<div class="row">
+			<div class="box-16">
+				NESTED ROW CONTENT
+			</div><!--/.box-16-->
+		</div><!--/.row-->
+	</div><!--/.box-16-->
+</div><!--/.row-->
