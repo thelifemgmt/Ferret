@@ -42,32 +42,32 @@ You can also control the grid settings inside this file. Default setting is 16 b
 
 The grid is very simple to use. Start with a row, and insert your boxes (or columns) inside.
 
-<div class="row">
-	<div class="box-8">
-		YOUR CONTENT
+	<div class="row">
+		<div class="box-8">
+			YOUR CONTENT
+		</div>
+		
+		<div class="box-8">
+			YOUR CONTENT
+		</div><!--/.box-8-->
 	</div>
-	
-	<div class="box-8">
-		YOUR CONTENT
-	</div><!--/.box-8-->
-</div>
 
 
 <b>Nested Grid Rows</b>
 
 You can also nest boxes inside boxes. When doing so, you must always start your nested content with a new row.
 
-<div class="row">
-	<div class="box-16">
-		YOUR CONTENT
-		
-		<div class="row">
-			<div class="box-16">
-				NESTED ROW CONTENT
-			</div><!--/.box-16-->
+	<div class="row">
+		<div class="box-16">
+			YOUR CONTENT
+			
+			<div class="row">
+				<div class="box-16">
+					NESTED ROW CONTENT
+				</div><!--/.box-16-->
+			</div>
 		</div>
 	</div>
-</div>
 
 
 <b>Add Row Spacing</b>
@@ -76,27 +76,27 @@ By default, rows have no spacing in-between each other. Sometimes spacing is nic
 
 Default spacing:
 
-<div class="row with-spacing">
-	<div class="box-16">
-		YOUR CONTENT
+	<div class="row with-spacing">
+		<div class="box-16">
+			YOUR CONTENT
+		</div>
 	</div>
-</div>
 
 More spacing:
 
-<div class="row with-more-spacing">
-	<div class="box-16">
-		YOUR CONTENT
+	<div class="row with-more-spacing">
+		<div class="box-16">
+			YOUR CONTENT
+		</div>
 	</div>
-</div>
 
 or less spacing:
 
-<div class="row with-less-spacing">
-	<div class="box-16">
-		YOUR CONTENT
+	<div class="row with-less-spacing">
+		<div class="box-16">
+			YOUR CONTENT
+		</div>
 	</div>
-</div>
 
 
 <b>Components</b>
