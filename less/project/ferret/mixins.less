@@ -8,6 +8,12 @@
 	transition: all @speed ease-in-out;
 }
 
+.transition-more(@property @speed @effect @delay) {
+	-webkit-transition: @property @speed @effect @delay;
+	-moz-transition: @property @speed @effect @delay;
+	transition: @property @speed @effect @delay;
+}
+
 
 // Gradients
 .gradient(@origin: top, @start: #e1e1e1, @stop: #353535) {
@@ -212,7 +218,7 @@
 @device: ~"(max-width: 959px)"; // All Devices
 @desktop: ~"(min-width: 960px)";
 @large-desktop: ~"(min-width: 1280px)";
-@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"; // Only Retina Screens
 
 
 // Media Queries to Target Device Only
