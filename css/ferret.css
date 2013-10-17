@@ -67,9 +67,6 @@ Email: thelifemgmt@gmail.com
   background-image: url(../images/ferret/bg_stripes.png);
   background-repeat: repeat;
 }
-.first-section {
-  margin-top: 60px;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1160,6 +1157,9 @@ table.with-footer tbody tr:last-child td {
   opacity: 1;
   visibility: visible;
 }
+.first-section {
+  margin-top: 60px;
+}
 header {
   position: fixed;
   width: 100%;
@@ -1333,7 +1333,6 @@ span.logo {
   text-transform: uppercase;
   background: none;
 }
-/* END */
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,
