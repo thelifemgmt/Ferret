@@ -5,7 +5,7 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
 
-<section id="content" class="first">
+<main id="content" class="first-section" role="main">
     <div class="container">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <article class="row with-spacing">
@@ -23,6 +23,6 @@ Template Name: Home Page
         <?php endwhile; else: ?>
 		<?php endif; ?>
 	</div><!--/.container-->
-</section>
+</main>
 
 <?php get_footer(); ?>

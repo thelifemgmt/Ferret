@@ -14,23 +14,23 @@
 				<?php if ($post->comment_status == 'open') : ?>
 				<h3>Leave a Comment</h3>
 		        <form action="<?php bloginfo('url'); ?>/wp-comments-post.php" method="post" id="commentform">
-		        	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>"/>
+		        	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
 		            
 		            <div class="row">
 		            	<div class="box-6">
-		            		<input class="inputfield" type="text" name="author" id="author" placeholder="full name"/>
+		            		<input class="inputfield" type="text" name="author" id="author" placeholder="full name">
 		            	</div><!--/.box-6-->
 		            </div><!--/.row-->
 		            
 		            <div class="row">
 		            	<div class="box-6">
-		            		<input class="inputfield" type="text" name="email" id="email" placeholder="email address"/>
+		            		<input class="inputfield" type="text" name="email" id="email" placeholder="email address">
 		            	</div><!--/.box-6-->
 		            </div><!--/.row-->
 		            
 		            <div class="row">
 		            	<div class="box-6">
-		            		<input class="inputfield" type="url" name="url" id="url" placeholder="website url"/>
+		            		<input class="inputfield" type="url" name="url" id="url" placeholder="website url">
 		            	</div><!--/.box-6-->
 		            </div><!--/.row-->
 		            
@@ -42,7 +42,7 @@
 		            
 		            <div class="row">
 		            	<div class="box-6">
-		            		<input class="button submit fade" name="submit" type="submit" id="submit" value="leave comment"/>
+		            		<input class="button submit fade" name="submit" type="submit" id="submit" value="leave comment">
 		            	</div><!--/.box-6-->
 		            </div><!--/.row-->
 		        <?php do_action('comment_form', $post->ID); ?>

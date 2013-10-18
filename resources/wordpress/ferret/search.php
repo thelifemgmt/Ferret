@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="content">
+<main id="content" class="first-section" role="main">
 	<div class="container">
 		<div class="row">
 			<div class="box-16">
@@ -14,6 +14,6 @@
 			</div><!--/.box-16-->
 		</div><!--/.row-->
 	</div><!--/.container-->
-</section>
+</main>
 
 <?php get_footer(); ?>
