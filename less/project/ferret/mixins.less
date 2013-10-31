@@ -209,6 +209,15 @@
 }
 
 
+// SVG Background Image
+.svg(@image, @width, @height) {
+	display: inline-block;
+	.size(@width, @height);
+	background: ~"url(@{image}.svg) no-repeat center center";
+	background-size: @width @height;
+}
+
+
 // Media Queries for Mobile First Design
 @mobile: ~"(max-width: 599px)"; // Only Phone
 @small-tablet: ~"(min-width: 600px)";
