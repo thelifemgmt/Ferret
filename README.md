@@ -148,4 +148,4 @@ Full-width button
 
 ---
 
-By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> file inside the <i>less/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once down, recompile your LESS or SASS folder, and your good to go.
+By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> or <i>ferret.scss</i> file inside the <i>less/</i> or <i>sass/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once that is done, recompile your LESS or SASS ferret file, and your good to go.
