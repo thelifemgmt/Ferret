@@ -1,0 +1,125 @@
+// Button Default Styles
+
+
+// Button Base Mixin
+@mixin btn-bg($btn-bg: $button-bg, $btn-color: $button-color) {
+	color: $btn-color;
+	text-shadow: 0 1px 0 darken($btn-bg, 3%);
+	box-shadow: 0 4px 0 darken($btn-bg, 10%);
+	background-color: $btn-bg;
+	
+	&:hover {
+		background-color: darken($btn-bg, 5%);
+	}
+	
+	&:active {
+		background-color: darken($btn-bg, 8%);
+	}
+}
+
+
+// Button Base
+.button,
+a.button {
+	float: left;
+	padding: 0 $button-height - 15;
+	color: $button-color;
+	font-family: $button-font;
+	font-weight: $button-font-weight;
+	font-size: $button-font-size;
+	line-height: $button-height;
+	@include radius;
+	@include btn-bg;
+	@include transition;
+	-webkit-appearance: none;
+	
+	
+	// Submit Button
+	&.submit {
+		@include font-semi;
+		letter-spacing: $base-letter-spacing;
+		border: 0;
+		@include btn-bg($button-submit);
+		margin: 5px 0 0;
+	}
+	
+	
+	// Colors & Variations
+	&.orange {
+		@include btn-bg($orange);
+	}
+	
+	&.red {
+		@include btn-bg($red);
+	}
+	
+	&.blue {
+		@include btn-bg($blue);
+	}
+	
+	&.green {
+		@include btn-bg($green);
+	}
+	
+	&.light {
+		@include btn-bg($gray);
+	}
+	
+	&.striped {
+		background-image: $striped;
+	}
+	
+	&.flat {
+		text-shadow: none;
+		box-shadow: none;
+	}
+	
+	&.reverse {
+		@include btn-bg($light-gray, #555);
+	}
+	
+	&.oval {
+		@include radius($button-height / 2);
+	}
+	
+	&.primary {
+		@include btn-bg($primary);
+	}
+	
+	&.secondary {
+		@include btn-bg($secondary);
+	}
+	
+	&.tertiary {
+		@include btn-bg($tertiary);
+	}
+	
+	&.disabled {
+		opacity: .6;
+		pointer-events: none;
+	}
+	
+	
+	// Sizes
+	&.mini {font-size: $button-font-size - 4; line-height: $button-height - 18; padding: 0 $button-height / 4 + 2;}
+	
+	&.small {font-size: $button-font-size - 2; line-height: $button-height - 10; padding: 0 $button-height / 2;}
+	
+	&.large {font-size: $button-font-size + 2; line-height: $button-height + 10; padding: 0 $button-height + 5;}
+	
+	&.x-large {font-size: $button-font-size + 4; line-height: $button-height + 20; padding: 0 $button-height;}
+	
+	&.full-width {width: 100%; padding-left: 0; padding-right: 0; text-align: center;}
+}
+
+
+// Submit
+input[type='submit'].button {
+	height: $button-height;
+	
+	&.small {height: $button-height - 10;}
+	
+	&.large {height: $button-height + 10;}
+	
+	&.x-large {height: $button-height + 20;}
+}

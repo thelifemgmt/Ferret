@@ -1,0 +1,126 @@
+// Typography Default Styles
+
+
+// Headlines
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span.headline {
+	color: $headline-color;
+	font-family: $headline-font;
+	font-weight: $headline-weight;
+	margin-bottom: $headline-margin;
+	line-height: $headline-line-height;
+}
+
+h1 {
+	font-size: $headline-h1-size;
+}
+
+h2 {
+	font-size: $headline-h2-size;
+}
+
+h3 {
+	font-size: $headline-h3-size;
+}
+
+h4 {
+	font-size: $headline-h4-size;
+}
+
+h5 {
+	font-size: $headline-h5-size;
+}
+
+h6 {
+	font-size: $headline-h6-size;
+}
+
+span.headline {
+	display: block;
+	font-size: $headline-span-headline-size;
+	color: $headline-color;
+}
+
+
+// Subheadlines
+.with-subheadline {
+	margin-bottom: 5px;
+}
+
+.subheadline {
+	display: block;
+	@include font-semi;
+	font-size: $headline-sub-headline-size;
+	color: $headline-sub-headline-color;
+}
+
+
+// Standard Links
+a {
+	text-decoration: none;
+	color: $link-color;
+	@include font-reg;
+	@include transition;
+	outline: none;
+	
+	&:hover {
+		color: $link-hover;
+	}
+}
+
+
+// Paragraphs
+p {
+	margin: 0 0 $paragraph-margin 0;
+	
+	&:last-child {
+		margin: 0;
+	}
+	
+	&.large {
+		font-size: $paragraph-large-font-size;
+		line-height: 2.2;
+	}
+}
+
+p,
+span {
+	letter-spacing: $base-letter-spacing;
+}
+
+
+// Additional Copy Sizes
+small,
+.small {
+	font-size: 80%;
+}
+
+
+// Specialty Characters
+sup {
+	vertical-align: top;
+	font-size: 73%;
+}
+
+
+// Blockquotes
+.pull-quote {
+    border-left: 1px solid $border-color;
+    padding: 0 0 0 20px;
+    color: $quote-color;
+    
+    cite {
+    	display: block;
+    	color: $quote-author-color;
+    	font-size: $quote-font-size;
+    	font-style: $quote-author-font-style;
+	    margin-top: 12px;
+	    
+	    &:before {content: $quote-author-before;}
+    }
+}

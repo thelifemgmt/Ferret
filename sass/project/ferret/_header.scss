@@ -1,0 +1,154 @@
+// Demo Header Styles (OUT OF DATE CODE - NOT RECOMMENDED FOR USE)
+
+
+// I REPEAT - DO NOT USE
+
+
+// Header and Nav
+$nav-bar-position: fixed;
+$nav-bar-bg: $dark;
+$nav-bar-height: 60px;
+$nav-position: right;
+$nav-spacing: 20px;
+$nav-font: $font-bold;
+$nav-font-size: 12px;
+$nav-font-weight: normal;
+$nav-color: $white;
+$nav-color-hover: $orange;
+$mobile-nav-bg: $dark;
+$mobile-nav-button: $dark + 20;
+$mobile-nav-button-height: 40px;
+$mobile-nav-menu-height: 60px;
+$mobile-nav-font-size: 12px;
+
+
+header {
+	position: $nav-bar-position;
+	width: 100%;
+	height: $nav-bar-height;
+	top: 0;
+	background: $nav-bar-bg;
+	z-index: 100;
+	
+	nav {
+		
+		// Media
+		@media #{$device} {
+			position: relative;
+			height: $nav-bar-height;
+		}
+		
+		ul {
+			float: $nav-position;
+			
+			// Media
+			@media #{$mobile} {
+				width: 100%;
+			}
+			
+			@media #{$small-tablet} {
+				width: 50%;
+			}
+			
+			@media #{$device} {
+				margin-top: $nav-bar-height + 10;
+				display: none;
+			}
+			
+			@media #{$desktop} {
+				display: block !important;
+				width: auto;
+			}
+			
+			&:before {
+				
+				// Media
+				@media #{$device} {
+					@include triangle(up, 7px, $mobile-nav-bg);
+				    top: $nav-bar-height + 3;
+				    right: 13px;
+				}
+			}
+			
+			li {
+				float: left;
+				margin: 0 $nav-spacing;
+				
+				// Media
+				@media #{$device} {
+					float: none !important;
+					display: block;
+				    height: $mobile-nav-menu-height;
+				    border-top: 1px solid $mobile-nav-bg + 10; 
+				    border-bottom: 1px solid $mobile-nav-bg - 10;
+				    padding: 0;
+				    background: $mobile-nav-bg;
+				    margin: 0 !important;
+				}
+				
+				&:first-child {
+					margin-left: 0;
+					
+					// Media
+					@media #{$device} {
+						border-top: 0; 
+						@include radius(3px 3px 0 0);
+					}
+				}
+				
+				&:last-child {
+					margin-right: 0;
+					
+					// Media
+					@media #{$device} {
+						border-bottom: 0; 
+						@include radius(0 0 3px 3px);
+					}
+				}
+				
+				a {
+					display: block;
+					font-family: $nav-font;
+					font-size: $nav-font-size;
+					font-weight: $nav-font-weight;
+					color: $nav-color !important;
+					line-height: $nav-bar-height;
+					
+					// Media
+					@media #{$device} {
+						display: block;
+				    	width: 100%;
+				    	font-size: $mobile-nav-font-size;
+				    	padding: 0 20px;
+					}
+					
+					&:hover {color: $nav-color-hover !important;}
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+.mobile-nav {
+	position: absolute;
+	top: (($nav-bar-height - $mobile-nav-button-height) / 2);
+	right: 20px;
+	width: $mobile-nav-button-height;
+	height: $mobile-nav-button-height;
+	border-radius: 50%;
+	background: $mobile-nav-button url(../images/ferret/button_mobile_nav.png) no-repeat center center; 
+	cursor: pointer;
+	z-index: 100;
+	display: none;
+	@include transition;
+	
+	&.active {
+		@include rotate(-90deg);
+	}
+	
+	// Media
+	@media #{$device} {
+		display: block;
+	}
+}

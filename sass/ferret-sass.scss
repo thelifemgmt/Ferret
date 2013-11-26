@@ -1,0 +1,64 @@
+/*********************************************
+Ferret Framework Main Stylesheet
+Last Updated: 9/12/13
+Written by: Sean Stopnik
+Email: thelifemgmt@gmail.com
+*********************************************/
+
+
+// Project Settings & Variables (Do NOT Remove)
+@import 'project/project-settings';
+
+
+// Base (Do NOT Remove)
+@import 'project/ferret/_mixins';
+@import 'project/ferret/grid/_box-grid';
+@import 'project/ferret/_fonts';
+@import 'project/ferret/_reset';
+@import 'project/ferret/_base';
+@import 'project/ferret/_typography';
+
+
+// Compontents
+
+// Buttons (Remove if Not Needed)
+@import 'project/ferret/components/variables/_buttons-variables'; // Button Variables
+@import 'project/ferret/components/_buttons'; // Button Styles
+
+
+// Forms (Remove if Not Needed)
+@import 'project/ferret/components/variables/_forms-variables'; // Form Variables
+@import 'project/ferret/components/_forms'; // Form Styles
+
+
+// Lists (Remove if Not Needed)
+@import 'project/ferret/components/variables/_lists-variables'; // list Variables
+@import 'project/ferret/components/_lists'; // List Styles
+
+
+// Tabs (Remove if Not Needed)
+@import 'project/ferret/components/variables/_tabs-variables'; // Tabs Variables
+@import 'project/ferret/components/_tabs'; // Tabs Styles
+
+
+// Tables (Remove if Not Needed)
+@import 'project/ferret/components/variables/_tables-variables'; // Tables Variables
+@import 'project/ferret/components/_tables'; // Tables Styles
+
+
+// Tooltips (Remove if Not Needed)
+@import 'project/ferret/components/variables/_tooltips-variables'; // Tooltip Variables
+@import 'project/ferret/components/_tooltips'; // Tooltip Styles
+
+
+// Main Project Specific CSS
+@import 'project/project-styles'; // Located in the Project Folder
+
+
+// Fancybox Styles (Remove if Not Using Fancybox)
+@import 'project/ferret/components/variables/_fancybox-variables'; // Fancybox Variables
+@import 'project/ferret/components/_fancybox'; // Fancybox Styles
+
+
+// IE 6-7 Support (Include this File ONLY if supporting IE 6-7)
+//@import 'project/ferret/grid/_box-grid-ie6-7';

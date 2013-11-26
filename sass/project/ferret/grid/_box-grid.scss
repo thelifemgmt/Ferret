@@ -1,0 +1,175 @@
+// The Box Grid - Version 3.0
+// Written by: Sean Stopnik
+// Email: thelifemgmt$gmail.com
+
+
+// Box Grid
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	html .row {
+		height: 1%;
+	}
+	
+	@media #{$device} {
+		-webkit-text-size-adjust: none;
+	}
+}
+
+
+// Container
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	
+	.ie8 & {
+		width: $grid-normal;
+	}
+	
+	@media #{$device} {
+		padding: 0 10px;
+	}
+	
+	@media #{$tablet} {
+		width: 768px;
+	}
+	
+	@media #{$desktop} {
+		width: $grid-normal;
+	}
+	
+	@media #{$large-desktop} {
+		width: $grid-wide;
+	}
+}
+
+
+// Rows
+.row {
+	display: block;
+	width: 100%;
+	
+	.row {
+		margin: 0 -10px;
+		width: auto;
+	}
+	
+	&.with-spacing {
+		margin-bottom: $grid-row-with-spacing;
+	}
+	
+	&.with-less-spacing {
+		margin-bottom: $grid-row-with-spacing / 2;
+	}
+	
+	&.with-more-spacing {
+		margin-bottom: $grid-row-with-spacing * 2;
+	}
+	
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	
+	&.centered {
+		text-align: center;
+		
+		div {
+			float: none;
+			display: inline-block;
+			text-align: left;
+			margin: 0 -2px;
+		}
+	}
+	
+	&.no-gutters {
+		padding: 0 $grid-gutter-width;
+		
+		[class*="box-"] {
+			padding: 0;
+		}
+	}
+	
+	&.large-gutters {
+		
+		[class*="box-"] {
+			padding: 0 $grid-gutter-width * 2;
+		}
+	}
+	
+	// Auto Clearing
+	&:before,
+	&:after {
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+		content: "";
+	}
+	
+	&:after {clear: both;}
+}
+
+
+// Box Widths
+// Grid Loop Start
+@for $i from 1 through $grid-boxes {
+	.box-#{$i} {
+		width: 100% / $grid-boxes * $i;
+	}
+}
+// Grid Loop End
+
+.box-full {
+	width: 100%;
+}
+
+.box-half {
+	width: 50%;
+}
+
+.box-3rd {
+	width: (100% / 3);
+}
+
+.box-2-3rd {
+	width: (100% / 3) * 2;
+}
+
+.box-5th {
+	width: (100% / 5);
+}
+
+.box-6th {
+	width: (100% / 6);
+}
+
+@media #{$mobile} {
+	[class^="box-"] {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+@media #{$device} {
+	[class^="box-"] {
+		width: 100%;
+	}
+	
+	.box-half,
+	.box-5th,
+	.box-6th {
+		width: 50%;
+	}
+}
+
+
+// Box Positioning
+[class^="box-"] {
+	float: left;
+	padding: 0 $grid-gutter-width;
+}

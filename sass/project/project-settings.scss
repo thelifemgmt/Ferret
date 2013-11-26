@@ -1,0 +1,89 @@
+// Project Settings & Variables
+
+
+// Grid Settings
+$grid-boxes: 16; // Sets the Max Number of Grid Boxes per Row (up to 24)
+$grid-gutter-width: 10px; // Sets the Gutter Width on Each Side of Each Box
+$grid-normal: 960px; // Sets Container Width
+$grid-wide: 1200px; // Sets Wide Screen Container Width
+$grid-row-with-spacing: 40px;
+
+// Fonts
+$font-light: 'OpenSansLight';
+$font-normal: 'OpenSansReg';
+$font-semi: 'OpenSansSemi';
+$font-bold: 'OpenSansBold';
+$font-headline: 'OpenSansBold';
+
+
+// Colors
+$blue: #48b2c1;
+$orange: #fdaa4e;
+$red: #f26a4a;
+$green: #50c690;
+$yellow: #f3de99;
+$gray: #acacac;
+$light-gray: #e1e1e1;
+$dark-gray: #959595;
+$dark: #353535;
+$white: #fff;
+
+$primary: $blue;
+$secondary: $orange;
+$tertiary: $green;
+
+
+// Base
+$base-bg: #fff;
+$base-font: $font-light;
+$base-color: #707070;
+$base-line-height: 2;
+$base-font-size: 16px;
+$base-font-weight: normal;
+$base-letter-spacing: 1px;
+$link-color: $primary;
+$link-hover: $dark;
+
+
+// Typography
+$headline-h1-size: 240%;
+$headline-h2-size: 200%;
+$headline-h3-size: 160%;
+$headline-h4-size: 140%;
+$headline-h5-size: 120%;
+$headline-h6-size: 100%;
+$headline-span-headline-size: 120%;
+$headline-sub-headline-size: 120%;
+$headline-sub-headline-color: $dark-gray;
+$headline-color: $dark;
+$headline-font: $font-bold;
+$headline-weight: normal;
+$headline-line-height: 1.5;
+$headline-margin: 15px;
+$paragraph-margin: 20px;
+$paragraph-large-font-size: 110%;
+
+
+// Blockquotes
+$quote-color: lighten($base-color, 20%);
+$quote-font-size: 93%;
+$quote-author-font-style: italic;
+$quote-author-color: $dark;
+$quote-author-before: "\2014 \0020";
+
+
+// Borders
+$border-color: #e1e1e1;
+
+
+// User Select
+$user-select-bg: $dark;
+$user-select-color: $white;
+
+
+// First Section Top Margin to Compensate for Fixed Top Navigation Bar
+$first-section-margin: 60px;
+
+
+// Extras
+$striped: url(../images/ferret/bg_stripes.png);

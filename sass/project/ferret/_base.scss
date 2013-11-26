@@ -1,0 +1,65 @@
+// Base Default Styles
+
+
+// Base Defaults
+body {
+	color: $base-color;
+	font-family: $base-font;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+	background: $base-bg;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 2px;
+	background: url(../images/ferret/hr_horizontal.png) repeat-x;
+	margin: 0 10px 40px;
+	padding: 0;
+	
+	&.flush {margin: 0;}
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+
+input[type='button'],
+input[type='submit'],
+button {
+	cursor: pointer;
+	border: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+.bold,
+b,
+strong {
+	font-weight: bold;
+}
+
+.italic,
+i {
+	font-style: italic;
+}
+
+
+// User Select
+::selection,
+::-moz-selection {
+	background: $user-select-bg;
+	color: $user-select-color;
+}
+
+
+// IE7 Image Fix
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}

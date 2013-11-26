@@ -1,0 +1,251 @@
+// Fancybox v2.1.5
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+.fancybox-skin {
+	position: relative;
+	color: $dark;
+	text-shadow: none;
+	@include radius;
+	background: $white;
+}
+.fancybox-opened {
+	z-index: 8030;
+}
+.fancybox-outer, .fancybox-inner {
+	position: relative;
+}
+.fancybox-inner {
+	overflow: hidden;
+	
+	.fancybox-type-iframe & {
+		-webkit-overflow-scrolling: touch;
+	}
+}
+.fancybox-error {
+	color: #444;
+	@include font-semi;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+.fancybox-image, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	@include background-image('../images/fancybox/fancybox_sprite', png, 40px, 160px);
+	background-repeat: no-repeat;
+}
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8060;
+}
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	@include background-image('../images/fancybox/fancybox_loading', gif, 24px, 24px);
+}
+.fancybox-close {
+	position: absolute;
+	top: -25px;
+	right: -25px;
+	@include size(40px);
+	@include radius;
+	cursor: pointer;
+	z-index: 8040;
+	background-color: $fancybox-close;
+	background-position: 0 -80px;
+	
+	&:hover {
+		background-color: $dark;
+	}
+}
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 20%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 8040;
+	
+	span {
+		position: absolute;
+		top: 50%;
+		@include size(40px);
+		margin-top: -20px;
+		cursor: pointer;
+		z-index: 8040;
+		background-color: $fancybox-nav;
+	}
+}
+.fancybox-prev {
+	left: 0;
+	height: 100%;
+	opacity: 0;
+	
+	span {
+		left: -10px;
+		background-position: 0 0;
+	}
+	
+	&:hover {
+		left: -25px;
+		opacity: 1;
+		
+		span {
+			background-color: $fancybox-nav;
+			
+			&:hover {
+				background-color: $fancybox-nav-hover;
+			}
+		}
+	}
+}
+.fancybox-next {
+	right: 0;
+	height: 100%;
+	opacity: 0;
+	
+	span {
+		right: -10px;
+		background-position: 0 -40px;
+	}
+	
+	&:hover {
+		right: -25px;
+		opacity: 1;
+		
+		span {
+			background-color: $fancybox-nav;
+			
+			&:hover {
+				background-color: $fancybox-nav-hover;
+			}
+		}
+	}
+}
+.fancybox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important;
+}
+
+
+// Overlay
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+    
+    body {
+	    overflow: hidden !important;
+    }
+    
+    .fancybox-overlay {
+		overflow: auto;
+		overflow-y: scroll;
+	}
+}
+
+.fancybox-lock-test {
+	overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: rgba(0,0,0,.6);
+}
+
+.fancybox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+
+// Titles
+.fancybox-title {
+	visibility: hidden;
+	@include font-semi;
+	font-size: 11px;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -40px;
+	z-index: 8050;
+	text-align: center;
+}
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	margin-right: -100%;
+	padding: 5px 20px;
+	background: $dark;
+	@include radius;
+	color: $white;
+	white-space: nowrap;
+}
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: $white;
+}
+.fancybox-title-inside-wrap {
+	padding-top: 10px;
+}
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: $white;
+	padding: 10px;
+	background: $dark;
+}

@@ -1,0 +1,241 @@
+// Default Mix-ins
+
+
+// Transitions
+@mixin transition($speed: .15s) {
+	-webkit-transition: all $speed ease-in-out;
+	-moz-transition: all $speed ease-in-out;
+	transition: all $speed ease-in-out;
+}
+
+@mixin transition-more($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	transition: $transition;
+}
+
+
+// Gradients
+@mixin gradient($origin: top, $start: #e1e1e1, $stop: #353535) {
+	background-color: $start;
+	background-image: -webkit-linear-gradient($origin, $start, $stop);
+	background-image: -moz-linear-gradient($origin, $start, $stop);
+	background-image: -o-linear-gradient($origin, $start, $stop);
+	background-image: -ms-linear-gradient($origin, $start, $stop);
+	background-image: linear-gradient($origin, $start, $stop);
+}
+
+
+// Rounded Corners
+@mixin radius($radius: 3px) {
+	border-radius: $radius;
+}
+
+
+// Rotate
+@mixin rotate($rotate) {
+	-webkit-transform: rotate($rotate);
+	transform: rotate($rotate);
+}
+
+
+// Scale
+@mixin scale($scale) {
+	-webkit-transform: scale($scale);
+	transform: scale($scale);
+}
+
+
+// Translate
+@mixin translate($translate) {
+	-webkit-transform: translate($translate);
+	transform: translate($translate);
+}
+
+
+// Backface Visibility
+@mixin backface() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+// Translate3d
+@mixin translate3d($translate3d) {
+	-webkit-transform: translate3d($translate3d);
+	transform: translate3d($translate3d);
+	@include backface;
+}
+
+
+// Anitmation
+@mixin animate($name, $speed: .2s, $ease: ease-in, $delay: .5s, $when: both) {
+	-webkit-animation: $name $speed $ease $delay $when;
+	animation: $name $speed $ease $delay $when;
+}
+
+
+// Width and Height
+@mixin size($width: false, $height: false) {
+	@if $height != false { 
+		width: $width;
+		height: $height;
+	}
+	
+	@else {
+		width: $width;
+		height: $width;
+	}
+}
+
+
+// Triangle
+@mixin triangle-base {
+	position: absolute;
+	@include size(0);
+	content: '';
+}
+
+@mixin triangle($direction, $size, $color) {
+	@if ($direction == "up") {
+		@include triangle-base();
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	}
+	
+	@else if ($direction == "down") {
+		@include triangle-base();
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	}
+	
+	@else if ($direction == "left") {
+		@include triangle-base();
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+	
+	@else if ($direction == "right") {
+		@include triangle-base();
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	}
+}
+
+
+// Effects
+@mixin shadow($shadow...) {
+	box-shadow: $shadow;
+}
+
+@mixin fade($fade: 0.6) {
+	@include transition;
+  	opacity: 1.0;
+  	
+  	&:hover {
+	  	opacity: $fade;
+	}
+}
+
+
+// Positioning
+.position {position: relative;}
+
+.left,
+.floated {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.flush {
+	margin: 0;
+}
+
+@mixin margin($direction, $amount) {
+	margin-#{$direction}: $amount;
+}
+
+@each $i in 10, 20, 30, 40, 50, 60 {
+	.top-#{$i} {
+		margin-top: #{$i}px;
+	}
+}
+
+@each $i in 10, 20, 30, 40, 50, 60 {
+	.bottom-#{$i} {
+		margin-bottom: #{$i}px;
+	}
+}
+
+
+// Extras
+.clear {
+	clear: both;
+	display: block;
+	@include size(0);
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.not-selectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.striped {
+	background-image: url(../images/ferret/bg_stripes.png);
+	background-repeat: repeat;
+}
+
+
+// Retina Images
+@mixin background-image($image, $extension: jpg, $width: 100%, $height: 100%) {
+	background-image: url(#{$image}.#{$extension});
+	
+	@media #{$retina} {
+		background-image: url(#{$image}@2x.#{$extension});
+		background-size: $width $height;
+	}
+}
+
+
+// SVG Background Image
+@mixin svg($image, $width, $height) {
+	display: inline-block;
+	@include size($width, $height);
+	background: url(#{$image}.svg) no-repeat center center;
+	background-size: $width $height;
+}
+
+
+// Media Queries for Mobile First Design
+$mobile: "(max-width: 599px)"; // Only Phone
+$small-tablet: "(min-width: 600px)";
+$tablet: "(min-width: 768px)";
+$device: "(max-width: 959px)"; // All Devices
+$desktop: "(min-width: 960px)";
+$large-desktop: "(min-width: 1280px)";
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"; // Only Retina Screens
+
+
+// Media Queries to Target Device Only
+$small-tablet-only: "(min-width: 600px) and (max-width: 767px)";
+$tablet-only: "(min-width: 768px) and (max-width: 959px)";
+$desktop-only: "(min-width: 960px) and (max-width: 1279px)";

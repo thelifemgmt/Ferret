@@ -1,0 +1,86 @@
+// Tabs Default Styles
+
+// Tabs
+ul.tabs-nav {
+    float: left;
+    width: 100%;
+    margin: 5px 0 20px;
+    
+    @media #{$small-tablet} {
+    	border-bottom: 1px solid $tab-border-color;
+    }
+    
+    li {
+	    float: left;
+	    padding: 6px $tab-spacing;
+	    border: 1px solid $tab-border-color;
+	    background: $tab-bg;
+	    margin: 0 -1px -1px 0;
+	    @include transition;
+	    
+	    &:hover {
+	    	cursor: pointer;
+	    	a {
+	    		color: $tab-color-hover;
+	    	}
+	    }
+		
+		a {
+		    display: block;
+		    color: $tab-color;
+		    font-family: $tab-font;
+	    	font-size: $tab-font-size;
+	    	font-weight: $tab-font-weight;
+	    	line-height: 1.9;
+	    	letter-spacing: $tab-letter-spacing;
+	    	
+	    	&:hover {
+	    		color: $tab-color-hover;
+	    	}
+	    }
+	    
+	    &.active {
+		    padding-top: 9px;
+		    border-bottom: 1px solid $tab-frame-bg;
+		    margin-top: -3px;
+		    background: $tab-frame-bg;
+		    
+		    a {
+		    	color: $tab-color-active;
+		    }
+		}
+		
+		@media #{$mobile} {
+			border: none;
+    		border-right: 1px solid $tab-border-color;
+    		padding: 2px 12px;
+    		background: none;
+    		
+    		&:first-child {
+    			padding-left: 0;
+    		}
+    		
+    		&:last-child {
+    			padding-right: 0;
+    			border: none;
+    		}
+    		
+    		&.active {
+    			padding-top: 2px;
+    			margin-top: 0;
+    			background: none;
+    		}
+    		
+    		a {
+    			font-size: 90%;
+    		}
+		}
+    }
+}
+.tab-frame {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	background: $tab-frame-bg;
+	display: none;
+}

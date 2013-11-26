@@ -1,49 +1,78 @@
 /*********************************************
 Ferret Framework Main Stylesheet
-Last Updated: 11/28/13
+Last Updated: 9/12/13
 Written by: Sean Stopnik
 Email: thelifemgmt@gmail.com
 *********************************************/
 .position {
   position: relative;
 }
+
 .left,
 .floated {
   float: left;
 }
+
 .right {
   float: right;
 }
+
 .center {
   text-align: center;
 }
+
 .flush {
   margin: 0;
 }
-.top10 {
+
+.top-10 {
   margin-top: 10px;
 }
-.top20 {
+
+.top-20 {
   margin-top: 20px;
 }
-.top30 {
+
+.top-30 {
   margin-top: 30px;
 }
-.top40 {
+
+.top-40 {
   margin-top: 40px;
 }
-.bottom10 {
+
+.top-50 {
+  margin-top: 50px;
+}
+
+.top-60 {
+  margin-top: 60px;
+}
+
+.bottom-10 {
   margin-bottom: 10px;
 }
-.bottom20 {
+
+.bottom-20 {
   margin-bottom: 20px;
 }
-.bottom30 {
+
+.bottom-30 {
   margin-bottom: 30px;
 }
-.bottom40 {
+
+.bottom-40 {
   margin-bottom: 40px;
 }
+
+.bottom-50 {
+  margin-bottom: 50px;
+}
+
+.bottom-60 {
+  margin-bottom: 60px;
+}
+
 .clear {
   clear: both;
   display: block;
@@ -52,21 +81,24 @@ Email: thelifemgmt@gmail.com
   overflow: hidden;
   visibility: hidden;
 }
-.normal {
-  font-weight: normal;
-}
-.noselect {
+
+.not-selectable {
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 .hidden {
   display: none;
+  visibility: hidden;
 }
+
 .striped {
   background-image: url(../images/ferret/bg_stripes.png);
   background-repeat: repeat;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -80,6 +112,7 @@ Email: thelifemgmt@gmail.com
     -webkit-text-size-adjust: none;
   }
 }
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -108,6 +141,7 @@ Email: thelifemgmt@gmail.com
     width: 1200px;
   }
 }
+
 .row {
   display: block;
   width: 100%;
@@ -148,8 +182,7 @@ Email: thelifemgmt@gmail.com
 .row.large-gutters [class*="box-"] {
   padding: 0 20px;
 }
-.row:before,
-.row:after {
+.row:before, .row:after {
   display: block;
   height: 0;
   overflow: hidden;
@@ -159,72 +192,95 @@ Email: thelifemgmt@gmail.com
 .row:after {
   clear: both;
 }
+
 .box-1 {
   width: 6.25%;
 }
+
 .box-2 {
   width: 12.5%;
 }
+
 .box-3 {
   width: 18.75%;
 }
+
 .box-4 {
   width: 25%;
 }
+
 .box-5 {
   width: 31.25%;
 }
+
 .box-6 {
   width: 37.5%;
 }
+
 .box-7 {
   width: 43.75%;
 }
+
 .box-8 {
   width: 50%;
 }
+
 .box-9 {
   width: 56.25%;
 }
+
 .box-10 {
   width: 62.5%;
 }
+
 .box-11 {
   width: 68.75%;
 }
+
 .box-12 {
   width: 75%;
 }
+
 .box-13 {
   width: 81.25%;
 }
+
 .box-14 {
   width: 87.5%;
 }
+
 .box-15 {
   width: 93.75%;
 }
+
 .box-16 {
   width: 100%;
 }
+
 .box-full {
   width: 100%;
 }
+
 .box-half {
   width: 50%;
 }
+
 .box-3rd {
-  width: 33.333333333333336%;
+  width: 33.33333%;
 }
+
 .box-2-3rd {
-  width: 66.66666666666667%;
+  width: 66.66667%;
 }
+
 .box-5th {
   width: 20%;
 }
+
 .box-6th {
-  width: 16.666666666666668%;
+  width: 16.66667%;
 }
+
 @media (max-width: 599px) {
   [class^="box-"] {
     width: 100%;
@@ -235,6 +291,7 @@ Email: thelifemgmt@gmail.com
   [class^="box-"] {
     width: 100%;
   }
+
   .box-half,
   .box-5th,
   .box-6th {
@@ -245,108 +302,38 @@ Email: thelifemgmt@gmail.com
   float: left;
   padding: 0 10px;
 }
+
 @font-face {
-  font-family: 'OpenSansLight';
-  src: url('../fonts/OpenSans-Light-webfont.eot');
-  src: url('../fonts/OpenSans-Light-webfont?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
 }
+
 @font-face {
-  font-family: 'OpenSansReg';
-  src: url('../fonts/OpenSans-Regular-webfont.eot');
-  src: url('../fonts/OpenSans-Regular-webfont?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg#OpenSansReg') format('svg');
+  font-family: "OpenSansReg";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansReg") format("svg");
 }
+
 @font-face {
-  font-family: 'OpenSansSemi';
-  src: url('../fonts/OpenSans-Semibold-webfont.eot');
-  src: url('../fonts/OpenSans-Semibold-webfont?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemi') format('svg');
+  font-family: "OpenSansSemi";
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemi") format("svg");
 }
+
 @font-face {
-  font-family: 'OpenSansBold';
-  src: url('../fonts/OpenSans-Bold-webfont.eot');
-  src: url('../fonts/OpenSans-Bold-webfont?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
 }
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video,
-main {
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video, main {
   margin: 0;
   padding: 0;
   border: 0;
@@ -354,55 +341,52 @@ main {
   font: inherit;
   vertical-align: baseline;
 }
+
 html {
   overflow-y: scroll;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
+blockquote:before, blockquote:after,
 q:before,
-blockquote:after,
 q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main {
+
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section, main {
   display: block;
 }
+
 body {
   color: #707070;
-  font-family: 'OpenSansLight';
+  font-family: "OpenSansLight";
   font-size: 16px;
   font-weight: normal;
   line-height: 2;
-  background: #ffffff;
+  background: white;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
 hr {
   display: block;
   border: 0;
@@ -414,10 +398,12 @@ hr {
 hr.flush {
   margin: 0;
 }
+
 input,
 select {
   vertical-align: middle;
 }
+
 input[type='button'],
 input[type='submit'],
 button {
@@ -427,23 +413,28 @@ button {
   -webkit-appearance: none;
   outline: none;
 }
+
 .bold,
 b,
 strong {
   font-weight: bold;
 }
+
 .italic,
 i {
   font-style: italic;
 }
+
 ::selection,
 ::-moz-selection {
   background: #353535;
-  color: #ffffff;
+  color: white;
 }
+
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
+
 h1,
 h2,
 h3,
@@ -452,37 +443,46 @@ h5,
 h6,
 span.headline {
   color: #353535;
-  font-family: 'OpenSansBold';
+  font-family: "OpenSansBold";
   font-weight: normal;
   margin-bottom: 15px;
   line-height: 1.5;
 }
+
 h1 {
   font-size: 240%;
 }
+
 h2 {
   font-size: 200%;
 }
+
 h3 {
   font-size: 160%;
 }
+
 h4 {
   font-size: 140%;
 }
+
 h5 {
   font-size: 120%;
 }
+
 h6 {
   font-size: 100%;
 }
+
 span.headline {
   display: block;
   font-size: 120%;
   color: #353535;
 }
+
 .with-subheadline {
   margin-bottom: 5px;
 }
+
 .subheadline {
   display: block;
   font-family: 'OpenSansSemi';
@@ -491,6 +491,7 @@ span.headline {
   font-size: 120%;
   color: #959595;
 }
+
 a {
   text-decoration: none;
   color: #48b2c1;
@@ -505,6 +506,7 @@ a {
 a:hover {
   color: #353535;
 }
+
 p {
   margin: 0 0 20px 0;
 }
@@ -515,18 +517,22 @@ p.large {
   font-size: 110%;
   line-height: 2.2;
 }
+
 p,
 span {
   letter-spacing: 1px;
 }
+
 small,
 .small {
   font-size: 80%;
 }
+
 sup {
   vertical-align: top;
   font-size: 73%;
 }
+
 .pull-quote {
   border-left: 1px solid #e1e1e1;
   padding: 0 0 0 20px;
@@ -542,16 +548,18 @@ sup {
 .pull-quote cite:before {
   content: "\2014 \0020";
 }
+
 .button,
 a.button {
   float: left;
   padding: 0 25px;
-  font-family: 'OpenSansBold';
+  color: white;
+  font-family: "OpenSansBold";
   font-weight: normal;
   font-size: 14px;
   line-height: 40px;
   border-radius: 3px;
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #3fabbb;
   box-shadow: 0 4px 0 #3693a0;
   background-color: #48b2c1;
@@ -575,7 +583,7 @@ a.button.submit {
   font-style: normal;
   letter-spacing: 1px;
   border: 0;
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #f15e3c;
   box-shadow: 0 4px 0 #ef431a;
   background-color: #f26a4a;
@@ -591,7 +599,7 @@ a.button.submit:active {
 }
 .button.orange,
 a.button.orange {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #fda33f;
   box-shadow: 0 4px 0 #fc921c;
   background-color: #fdaa4e;
@@ -606,7 +614,7 @@ a.button.orange:active {
 }
 .button.red,
 a.button.red {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #f15e3c;
   box-shadow: 0 4px 0 #ef431a;
   background-color: #f26a4a;
@@ -621,7 +629,7 @@ a.button.red:active {
 }
 .button.blue,
 a.button.blue {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #3fabbb;
   box-shadow: 0 4px 0 #3693a0;
   background-color: #48b2c1;
@@ -636,7 +644,7 @@ a.button.blue:active {
 }
 .button.green,
 a.button.green {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #44c289;
   box-shadow: 0 4px 0 #38ab76;
   background-color: #50c690;
@@ -651,7 +659,7 @@ a.button.green:active {
 }
 .button.light,
 a.button.light {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #a4a4a4;
   box-shadow: 0 4px 0 #939393;
   background-color: #acacac;
@@ -694,7 +702,7 @@ a.button.oval {
 }
 .button.primary,
 a.button.primary {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #3fabbb;
   box-shadow: 0 4px 0 #3693a0;
   background-color: #48b2c1;
@@ -709,7 +717,7 @@ a.button.primary:active {
 }
 .button.secondary,
 a.button.secondary {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #fda33f;
   box-shadow: 0 4px 0 #fc921c;
   background-color: #fdaa4e;
@@ -724,7 +732,7 @@ a.button.secondary:active {
 }
 .button.tertiary,
 a.button.tertiary {
-  color: #ffffff;
+  color: white;
   text-shadow: 0 1px 0 #44c289;
   box-shadow: 0 4px 0 #38ab76;
   background-color: #50c690;
@@ -773,6 +781,7 @@ a.button.full-width {
   padding-right: 0;
   text-align: center;
 }
+
 input[type='submit'].button {
   height: 40px;
 }
@@ -785,11 +794,12 @@ input[type='submit'].button.large {
 input[type='submit'].button.x-large {
   height: 60px;
 }
+
 .inputfield {
   float: left;
   width: 100%;
   height: 45px;
-  font-family: 'OpenSansReg';
+  font-family: "OpenSansReg";
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
@@ -798,7 +808,7 @@ input[type='submit'].button.x-large {
   padding: 8.5px 10px;
   border: 1px solid #e1e1e1;
   border-radius: 3px;
-  background: #ffffff;
+  background: white;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -811,30 +821,33 @@ input[type='submit'].button.x-large {
   border-color: #ebc855;
   background: #f8edc7;
 }
-select.inputfield {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  color: #acacac;
-  background: #ffffff url(../images/ferret/bg_select_arrow.png) no-repeat right;
-}
-select.inputfield:focus {
-  background: #f8edc7 url(../images/ferret/bg_select_arrow.png) no-repeat right;
-}
-textarea.inputfield {
-  height: 140px;
-}
 @media (min-width: 600px) {
   .inputfield {
     margin-bottom: 20px;
   }
 }
+
+select.inputfield {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #acacac;
+  background: white url(../images/ferret/bg_select_arrow.png) no-repeat right;
+}
+select.inputfield:focus {
+  background: #f8edc7 url(../images/ferret/bg_select_arrow.png) no-repeat right;
+}
+
+textarea.inputfield {
+  height: 140px;
+}
+
 .checkbox,
 .radio-button {
   float: left;
   width: 17px;
   height: 17px;
   border: 1px solid #e1e1e1;
-  background: #ffffff;
+  background: white;
   -webkit-appearance: none;
   margin: 0 7px 0 0;
   cursor: pointer;
@@ -858,32 +871,38 @@ textarea.inputfield {
     margin-bottom: 20px;
   }
 }
+
 .checkbox {
   border-radius: 3px;
 }
 .checkbox:checked {
   background: url(../images/ferret/bg_checkbox.png) no-repeat center center;
 }
+
 .radio-button {
   border-radius: 50%;
 }
 .radio-button:checked {
   background: url(../images/ferret/bg_radio_button.png) no-repeat center center;
 }
+
 label {
   float: left;
   font-size: 12px;
   line-height: 1.5;
 }
+
 ::-webkit-input-placeholder {
   color: #acacac;
 }
+
 input[type='text']:-moz-placeholder,
 input[type='tel']:-moz-placeholder,
 input[type='email']:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #acacac;
 }
+
 ul li {
   margin-bottom: 10px;
   font-size: 95%;
@@ -932,6 +951,7 @@ ul.inline li:last-child {
 ul.with-spacing {
   margin-bottom: 20px;
 }
+
 ol li {
   margin: 0 0 10px 25px;
   list-style: decimal;
@@ -944,6 +964,7 @@ ol li:last-child {
 ol.with-spacing {
   margin-bottom: 20px;
 }
+
 dl {
   font-size: 95%;
 }
@@ -963,6 +984,7 @@ dl dd:last-child {
 dl.with-spacing {
   margin-bottom: 20px;
 }
+
 ul.tabs-nav {
   float: left;
   width: 100%;
@@ -992,7 +1014,7 @@ ul.tabs-nav li:hover a {
 ul.tabs-nav li a {
   display: block;
   color: #959595;
-  font-family: 'OpenSansSemi';
+  font-family: "OpenSansSemi";
   font-size: 12px;
   font-weight: normal;
   line-height: 1.9;
@@ -1003,9 +1025,9 @@ ul.tabs-nav li a:hover {
 }
 ul.tabs-nav li.active {
   padding-top: 9px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid white;
   margin-top: -3px;
-  background: #ffffff;
+  background: white;
 }
 ul.tabs-nav li.active a {
   color: #f26a4a;
@@ -1033,13 +1055,15 @@ ul.tabs-nav li.active a {
     font-size: 90%;
   }
 }
+
 .tab-frame {
   float: left;
   width: 100%;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: white;
   display: none;
 }
+
 table {
   width: 100%;
 }
@@ -1047,7 +1071,7 @@ table thead {
   background: #48b2c1;
 }
 table thead th {
-  color: #ffffff;
+  color: white;
   font-family: 'OpenSansBold';
   font-weight: normal;
   font-style: normal;
@@ -1107,6 +1131,7 @@ table tfoot td:last-child {
 table.with-footer tbody tr:last-child td {
   border-radius: 0;
 }
+
 .tooltip {
   position: relative;
 }
@@ -1115,14 +1140,14 @@ table.with-footer tbody tr:last-child td {
   bottom: 18px;
   width: 220%;
   left: -60%;
-  font-family: 'OpenSansSemi';
+  font-family: "OpenSansSemi";
   letter-spacing: 0;
   font-size: 80%;
   font-weight: normal;
   line-height: 1.6;
   text-align: center;
   padding: 8px 10px;
-  color: #ffffff;
+  color: white;
   background: #353535;
   border-radius: 3px;
   z-index: 100;
@@ -1157,9 +1182,11 @@ table.with-footer tbody tr:last-child td {
   opacity: 1;
   visibility: visible;
 }
+
 .first-section {
   margin-top: 60px;
 }
+
 header {
   position: fixed;
   width: 100%;
@@ -1248,10 +1275,10 @@ header nav ul li:last-child {
 }
 header nav ul li a {
   display: block;
-  font-family: 'OpenSansBold';
+  font-family: "OpenSansBold";
   font-size: 12px;
   font-weight: normal;
-  color: #ffffff !important;
+  color: white !important;
   line-height: 60px;
 }
 @media (max-width: 959px) {
@@ -1265,6 +1292,7 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #fdaa4e !important;
 }
+
 .mobile-nav {
   position: absolute;
   top: 10px;
@@ -1289,11 +1317,13 @@ header nav ul li a:hover {
     display: block;
   }
 }
+
 section {
   padding: 20px 0;
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 20px;
 }
+
 @media (min-width: 600px) {
   .row {
     margin-bottom: 20px;
@@ -1305,6 +1335,7 @@ section {
 .row form .row {
   background: none;
 }
+
 span {
   display: block;
   border-radius: 3px;
@@ -1333,6 +1364,7 @@ span.logo {
   text-transform: uppercase;
   background: none;
 }
+
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,
@@ -1349,32 +1381,37 @@ span.logo {
   outline: none;
   vertical-align: top;
 }
+
 .fancybox-wrap {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 8020;
 }
+
 .fancybox-skin {
   position: relative;
   color: #353535;
   text-shadow: none;
   border-radius: 3px;
-  background: #ffffff;
+  background: white;
 }
+
 .fancybox-opened {
   z-index: 8030;
 }
-.fancybox-outer,
-.fancybox-inner {
+
+.fancybox-outer, .fancybox-inner {
   position: relative;
 }
+
 .fancybox-inner {
   overflow: hidden;
 }
 .fancybox-type-iframe .fancybox-inner {
   -webkit-overflow-scrolling: touch;
 }
+
 .fancybox-error {
   color: #444;
   font-family: 'OpenSansSemi';
@@ -1384,32 +1421,29 @@ span.logo {
   padding: 15px;
   white-space: nowrap;
 }
-.fancybox-image,
-.fancybox-iframe {
+
+.fancybox-image, .fancybox-iframe {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 .fancybox-image {
   max-width: 100%;
   max-height: 100%;
 }
-#fancybox-loading,
-.fancybox-close,
-.fancybox-prev span,
-.fancybox-next span {
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
   background-image: url(../images/fancybox/fancybox_sprite.png);
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  #fancybox-loading,
-  .fancybox-close,
-  .fancybox-prev span,
-  .fancybox-next span {
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
     background-image: url(../images/fancybox/fancybox_sprite@2x.png);
     background-size: 40px 160px;
   }
 }
+
 #fancybox-loading {
   position: fixed;
   top: 50%;
@@ -1421,6 +1455,7 @@ span.logo {
   cursor: pointer;
   z-index: 8060;
 }
+
 #fancybox-loading div {
   width: 44px;
   height: 44px;
@@ -1432,6 +1467,7 @@ span.logo {
     background-size: 24px 24px;
   }
 }
+
 .fancybox-close {
   position: absolute;
   top: -25px;
@@ -1447,6 +1483,7 @@ span.logo {
 .fancybox-close:hover {
   background-color: #353535;
 }
+
 .fancybox-nav {
   position: absolute;
   top: 0;
@@ -1465,6 +1502,7 @@ span.logo {
   z-index: 8040;
   background-color: #353535;
 }
+
 .fancybox-prev {
   left: 0;
   height: 100%;
@@ -1484,6 +1522,7 @@ span.logo {
 .fancybox-prev:hover span:hover {
   background-color: #48b2c1;
 }
+
 .fancybox-next {
   right: 0;
   height: 100%;
@@ -1503,6 +1542,7 @@ span.logo {
 .fancybox-next:hover span:hover {
   background-color: #48b2c1;
 }
+
 .fancybox-tmp {
   position: absolute;
   top: -99999px;
@@ -1512,6 +1552,7 @@ span.logo {
   max-height: 99999px;
   overflow: visible !important;
 }
+
 .fancybox-lock {
   overflow: hidden !important;
   width: auto;
@@ -1519,13 +1560,15 @@ span.logo {
 .fancybox-lock body {
   overflow: hidden !important;
 }
-.fancybox-lock-test {
-  overflow-y: hidden !important;
-}
 .fancybox-lock .fancybox-overlay {
   overflow: auto;
   overflow-y: scroll;
 }
+
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+
 .fancybox-overlay {
   position: absolute;
   top: 0;
@@ -1535,11 +1578,13 @@ span.logo {
   z-index: 8010;
   background: rgba(0, 0, 0, 0.6);
 }
+
 .fancybox-overlay-fixed {
   position: fixed;
   bottom: 0;
   right: 0;
 }
+
 .fancybox-title {
   visibility: hidden;
   font-family: 'OpenSansSemi';
@@ -1550,9 +1595,11 @@ span.logo {
   text-shadow: none;
   z-index: 8050;
 }
+
 .fancybox-opened .fancybox-title {
   visibility: visible;
 }
+
 .fancybox-title-float-wrap {
   position: absolute;
   bottom: 0;
@@ -1561,28 +1608,32 @@ span.logo {
   z-index: 8050;
   text-align: center;
 }
+
 .fancybox-title-float-wrap .child {
   display: inline-block;
   margin-right: -100%;
   padding: 5px 20px;
   background: #353535;
   border-radius: 3px;
-  color: #ffffff;
+  color: white;
   white-space: nowrap;
 }
+
 .fancybox-title-outside-wrap {
   position: relative;
   margin-top: 10px;
-  color: #ffffff;
+  color: white;
 }
+
 .fancybox-title-inside-wrap {
   padding-top: 10px;
 }
+
 .fancybox-title-over-wrap {
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #ffffff;
+  color: white;
   padding: 10px;
   background: #353535;
 }

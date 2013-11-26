@@ -1,0 +1,51 @@
+// Fontface Fonts
+@mixin font-face-mixin($font-name, $font-path, $font-file) {
+	@font-face {
+	    font-family: '#{$font-name}';
+	    src: url('#{$font-path}/#{$font-file}.eot');
+	    src: url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
+	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
+	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
+	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
+	}	
+}
+
+@include font-face-mixin('OpenSansLight', '../fonts', 'OpenSans-Light-webfont');
+
+@include font-face-mixin('OpenSansReg', '../fonts', 'OpenSans-Regular-webfont');
+
+@include font-face-mixin('OpenSansSemi', '../fonts', 'OpenSans-Semibold-webfont');
+
+@include font-face-mixin('OpenSansBold', '../fonts', 'OpenSans-Bold-webfont');
+
+
+// Font Mixins
+@mixin font-styles {
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-light {
+	font-family: 'OpenSansLight';
+	@include font-styles;
+}
+
+@mixin font-reg {
+	font-family: 'OpenSansReg';
+	@include font-styles;
+}
+
+@mixin font-semi {
+	font-family: 'OpenSansSemi';
+	@include font-styles;
+}
+
+@mixin font-bold {
+	font-family: 'OpenSansBold';
+	@include font-styles;
+}
+
+@mixin font-headline {
+	font-family: 'OpenSansBold';
+	@include font-styles;
+}

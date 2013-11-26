@@ -1,0 +1,60 @@
+// Project Styles
+
+
+// First Section
+.first-section {margin-top: $first-section-margin;}
+
+
+// JUST FOR FERRET DEMO - REMOVE BEFORE DEVELOPMENT
+@import 'ferret/header'; // OUT OF DATE CODE
+
+section {
+	padding: 20px 0;
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 20px;
+}
+.row {
+	
+	@media #{$small-tablet} {
+		margin-bottom: 20px;
+	}
+	
+	.row {
+		background: #acacac;
+	}
+	
+	form {
+		
+		.row {
+			background: none;
+		}
+	}
+}
+span {
+	display: block;
+	@include radius;
+	background: #e1e1e1;
+	@include transition;
+	
+	&:hover {
+		color: #fff;
+		background: $dark;
+	}
+	
+	&.headline {
+		color: $dark;
+		background: none;
+	}
+	
+	&.logo {
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		font-size: 24px;
+		@include font-bold;
+		color: #fff;
+		text-transform: uppercase;
+		background: none;
+	}
+}
+// END DEMO CODE

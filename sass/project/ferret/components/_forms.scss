@@ -1,0 +1,119 @@
+// Forms Default Styles
+
+
+.inputfield {
+	float: left;
+	width: 100%;
+	height: $input-height;
+	font-family: $input-font;
+	font-size: $input-font-size;
+	font-weight: $input-font-weight;
+	letter-spacing: $base-letter-spacing;
+	line-height: 2;
+	color: $input-color;
+	padding: (($input-height - $input-font-size * 2) / 2) 10px;
+	border: 1px solid $input-border;
+	@include radius;
+	background: $input-bg;
+	@include transition;
+	
+	&:hover {
+		border-color: $input-border-hover;
+	}
+	
+	&:focus {
+		outline: none;
+		border-color: $input-border-focus;
+		background: $input-bg-focus;
+	}
+	
+	@media #{$small-tablet} {
+		margin-bottom: $input-margin-bottom;
+	}
+}
+
+
+// Select
+select.inputfield {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: $placeholder-color;
+	background: $input-bg url(../images/ferret/bg_select_arrow.png) no-repeat right;
+	
+	&:focus {
+		background: $input-bg-focus url(../images/ferret/bg_select_arrow.png) no-repeat right;
+	}
+}
+
+
+// Textarea
+textarea.inputfield {
+	height: $input-textarea-height;
+}
+
+
+// Checkbox and Radio
+.checkbox,
+.radio-button {
+	float: left;
+	@include size($input-checkbox-size);
+	border: 1px solid $input-border;
+	background: $input-checkbox-bg;
+	-webkit-appearance: none;
+	margin: 0 7px 0 0;
+	cursor: pointer;
+	@include transition;
+	
+	&:hover {
+		border-color: $input-border-hover;
+	}
+	
+	&:focus {
+		outline: none;
+		border-color: $input-border-focus;
+		background: $input-bg-focus;
+	}
+	
+	@media #{$small-tablet} {
+		margin-bottom: $input-margin-bottom;
+	}
+}
+
+.checkbox {
+	@include radius;
+	
+	&:checked {
+		background: $input-checkbox-checked no-repeat center center;
+	}
+}
+
+.radio-button {
+	@include radius(50%);
+	
+	&:checked {
+		background: $input-radio-checked no-repeat center center;
+	}
+}
+
+
+// Label
+label {
+	float: left;
+	font-size: $input-label-font-size;
+	line-height: 1.5;
+}
+
+
+// Placeholder
+::-webkit-input-placeholder {
+	color: $placeholder-color;
+}
+
+input[type='text'],
+input[type='tel'], 
+input[type='email'],
+textarea {
+	&:-moz-placeholder {
+		color: $placeholder-color;
+	}
+}

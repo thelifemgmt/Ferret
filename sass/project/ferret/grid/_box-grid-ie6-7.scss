@@ -1,0 +1,46 @@
+// Box Grid Support for IE6-7
+
+
+// Container
+.ie6,
+.ie7,
+.ie8 {
+	.container {width: 960px;}
+}
+
+// Rows
+.ie6 .row.row {width: 105%;}
+
+
+// Widths
+.ie6,
+.ie7 {
+	.box-1 {width: 40px;}
+	.box-2 {width: 100px;}
+	.box-3 {width: 160px;}
+	.box-4 {width: 220px;}
+	.box-5 {width: 280px;}
+	.box-6 {width: 340px;}
+	.box-7 {width: 400px;}
+	.box-8,
+	.box-half {width: 460px;}
+	.box-9 {width: 520px;}
+	.box-10 {width: 580px;}
+	.box-11 {width: 640px;}
+	.box-12 {width: 700px;}
+	.box-13 {width: 760px;}
+	.box-14 {width: 820px;}
+	.box-15 {width: 880px;}
+	.box-16,
+	.box-full {width: 940px;}
+	.box-3rd {width: 300px;}
+	.box-2-3rd {width: 620px;}
+	.box-5th {width: 172px;}
+	.box-6th {width: 140px;}
+	
+	// Positioning
+	[class*='box-'] {
+		float: left;
+		margin: 0 10px;
+	}
+}

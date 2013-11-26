@@ -1,0 +1,105 @@
+// List Default Styles
+
+
+ul {
+	li {
+		margin-bottom: $list-item-margin-bottom;
+		font-size: $list-font-size;
+		letter-spacing: $base-letter-spacing;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&.disc {
+		list-style-type: disc;
+		margin-left: 20px;
+	}
+	
+	&.square {
+		list-style-type: square;
+		margin-left: 20px;
+	}
+	
+	&.checkmark li:before {
+		content: "\2713";
+		color: $list-item-checkbox;
+		padding-right: 10px;
+	}
+	
+	&.plus li:before {
+		content: "\271A";
+		color: $list-item-plus;
+		padding-right: 10px;
+	}
+	
+	&.multiply li:before {
+		content: "\2716";
+		color: $list-item-multiply;
+		padding-right: 10px;
+	}
+	
+	&.inline {
+		li {
+			float: left;
+			line-height: 1.2;
+			border-right: 1px solid $gray;
+			padding-right: 10px;
+			margin-left: 10px;
+			
+			&:first-child {
+				margin: 0;
+			}
+			
+			&:last-child {
+				padding: 0;
+				border: 0;
+			}
+		}
+		
+	}
+	
+	&.with-spacing {
+		margin-bottom: $paragraph-margin;
+	}
+}
+
+ol {
+	li {
+		margin: 0 0 $list-item-margin-bottom 25px;
+		list-style: decimal;
+		font-size: $list-font-size;
+		letter-spacing: $base-letter-spacing;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&.with-spacing {
+		margin-bottom: $paragraph-margin;
+	}
+}
+
+dl {
+	font-size: $list-font-size;
+	
+	dt {
+		color: $list-definition-title-color;
+		@include font-bold;
+	}
+	
+	dd {
+		letter-spacing: $base-letter-spacing;
+		margin-bottom: $list-item-margin-bottom;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&.with-spacing {
+		margin-bottom: $paragraph-margin;
+	}
+}

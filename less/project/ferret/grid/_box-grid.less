@@ -116,6 +116,7 @@
 
 
 // Box Widths
+// Grid Loop Start
 @iterations: 1;
 .grid-loop (@index) when (@index =< @grid-boxes) {
 	.box-@{index} {
@@ -123,10 +124,8 @@
 	}
 	.grid-loop(@index + 1);
 }
-
-.grid-loop (@grid-boxes) {}
-
 .grid-loop (@iterations);
+// Grid Loop End
 
 .box- {
 	&full {width: 100%;}
