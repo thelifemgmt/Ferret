@@ -11,7 +11,7 @@ Ferret works in all modern browsers, and even not so modern browsers like IE 8. 
 * Fully Responsive
 * 100% Customizable
 * Your Choice of LESS or SASS
-* 1-24 Grid Columns
+* Unlimited Grid Columns
 * Full Browser Support
 
 Still in Development
