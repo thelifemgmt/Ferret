@@ -226,16 +226,16 @@
 
 
 // Media Queries for Mobile First Design
-$mobile: "(max-width: 599px)"; // Only Phone
-$small-tablet: "(min-width: 600px)";
-$tablet: "(min-width: 768px)";
-$device: "(max-width: 959px)"; // All Devices
-$desktop: "(min-width: 960px)";
-$large-desktop: "(min-width: 1280px)";
-$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"; // Only Retina Screens
+$mobile: '(max-width: 599px)'; // Only Phone
+$small-tablet: '(min-width: 600px)';
+$tablet: '(min-width: 768px)';
+$device: '(max-width: 959px)'; // All Devices
+$desktop: '(min-width: 960px)';
+$large-desktop: '(min-width: 1280px)';
+$retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'; // Only Retina Screens
 
 
 // Media Queries to Target Device Only
-$small-tablet-only: "(min-width: 600px) and (max-width: 767px)";
-$tablet-only: "(min-width: 768px) and (max-width: 959px)";
-$desktop-only: "(min-width: 960px) and (max-width: 1279px)";
+$small-tablet-only: '(min-width: 600px) and (max-width: 767px)';
+$tablet-only: '(min-width: 768px) and (max-width: 959px)';
+$desktop-only: '(min-width: 960px) and (max-width: 1279px)';
