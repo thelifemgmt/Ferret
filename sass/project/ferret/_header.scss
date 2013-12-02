@@ -137,7 +137,10 @@ header {
 	width: $mobile-nav-button-height;
 	height: $mobile-nav-button-height;
 	border-radius: 50%;
-	background: $mobile-nav-button url(../images/ferret/button_mobile_nav.png) no-repeat center center; 
+	background-color: $mobile-nav-button; 
+	@include background-image('../images/ferret/button_mobile_nav', png, 60px, 60px);
+	background-repeat: no-repeat;
+	background-position: center center;
 	cursor: pointer;
 	z-index: 100;
 	display: none;

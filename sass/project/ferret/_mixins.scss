@@ -54,9 +54,9 @@
 
 
 // Backface Visibility
-@mixin backface() {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+@mixin backface($backface: hidden) {
+	-webkit-backface-visibility: $backface;
+	backface-visibility: $backface;
 }
 
 // Translate3d

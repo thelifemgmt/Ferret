@@ -1300,13 +1300,22 @@ header nav ul li a:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #494949 url(../images/ferret/button_mobile_nav.png) no-repeat center center;
+  background-color: #494949;
+  background-image: url(../images/ferret/button_mobile_nav.png);
+  background-repeat: no-repeat;
+  background-position: center center;
   cursor: pointer;
   z-index: 100;
   display: none;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .mobile-nav {
+    background-image: url(../images/ferret/button_mobile_nav@2x.png);
+    background-size: 60px 60px;
+  }
 }
 .mobile-nav.active {
   -webkit-transform: rotate(-90deg);
