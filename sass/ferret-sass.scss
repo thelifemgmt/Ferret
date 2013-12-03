@@ -1,6 +1,6 @@
 /*********************************************
 Ferret Framework Main Stylesheet
-Last Updated: 9/12/13
+Last Updated: 12/03/13
 Written by: Sean Stopnik
 Email: thelifemgmt@gmail.com
 *********************************************/
@@ -11,12 +11,12 @@ Email: thelifemgmt@gmail.com
 
 
 // Base (Do NOT Remove)
-@import 'project/ferret/_mixins';
+@import 'project/ferret/globals/_mixins';
 @import 'project/ferret/grid/_box-grid';
-@import 'project/ferret/_fonts';
-@import 'project/ferret/_reset';
-@import 'project/ferret/_base';
-@import 'project/ferret/_typography';
+@import 'project/ferret/shared/_fonts';
+@import 'project/ferret/globals/_reset';
+@import 'project/ferret/shared/_base';
+@import 'project/ferret/shared/_typography';
 
 
 // Compontents
