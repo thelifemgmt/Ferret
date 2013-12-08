@@ -1141,10 +1141,10 @@ table.with-footer tbody tr:last-child td {
   width: 220%;
   left: -60%;
   font-family: "OpenSansSemi";
-  letter-spacing: 0;
   font-size: 80%;
   font-weight: normal;
   line-height: 1.6;
+  letter-spacing: 0;
   text-align: center;
   padding: 8px 10px;
   color: white;

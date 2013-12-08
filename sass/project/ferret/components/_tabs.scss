@@ -28,9 +28,11 @@ ul.tabs-nav {
 		a {
 		    display: block;
 		    color: $tab-color;
-		    font-family: $tab-font;
-	    	font-size: $tab-font-size;
-	    	font-weight: $tab-font-weight;
+		    font: {
+			    family: $tab-font;
+			    size: $tab-font-size;
+			    weight: $tab-font-weight;
+		    }
 	    	line-height: 1.9;
 	    	letter-spacing: $tab-letter-spacing;
 	    	

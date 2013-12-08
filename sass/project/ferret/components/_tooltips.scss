@@ -9,11 +9,13 @@
 		bottom: 18px;
 		width: 220%;
 		left: -60%;
-		font-family: $tooltip-font;
-		letter-spacing: $tooltip-letter-spacing;
-		font-size: $tooltip-font-size;
-		font-weight: $tooltip-weight;
+		font: {
+			family: $tooltip-font;
+			size: $tooltip-font-size;
+			weight: $tooltip-weight;
+		}
 		line-height: 1.6;
+		letter-spacing: $tooltip-letter-spacing;
 		text-align: center;
 		padding: 8px 10px;
 		color: $tooltip-color;

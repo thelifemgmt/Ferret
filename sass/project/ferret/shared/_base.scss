@@ -4,9 +4,11 @@
 // Base Defaults
 body {
 	color: $base-color;
-	font-family: $base-font;
-	font-size: $base-font-size;
-	font-weight: $base-font-weight;
+	font: {
+		family: $base-font;
+		size: $base-font-size;
+		weight: $base-font-weight;	
+	}
 	line-height: $base-line-height;
 	background: $base-bg;
 	-webkit-font-smoothing: antialiased;

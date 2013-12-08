@@ -101,15 +101,36 @@ a.button {
 	
 	
 	// Sizes
-	&.mini {font-size: $button-font-size - 4; line-height: $button-height - 18; padding: 0 $button-height / 4 + 2;}
+	&.mini {
+		font-size: $button-font-size - 4;
+		line-height: $button-height - 18;
+		padding: 0 $button-height / 4 + 2;
+	}
 	
-	&.small {font-size: $button-font-size - 2; line-height: $button-height - 10; padding: 0 $button-height / 2;}
+	&.small {
+		font-size: $button-font-size - 2;
+		line-height: $button-height - 10;
+		padding: 0 $button-height / 2;
+	}
 	
-	&.large {font-size: $button-font-size + 2; line-height: $button-height + 10; padding: 0 $button-height + 5;}
+	&.large {
+		font-size: $button-font-size + 2;
+		line-height: $button-height + 10;
+		padding: 0 $button-height + 5;
+	}
 	
-	&.x-large {font-size: $button-font-size + 4; line-height: $button-height + 20; padding: 0 $button-height;}
+	&.x-large {
+		font-size: $button-font-size + 4;
+		line-height: $button-height + 20;
+		padding: 0 $button-height;
+	}
 	
-	&.full-width {width: 100%; padding-left: 0; padding-right: 0; text-align: center;}
+	&.full-width {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
 }
 
 
@@ -117,9 +138,15 @@ a.button {
 input[type='submit'].button {
 	height: $button-height;
 	
-	&.small {height: $button-height - 10;}
+	&.small {
+		height: $button-height - 10;
+	}
 	
-	&.large {height: $button-height + 10;}
+	&.large {
+		height: $button-height + 10;
+	}
 	
-	&.x-large {height: $button-height + 20;}
+	&.x-large {
+		height: $button-height + 20;
+	}
 }

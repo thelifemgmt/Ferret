@@ -21,8 +21,10 @@
 
 // Font Mixins
 @mixin font-styles {
-	font-weight: normal;
-	font-style: normal;
+	font: {
+		weight: normal;
+		style: normal;
+	}
 }
 
 @mixin font-light {

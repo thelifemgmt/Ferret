@@ -98,30 +98,38 @@
 @mixin triangle($direction, $size, $color) {
 	@if ($direction == "up") {
 		@include triangle-base();
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-bottom: $size solid $color;
+		border: {
+			left: $size solid transparent;
+			right: $size solid transparent;
+			bottom: $size solid $color;
+		}
 	}
 	
 	@else if ($direction == "down") {
 		@include triangle-base();
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
+		border: {
+			left: $size solid transparent;
+			right: $size solid transparent;
+			top: $size solid $color;
+		}
 	}
 	
 	@else if ($direction == "left") {
 		@include triangle-base();
-		border-top: $size solid transparent;
-		border-bottom: $size solid transparent;
-		border-right: $size solid $color;
+		border: {
+			top: $size solid transparent;
+			bottom: $size solid transparent;
+			right: $size solid $color;
+		}
 	}
 	
 	@else if ($direction == "right") {
 		@include triangle-base();
-		border-top: $size solid transparent;
-		border-bottom: $size solid transparent;
-		border-left: $size solid $color;
+		border: {
+			top: $size solid transparent;
+			bottom: $size solid transparent;
+			left: $size solid $color;
+		}
 	}
 }
 
@@ -200,8 +208,10 @@
 }
 
 .striped {
-	background-image: url(../images/ferret/bg_stripes.png);
-	background-repeat: repeat;
+	background: {
+		image: url(../images/ferret/bg_stripes.png);
+		repeat: repeat;
+	}
 }
 
 
@@ -210,8 +220,10 @@
 	background-image: url(#{$image}.#{$extension});
 	
 	@media #{$retina} {
-		background-image: url(#{$image}@2x.#{$extension});
-		background-size: $width $height;
+		background: {
+			image: url(#{$image}@2x.#{$extension});
+			size: $width $height;
+		}
 	}
 }
 

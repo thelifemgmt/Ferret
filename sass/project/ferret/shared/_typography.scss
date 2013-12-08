@@ -10,8 +10,10 @@ h5,
 h6,
 span.headline {
 	color: $headline-color;
-	font-family: $headline-font;
-	font-weight: $headline-weight;
+	font: {
+		family: $headline-font;
+		weight: $headline-weight;
+	}
 	margin-bottom: $headline-margin;
 	line-height: $headline-line-height;
 }
@@ -117,8 +119,10 @@ sup {
     cite {
     	display: block;
     	color: $quote-author-color;
-    	font-size: $quote-font-size;
-    	font-style: $quote-author-font-style;
+    	font: {
+	    	size: $quote-font-size;
+	    	style: $quote-author-font-style;
+    	}
 	    margin-top: 12px;
 	    
 	    &:before {content: $quote-author-before;}
