@@ -38,7 +38,7 @@ You can also control the grid settings inside this file. Default setting is 16 b
 
 <b>Basic Grid Use</b>
 
-The grid is very simple to use. Start with a row, and insert your boxes (or columns) inside.
+The grid is very simple to use. Start with a row, and insert your 'boxes' (default name) inside.
 
 	<div class="row">
 		<div class="box-8">
