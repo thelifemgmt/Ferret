@@ -1,4 +1,4 @@
-// The Box Grid - Version 3.0
+// Ferret Grid - Version 3.0
 // Written by: Sean Stopnik
 // Email: thelifemgmt@gmail.com
 
@@ -89,14 +89,14 @@
 	&.no-gutters {
 		padding: 0 @grid-gutter-width;
 		
-		[class*="box-"] {
+		[class*="@{grid-box-name}-"] {
 			padding: 0;
 		}
 	}
 	
 	&.large-gutters {
 		
-		[class*="box-"] {
+		[class*="@{grid-box-name}-"] {
 			padding: 0 @grid-gutter-width * 2;
 		}
 	}
@@ -119,7 +119,7 @@
 // Grid Loop Start
 @iterations: 1;
 .grid-loop (@index) when (@index =< @grid-boxes) {
-	.box-@{index} {
+	.@{grid-box-name}-@{index} {
 		width: 100% / @grid-boxes * @index;
 	}
 	.grid-loop(@index + 1);
@@ -127,7 +127,7 @@
 .grid-loop (@iterations);
 // Grid Loop End
 
-.box- {
+.@{grid-box-name}- {
 	&full {width: 100%;}
 	&half {width: 50%;}
 	&3rd {width: 100% / 3;}
@@ -137,18 +137,18 @@
 }
 
 @media @mobile {
-	[class^="box-"] {
+	[class^="@{grid-box-name}-"] {
 		width: 100%;
 		margin-bottom: 20px;
 	}
 }
 
 @media @device {
-	[class^="box-"] {
+	[class^="@{grid-box-name}-"] {
 		width: 100%;
 	}
 	
-	.box- {		
+	.@{grid-box-name}- {		
 		&half,
 		&5th,
 		&6th {
@@ -159,7 +159,7 @@
 
 
 // Box Positioning
-[class^="box-"] {
+[class^="@{grid-box-name}-"] {
 	float: left;
 	padding: 0 @grid-gutter-width;
 }
