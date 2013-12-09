@@ -1,4 +1,4 @@
-// The Box Grid - Version 3.0
+// Ferret Grid - Version 3.0
 // Written by: Sean Stopnik
 // Email: thelifemgmt$gmail.com
 
@@ -89,14 +89,14 @@
 	&.no-gutters {
 		padding: 0 $grid-gutter-width;
 		
-		[class*="box-"] {
+		[class*="#{$grid-box-name}-"] {
 			padding: 0;
 		}
 	}
 	
 	&.large-gutters {
 		
-		[class*="box-"] {
+		[class*="#{$grid-box-name}-"] {
 			padding: 0 $grid-gutter-width * 2;
 		}
 	}
@@ -118,58 +118,58 @@
 // Box Widths
 // Grid Loop Start
 @for $i from 1 through $grid-boxes {
-	.box-#{$i} {
+	.#{$grid-box-name}-#{$i} {
 		width: 100% / $grid-boxes * $i;
 	}
 }
 // Grid Loop End
 
-.box-full {
+.#{$grid-box-name}-full {
 	width: 100%;
 }
 
-.box-half {
+.#{$grid-box-name}-half {
 	width: 50%;
 }
 
-.box-3rd {
+.#{$grid-box-name}-3rd {
 	width: (100% / 3);
 }
 
-.box-2-3rd {
+.#{$grid-box-name}-2-3rd {
 	width: (100% / 3) * 2;
 }
 
-.box-5th {
+.#{$grid-box-name}-5th {
 	width: (100% / 5);
 }
 
-.box-6th {
+.#{$grid-box-name}-6th {
 	width: (100% / 6);
 }
 
 @media #{$mobile} {
-	[class^="box-"] {
+	[class^="#{$grid-box-name}-"] {
 		width: 100%;
 		margin-bottom: 20px;
 	}
 }
 
 @media #{$device} {
-	[class^="box-"] {
+	[class^="#{$grid-box-name}-"] {
 		width: 100%;
 	}
 	
-	.box-half,
-	.box-5th,
-	.box-6th {
+	.#{$grid-box-name}-half,
+	.#{$grid-box-name}-5th,
+	.#{$grid-box-name}-6th {
 		width: 50%;
 	}
 }
 
 
 // Box Positioning
-[class^="box-"] {
+[class^="#{$grid-box-name}-"] {
 	float: left;
 	padding: 0 $grid-gutter-width;
 }

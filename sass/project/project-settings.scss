@@ -2,11 +2,12 @@
 
 
 // Grid Settings
+$grid-box-name: 'box'; // Sets the Class Name for the Grid Columns. Default is 'box'.
 $grid-boxes: 16; // Sets the Max Number of Grid Boxes per Row (up to 24)
 $grid-gutter-width: 10px; // Sets the Gutter Width on Each Side of Each Box
 $grid-normal: 960px; // Sets Container Width
 $grid-wide: 1200px; // Sets Wide Screen Container Width
-$grid-row-with-spacing: 40px;
+$grid-row-with-spacing: 40px; // Extra Spacing Between Rows
 
 // Fonts
 $font-light: 'OpenSansLight';
