@@ -155,14 +155,15 @@
 	}
 }
 
-@media #{$device} {
+@media #{$small-tablet} and #{$device} {
 	[class^="#{$grid-box-name}-"] {
 		width: 100%;
 	}
 	
 	.#{$grid-box-name}-half,
 	.#{$grid-box-name}-5th,
-	.#{$grid-box-name}-6th {
+	.#{$grid-box-name}-6th,
+	.#{$grid-box-name}-8 {
 		width: 50%;
 	}
 }

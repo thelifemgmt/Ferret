@@ -231,13 +231,14 @@ Email: thelifemgmt@gmail.com
     margin-bottom: 20px;
   }
 }
-@media (max-width: 959px) {
+@media (min-width: 600px) and (max-width: 959px) {
   [class^="box-"] {
     width: 100%;
   }
   .box-half,
   .box-5th,
-  .box-6th {
+  .box-6th,
+  .box-8 {
     width: 50%;
   }
 }
