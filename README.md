@@ -4,7 +4,7 @@ Ferret
 The Fast and Simple, Mobile-first Responsive Framework for Rapid Development
 ---
 
-Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and supports both LESS and SASS. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, all the way up to a 24 column grid. And since Ferret is percentage based, you can even have an odd amount of grid columns such as 19 columns or 13 columns. 
+Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and supports both LESS and SASS. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid... it's totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns. 
 
 Ferret works in all modern browsers, and even not so modern browsers like IE 8. Need support in IE 6 or 7? All you have to do is include the ie6-7 LESS or SASS stylesheet and boom... full IE 6-7 support!
 
@@ -13,8 +13,8 @@ Ferret works in all modern browsers, and even not so modern browsers like IE 8. 
 * Your Choice of LESS or SASS
 * Unlimited Grid Columns
 * Full Browser Support
+* Built Mobile-First
 
-Still in Development
 
 Updated (11/28/13)
 ---
@@ -32,7 +32,7 @@ Ferret uses both LESS or SASS for the CSS. Before using Ferret, make sure you ha
 
 When setting up Ferret for your project, first start with the <i>project-settings</i> file in the <i>less/project</i> or <i>sass/project</i> folder. Inside is all the project settings and variables to control the look and feel of the default settings. You can set your colors, margins, fonts, typography, and many other things all in that file. 
 
-You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 72 boxes... no problem! Most common box counts are 8, 12, 16, or 24. One note, if you are supporting ie6-7, Ferret only supports up to 24 boxes by default.
+You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 72 boxes... no problem! Most common box counts are 8, 12, 16, or 24. One note, if you are supporting ie6-7, Ferret only supports up to 16 boxes by default.
 
 
 

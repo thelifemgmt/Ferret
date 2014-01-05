@@ -15,34 +15,31 @@
 // Widths
 .ie6,
 .ie7 {
-	.box-1 {width: 40px;}
-	.box-2 {width: 100px;}
-	.box-3 {width: 160px;}
-	.box-4 {width: 220px;}
-	.box-5 {width: 280px;}
-	.box-6 {width: 340px;}
-	.box-7 {width: 400px;}
-	.box-8,
-	.box-half {width: 460px;}
-	.box-9 {width: 520px;}
-	.box-10 {width: 580px;}
-	.box-11 {width: 640px;}
-	.box-12 {width: 700px;}
-	.box-13 {width: 760px;}
-	.box-14 {width: 820px;}
-	.box-15 {width: 880px;}
-	.box-16,
-	.box-full {width: 940px;}
-	.box-3rd {width: 300px;}
-	.box-2-3rd {width: 620px;}
-	.box-5th {width: 172px;}
-	.box-6th {width: 140px;}
+	.@{grid-box-name}-1 {width: 40px;}
+	.@{grid-box-name}-2 {width: 100px;}
+	.@{grid-box-name}-3 {width: 160px;}
+	.@{grid-box-name}-4 {width: 220px;}
+	.@{grid-box-name}-5 {width: 280px;}
+	.@{grid-box-name}-6 {width: 340px;}
+	.@{grid-box-name}-7 {width: 400px;}
+	.@{grid-box-name}-8,
+	.@{grid-box-name}-half {width: 460px;}
+	.@{grid-box-name}-9 {width: 520px;}
+	.@{grid-box-name}-10 {width: 580px;}
+	.@{grid-box-name}-11 {width: 640px;}
+	.@{grid-box-name}-12 {width: 700px;}
+	.@{grid-box-name}-13 {width: 760px;}
+	.@{grid-box-name}-14 {width: 820px;}
+	.@{grid-box-name}-15 {width: 880px;}
+	.@{grid-box-name}-16,
+	.@{grid-box-name}-full {width: 940px;}
+	.@{grid-box-name}-3rd {width: 300px;}
+	.@{grid-box-name}-2-3rd {width: 620px;}
+	.@{grid-box-name}-5th {width: 172px;}
+	.@{grid-box-name}-6th {width: 140px;}
 	
 	// Positioning
-	.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8,
-	.box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .box-16,
-	.box-17, .box-18, .box-19, .box-20, .box-21, .box-22, .box-23, .box-24,
-	.box-full, .box-half, .box-3rd, .box-2-3rd, .box-5th, .box-6th {
+	[class*='@{grid-box-name}-'] {
 		float: left;
 		padding: 0 10px;
 	}
