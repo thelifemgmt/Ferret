@@ -1,15 +1,7 @@
-// Fontface Fonts
-@mixin font-face-mixin($font-name, $font-path, $font-file) {
-	@font-face {
-	    font-family: '#{$font-name}';
-	    src: url('#{$font-path}/#{$font-file}.eot');
-	    src: url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
-	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
-	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
-	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
-	}	
-}
+// Project Fonts
 
+
+// Create Font-face Fonts
 @include font-face-mixin('OpenSansLight', '../fonts', 'OpenSans-Light-webfont');
 
 @include font-face-mixin('OpenSansReg', '../fonts', 'OpenSans-Regular-webfont');
@@ -19,14 +11,7 @@
 @include font-face-mixin('OpenSansBold', '../fonts', 'OpenSans-Bold-webfont');
 
 
-// Font Mixins
-@mixin font-styles {
-	font: {
-		weight: normal;
-		style: normal;
-	}
-}
-
+// Create Mixin for Each Font
 @mixin font-light {
 	font-family: 'OpenSansLight';
 	@include font-styles;

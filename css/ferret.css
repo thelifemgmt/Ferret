@@ -4,69 +4,6 @@ Last Updated: 12/03/13
 Written by: Sean Stopnik
 Email: thelifemgmt@gmail.com
 *********************************************/
-.position {
-  position: relative;
-}
-.left,
-.floated {
-  float: left;
-}
-.right {
-  float: right;
-}
-.center {
-  text-align: center;
-}
-.flush {
-  margin: 0;
-}
-.top10 {
-  margin-top: 10px;
-}
-.top20 {
-  margin-top: 20px;
-}
-.top30 {
-  margin-top: 30px;
-}
-.top40 {
-  margin-top: 40px;
-}
-.bottom10 {
-  margin-bottom: 10px;
-}
-.bottom20 {
-  margin-bottom: 20px;
-}
-.bottom30 {
-  margin-bottom: 30px;
-}
-.bottom40 {
-  margin-bottom: 40px;
-}
-.clear {
-  clear: both;
-  display: block;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-.normal {
-  font-weight: normal;
-}
-.noselect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-.hidden {
-  display: none;
-}
-.striped {
-  background-image: url(../images/ferret/bg_stripes.png);
-  background-repeat: repeat;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -542,6 +479,69 @@ sup {
 }
 .pull-quote cite:before {
   content: "\2014 \0020";
+}
+.position {
+  position: relative;
+}
+.left,
+.floated {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  text-align: center;
+}
+.flush {
+  margin: 0;
+}
+.top10 {
+  margin-top: 10px;
+}
+.top20 {
+  margin-top: 20px;
+}
+.top30 {
+  margin-top: 30px;
+}
+.top40 {
+  margin-top: 40px;
+}
+.bottom10 {
+  margin-bottom: 10px;
+}
+.bottom20 {
+  margin-bottom: 20px;
+}
+.bottom30 {
+  margin-bottom: 30px;
+}
+.bottom40 {
+  margin-bottom: 40px;
+}
+.clear {
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.normal {
+  font-weight: normal;
+}
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.hidden {
+  display: none;
+}
+.striped {
+  background-image: url(../images/ferret/bg_stripes.png);
+  background-repeat: repeat;
 }
 .button,
 a.button {

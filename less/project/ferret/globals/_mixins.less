@@ -144,60 +144,6 @@
 }
 
 
-// Positioning
-.position {position: relative;}
-
-.left,
-.floated {float: left;}
-
-.right {float: right;}
-
-.center {text-align: center;}
-
-.flush {margin: 0;}
-
-.top10 {margin-top: 10px;}
-
-.top20 {margin-top: 20px;}
-
-.top30 {margin-top: 30px;}
-
-.top40 {margin-top: 40px;}
-
-.bottom10 {margin-bottom: 10px;}
-
-.bottom20 {margin-bottom: 20px;}
-
-.bottom30 {margin-bottom: 30px;}
-
-.bottom40 {margin-bottom: 40px;}
-
-
-// Extras
-.clear {
-	clear: both;
-	display: block;
-	.size(0);
-	overflow: hidden;
-	visibility: hidden;
-}
-
-.normal {font-weight: normal;}
-
-.noselect {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-}
-
-.hidden {display: none;}
-
-.striped {
-	background-image: url(../images/ferret/bg_stripes.png);
-	background-repeat: repeat;
-}
-
-
 // Retina Images
 .background-image(@image, @extension: jpg, @width: 100%, @height: 100%) {
 	background-image: ~"url(@{image}.@{extension})";
@@ -215,6 +161,24 @@
 	.size(@width, @height);
 	background: ~"url(@{image}.svg) no-repeat center center";
 	background-size: @width @height;
+}
+
+
+// Font-face
+.font-face-mixin(@font-name, @font-path, @font-file) {
+	@font-face {
+	    font-family: '@{font-name}';
+	    src: url('@{font-path}/@{font-file}.eot');
+	    src: url('@{font-path}/@{font-file}?#iefix') format('embedded-opentype'),
+	         url('@{font-path}/@{font-file}.woff') format('woff'),
+	         url('@{font-path}/@{font-file}.ttf') format('truetype'),
+	         url('@{font-path}/@{font-file}.svg#@{font-name}') format('svg');
+	}	
+}
+
+.font-styles() {
+	font-weight: normal;
+	font-style: normal;
 }
 
 

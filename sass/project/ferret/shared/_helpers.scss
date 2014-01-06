@@ -1,0 +1,66 @@
+// Project Helpers
+
+
+.position {
+	position: relative;
+}
+
+.left,
+.floated {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.flush {
+	margin: 0;
+}
+
+@mixin margin($direction, $amount) {
+	margin-#{$direction}: $amount;
+}
+
+@each $i in 10, 20, 30, 40, 50, 60 {
+	.top-#{$i} {
+		margin-top: #{$i}px;
+	}
+}
+
+@each $i in 10, 20, 30, 40, 50, 60 {
+	.bottom-#{$i} {
+		margin-bottom: #{$i}px;
+	}
+}
+
+.clear {
+	clear: both;
+	display: block;
+	@include size(0);
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.not-selectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.striped {
+	background: {
+		image: url(../images/ferret/bg_stripes.png);
+		repeat: repeat;
+	}
+}

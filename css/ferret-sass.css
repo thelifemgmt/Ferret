@@ -4,101 +4,6 @@ Last Updated: 12/03/13
 Written by: Sean Stopnik
 Email: thelifemgmt@gmail.com
 *********************************************/
-.position {
-  position: relative;
-}
-
-.left,
-.floated {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.center {
-  text-align: center;
-}
-
-.flush {
-  margin: 0;
-}
-
-.top-10 {
-  margin-top: 10px;
-}
-
-.top-20 {
-  margin-top: 20px;
-}
-
-.top-30 {
-  margin-top: 30px;
-}
-
-.top-40 {
-  margin-top: 40px;
-}
-
-.top-50 {
-  margin-top: 50px;
-}
-
-.top-60 {
-  margin-top: 60px;
-}
-
-.bottom-10 {
-  margin-bottom: 10px;
-}
-
-.bottom-20 {
-  margin-bottom: 20px;
-}
-
-.bottom-30 {
-  margin-bottom: 30px;
-}
-
-.bottom-40 {
-  margin-bottom: 40px;
-}
-
-.bottom-50 {
-  margin-bottom: 50px;
-}
-
-.bottom-60 {
-  margin-bottom: 60px;
-}
-
-.clear {
-  clear: both;
-  display: block;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.not-selectable {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.striped {
-  background-image: url(../images/ferret/bg_stripes.png);
-  background-repeat: repeat;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -548,6 +453,101 @@ sup {
 }
 .pull-quote cite:before {
   content: "\2014 \0020";
+}
+
+.position {
+  position: relative;
+}
+
+.left,
+.floated {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.flush {
+  margin: 0;
+}
+
+.top-10 {
+  margin-top: 10px;
+}
+
+.top-20 {
+  margin-top: 20px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+.top-40 {
+  margin-top: 40px;
+}
+
+.top-50 {
+  margin-top: 50px;
+}
+
+.top-60 {
+  margin-top: 60px;
+}
+
+.bottom-10 {
+  margin-bottom: 10px;
+}
+
+.bottom-20 {
+  margin-bottom: 20px;
+}
+
+.bottom-30 {
+  margin-bottom: 30px;
+}
+
+.bottom-40 {
+  margin-bottom: 40px;
+}
+
+.bottom-50 {
+  margin-bottom: 50px;
+}
+
+.bottom-60 {
+  margin-bottom: 60px;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.striped {
+  background-image: url(../images/ferret/bg_stripes.png);
+  background-repeat: repeat;
 }
 
 .button,

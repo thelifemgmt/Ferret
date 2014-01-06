@@ -1,0 +1,38 @@
+// Project Fonts
+
+
+// Create Font-face Fonts
+.font-face-mixin('OpenSansLight', '../fonts', 'OpenSans-Light-webfont');
+
+.font-face-mixin('OpenSansReg', '../fonts', 'OpenSans-Regular-webfont');
+
+.font-face-mixin('OpenSansSemi', '../fonts', 'OpenSans-Semibold-webfont');
+
+.font-face-mixin('OpenSansBold', '../fonts', 'OpenSans-Bold-webfont');
+
+
+// Create Mixin for Each Font
+.font-light() {
+	font-family: 'OpenSansLight';
+	.font-styles;
+}
+
+.font-reg() {
+	font-family: 'OpenSansReg';
+	.font-styles;
+}
+
+.font-semi() {
+	font-family: 'OpenSansSemi';
+	.font-styles;
+}
+
+.font-bold() {
+	font-family: 'OpenSansBold';
+	.font-styles;
+}
+
+.font-headline() {
+	font-family: 'OpenSansBold';
+	.font-styles;
+}

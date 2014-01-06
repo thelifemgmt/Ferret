@@ -157,72 +157,6 @@
 }
 
 
-// Positioning
-.position {position: relative;}
-
-.left,
-.floated {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.center {
-	text-align: center;
-}
-
-.flush {
-	margin: 0;
-}
-
-@mixin margin($direction, $amount) {
-	margin-#{$direction}: $amount;
-}
-
-@each $i in 10, 20, 30, 40, 50, 60 {
-	.top-#{$i} {
-		margin-top: #{$i}px;
-	}
-}
-
-@each $i in 10, 20, 30, 40, 50, 60 {
-	.bottom-#{$i} {
-		margin-bottom: #{$i}px;
-	}
-}
-
-
-// Extras
-.clear {
-	clear: both;
-	display: block;
-	@include size(0);
-	overflow: hidden;
-	visibility: hidden;
-}
-
-.not-selectable {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.hidden {
-	display: none;
-	visibility: hidden;
-}
-
-.striped {
-	background: {
-		image: url(../images/ferret/bg_stripes.png);
-		repeat: repeat;
-	}
-}
-
-
 // Retina Images
 @mixin background-image($image, $extension: jpg, $width: 100%, $height: 100%) {
 	background-image: url(#{$image}.#{$extension});
@@ -242,6 +176,26 @@
 	@include size($width, $height);
 	background: url(#{$image}.svg) no-repeat center center;
 	background-size: $width $height;
+}
+
+
+// Font Face
+@mixin font-face-mixin($font-name, $font-path, $font-file) {
+	@font-face {
+	    font-family: '#{$font-name}';
+	    src: url('#{$font-path}/#{$font-file}.eot');
+	    src: url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
+	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
+	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
+	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
+	}	
+}
+
+@mixin font-styles {
+	font: {
+		weight: normal;
+		style: normal;
+	}
 }
 
 

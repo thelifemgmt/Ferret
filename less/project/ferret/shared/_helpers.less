@@ -1,0 +1,72 @@
+// Project Helpers
+
+
+.position {position: relative;}
+
+.left,
+.floated {float: left;}
+
+.right {float: right;}
+
+.center {text-align: center;}
+
+.flush {margin: 0;}
+
+.top {
+	&10 {
+		margin-top: 10px;
+	}
+	
+	&20 {
+		margin-top: 20px;
+	}
+	
+	&30 {
+		margin-top: 30px;
+	}
+	
+	&40 {
+		margin-top: 40px;
+	}
+}
+
+.bottom {
+	&10 {
+		margin-bottom: 10px;
+	}
+	
+	&20 {
+		margin-bottom: 20px;
+	}
+	
+	&30 {
+		margin-bottom: 30px;
+	}
+	
+	&40 {
+		margin-bottom: 40px;
+	}
+}
+
+.clear {
+	clear: both;
+	display: block;
+	.size(0);
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.normal {font-weight: normal;}
+
+.noselect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.hidden {display: none;}
+
+.striped {
+	background-image: url(../images/ferret/bg_stripes.png);
+	background-repeat: repeat;
+}
