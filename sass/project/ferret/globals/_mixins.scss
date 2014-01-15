@@ -74,6 +74,18 @@
 }
 
 
+// Keyframes
+@mixin keyframes($name) {
+	@-webkit-keyframes $name {
+		@content;
+	}
+	
+	@keyframes $name {
+		@content;
+	}
+}
+
+
 // Width and Height
 @mixin size($width: false, $height: false) {
 	@if $height != false { 
