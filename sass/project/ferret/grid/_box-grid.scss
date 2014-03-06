@@ -171,4 +171,14 @@
 [class^="#{$grid-box-name}-"] {
 	float: left;
 	padding: 0 $grid-gutter-width;
+	
+	@for $i from 1 through $grid-boxes {
+		&.left-#{$i} {
+			margin-left: 100% / $grid-boxes * $i;
+		}
+		
+		&.right-#{$i} {
+			margin-right: 100% / $grid-boxes * $i;
+		}
+	}
 }

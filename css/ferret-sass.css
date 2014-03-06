@@ -208,6 +208,102 @@ Email: thelifemgmt@gmail.com
   float: left;
   padding: 0 10px;
 }
+[class^="box-"].left-1 {
+  margin-left: 6.25%;
+}
+[class^="box-"].right-1 {
+  margin-right: 6.25%;
+}
+[class^="box-"].left-2 {
+  margin-left: 12.5%;
+}
+[class^="box-"].right-2 {
+  margin-right: 12.5%;
+}
+[class^="box-"].left-3 {
+  margin-left: 18.75%;
+}
+[class^="box-"].right-3 {
+  margin-right: 18.75%;
+}
+[class^="box-"].left-4 {
+  margin-left: 25%;
+}
+[class^="box-"].right-4 {
+  margin-right: 25%;
+}
+[class^="box-"].left-5 {
+  margin-left: 31.25%;
+}
+[class^="box-"].right-5 {
+  margin-right: 31.25%;
+}
+[class^="box-"].left-6 {
+  margin-left: 37.5%;
+}
+[class^="box-"].right-6 {
+  margin-right: 37.5%;
+}
+[class^="box-"].left-7 {
+  margin-left: 43.75%;
+}
+[class^="box-"].right-7 {
+  margin-right: 43.75%;
+}
+[class^="box-"].left-8 {
+  margin-left: 50%;
+}
+[class^="box-"].right-8 {
+  margin-right: 50%;
+}
+[class^="box-"].left-9 {
+  margin-left: 56.25%;
+}
+[class^="box-"].right-9 {
+  margin-right: 56.25%;
+}
+[class^="box-"].left-10 {
+  margin-left: 62.5%;
+}
+[class^="box-"].right-10 {
+  margin-right: 62.5%;
+}
+[class^="box-"].left-11 {
+  margin-left: 68.75%;
+}
+[class^="box-"].right-11 {
+  margin-right: 68.75%;
+}
+[class^="box-"].left-12 {
+  margin-left: 75%;
+}
+[class^="box-"].right-12 {
+  margin-right: 75%;
+}
+[class^="box-"].left-13 {
+  margin-left: 81.25%;
+}
+[class^="box-"].right-13 {
+  margin-right: 81.25%;
+}
+[class^="box-"].left-14 {
+  margin-left: 87.5%;
+}
+[class^="box-"].right-14 {
+  margin-right: 87.5%;
+}
+[class^="box-"].left-15 {
+  margin-left: 93.75%;
+}
+[class^="box-"].right-15 {
+  margin-right: 93.75%;
+}
+[class^="box-"].left-16 {
+  margin-left: 100%;
+}
+[class^="box-"].right-16 {
+  margin-right: 100%;
+}
 
 @font-face {
   font-family: "OpenSansLight";
