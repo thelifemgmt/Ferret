@@ -170,6 +170,7 @@
 // Box Positioning
 [class^="#{$grid-box-name}-"] {
 	float: left;
+	min-height: 1px;
 	padding: 0 $grid-gutter-width;
 	
 	@for $i from 1 through $grid-boxes {
