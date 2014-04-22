@@ -16,11 +16,10 @@ Ferret works in all modern browsers, and even not so modern browsers like IE 8. 
 * Built Mobile-First
 
 
-Updated (11/28/13)
+Updated (4/22/14)
 ---
 
-* Added SASS support
-* Reorganized LESS code to match new SASS code
+* Edit to Sass mixins file
 
 
 How to Use
@@ -28,11 +27,13 @@ How to Use
 
 <b>Ferret Setup</b>
 
-Ferret uses both LESS or SASS for the CSS. Before using Ferret, make sure you have a LESS or SASS compiler setup and watching the project.  If you don't have a compiler, I suggest you try <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>.
+Ferret is built in both LESS and SASS, giving you the option to choose what you prefer. Before using Ferret, make sure you have a LESS or SASS compiler setup and watching the project.  If you don't have a compiler, I suggest you try <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>.
 
 When setting up Ferret for your project, first start with the <i>project-settings</i> file in the <i>less/project</i> or <i>sass/project</i> folder. Inside is all the project settings and variables to control the look and feel of the default settings. You can set your colors, margins, fonts, typography, and many other things all in that file. 
 
 You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 72 boxes... no problem! Most common box counts are 8, 12, 16, or 24. One note, if you are supporting ie6-7, Ferret only supports up to 16 boxes by default.
+
+<b>Update:</b> I am no longer maintaining the LESS codebase. If you are new to Ferret, then I would suggest going with Sass.
 
 
 
