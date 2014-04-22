@@ -1,0 +1,183 @@
+<h1>Ferret</h1>
+
+<h2>The Fast and Simple, Mobile-first Responsive Framework for Rapid Development</h2>
+
+<p>Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and supports both LESS and SASS. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid&hellip; it&rsquo;s totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns.</p>
+
+<p>Ferret works in all modern browsers, and even not so modern browsers like IE 8. Need support in IE 6 or 7? All you have to do is include the ie6-7 LESS or SASS stylesheet and boom&hellip; full IE 6-7 support!</p>
+
+<ul>
+<li>Fully Responsive</li>
+<li>100% Customizable</li>
+<li>Your Choice of LESS or SASS</li>
+<li>Unlimited Grid Columns</li>
+<li>Full Browser Support</li>
+<li>Built Mobile-First</li>
+</ul>
+
+
+<h2>Updated (4/22/14)</h2>
+
+<ul>
+<li>Edit to Sass mixins file</li>
+</ul>
+
+
+<h2>How to Use</h2>
+
+<p><b>Ferret Setup</b></p>
+
+<p>Ferret is built in both LESS and SASS, giving you the option to choose what you prefer. Before using Ferret, make sure you have a LESS or SASS compiler setup and watching the project.  If you don&rsquo;t have a compiler, I suggest you try <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>.</p>
+
+<p>When setting up Ferret for your project, first start with the <i>project-settings</i> file in the <i>less/project</i> or <i>sass/project</i> folder. Inside is all the project settings and variables to control the look and feel of the default settings. You can set your colors, margins, fonts, typography, and many other things all in that file.</p>
+
+<p>You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 72 boxes&hellip; no problem! Most common box counts are 8, 12, 16, or 24. One note, if you are supporting ie6-7, Ferret only supports up to 16 boxes by default.</p>
+
+<p><b>Update:</b> I am no longer maintaining the LESS codebase. If you are new to Ferret, then I would suggest going with Sass.</p>
+
+<p><b>Basic Grid Use</b></p>
+
+<p>The grid is very simple to use. Start with a row, and insert your &lsquo;boxes&rsquo; (default name) inside.</p>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p><b>Nested Grid Rows</b></p>
+
+<p>You can also nest boxes inside boxes. When doing so, you must always start your nested content with a new row.</p>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="box-16"&gt;
+        YOUR CONTENT
+
+        &lt;div class="row"&gt;
+            &lt;div class="box-16"&gt;
+                NESTED ROW CONTENT
+            &lt;/div&gt;&lt;!--/.box-16--&gt;
+        &lt;/div&gt;&lt;!--/.row--&gt;
+    &lt;/div&gt;&lt;!--/.box-16--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p><b>Add Row Spacing</b></p>
+
+<p>By default, rows have no spacing in-between each other. Sometimes spacing is nice. You can simply add a bottom margin to a row by adding 1 of 3 classes.</p>
+
+<p>Default spacing:</p>
+
+<pre><code>&lt;div class="row with-spacing"&gt;
+    &lt;div class="box-16"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-16--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p>More spacing:</p>
+
+<pre><code>&lt;div class="row with-more-spacing"&gt;
+    &lt;div class="box-16"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-16--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p>or less spacing:</p>
+
+<pre><code>&lt;div class="row with-less-spacing"&gt;
+    &lt;div class="box-16"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-16--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p><b>Gutters</b><br/>
+You can change the gutters between boxes on a row. You can have no gutters, or larger gutters.</p>
+
+<p>No gutters:</p>
+
+<pre><code>&lt;div class="row no-gutters"&gt;
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p>Large gutters:</p>
+
+<pre><code>&lt;div class="row large-gutters"&gt;
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+
+    &lt;div class="box-8"&gt;
+        YOUR CONTENT
+    &lt;/div&gt;&lt;!--/.box-8--&gt;
+&lt;/div&gt;&lt;!--/.row--&gt;
+</code></pre>
+
+<p><b>Components</b></p>
+
+<p>Ferret has several included components to help you with quick development. Components include:</p>
+
+<ul>
+<li>Tabs</li>
+<li>Tables</li>
+<li>Lists</li>
+<li>Tooltips</li>
+<li>Modal</li>
+<li>Buttons</li>
+<li>Forms</li>
+<li>Pull Quotes</li>
+<li>and more&hellip;</li>
+</ul>
+
+
+<p><b>Buttons</b></p>
+
+<p>Buttons are very easy to create. Add a class of <i>.button</i> to any anchor or button tag. There a several default button styles already included in Ferret. Here are a few examples, or refer to the Ferret Demo for more.</p>
+
+<p>Default button:</p>
+
+<pre><code>&lt;a class="button" href=""&gt;This is a Button&lt;/a&gt;
+</code></pre>
+
+<p>Small button:</p>
+
+<pre><code>&lt;a class="button small" href=""&gt;This is a Small Button&lt;/a&gt;
+</code></pre>
+
+<p>Large button:</p>
+
+<pre><code>&lt;a class="button large" href=""&gt;This is a Large Button&lt;/a&gt;
+</code></pre>
+
+<p>X-large button:</p>
+
+<pre><code>&lt;a class="button x-large" href=""&gt;This is an X-large Button&lt;/a&gt; 
+</code></pre>
+
+<p>Oval button:</p>
+
+<pre><code>&lt;a class="button oval" href=""&gt;This is an Oval Button&lt;/a&gt;
+</code></pre>
+
+<p>Full-width button</p>
+
+<pre><code>&lt;a class="button full-width" href=""&gt;This is a Full-width Button&lt;/a&gt;
+</code></pre>
+
+<hr />
+
+<p>By default, all these components are included and compiled into the your project CSS. If you know your project won&rsquo;t be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> or <i>ferret.scss</i> file inside the <i>less/</i> or <i>sass/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once that is done, recompile your LESS or SASS ferret file, and your good to go.</p>

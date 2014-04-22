@@ -101,6 +101,35 @@ or less spacing:
 
 
 
+<b>Gutters</b>	
+You can change the gutters between boxes on a row. You can have no gutters, or larger gutters.
+
+No gutters:
+
+	<div class="row no-gutters">
+		<div class="box-8">
+			YOUR CONTENT
+		</div><!--/.box-8-->
+		
+		<div class="box-8">
+			YOUR CONTENT
+		</div><!--/.box-8-->
+	</div><!--/.row-->
+	
+Large gutters:
+
+	<div class="row large-gutters">
+		<div class="box-8">
+			YOUR CONTENT
+		</div><!--/.box-8-->
+		
+		<div class="box-8">
+			YOUR CONTENT
+		</div><!--/.box-8-->
+	</div><!--/.row-->
+
+
+
 <b>Components</b>
 
 Ferret has several included components to help you with quick development. Components include:
