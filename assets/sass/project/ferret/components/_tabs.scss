@@ -6,7 +6,7 @@ ul.tabs-nav {
     width: 100%;
     margin: 5px 0 20px;
     
-    @media #{$small-tablet} {
+    @include media(small-tablet) {
     	border-bottom: 1px solid $tab-border-color;
     }
     
@@ -52,7 +52,7 @@ ul.tabs-nav {
 		    }
 		}
 		
-		@media #{$mobile} {
+		@include media(phone) {
 			border: none;
     		border-right: 1px solid $tab-border-color;
     		padding: 2px 12px;

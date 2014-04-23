@@ -15,7 +15,7 @@ section {
 }
 .row {
 	
-	@media #{$small-tablet} {
+	@include media(small-tablet) {
 		margin-bottom: 20px;
 	}
 	

@@ -2,12 +2,26 @@
 
 
 // Grid Settings
-$grid-box-name: 'box'; // Sets the Class Name for the Grid Columns. Default is 'box'.
+$grid-box-name: 'box'; // Sets the Class Name for the Grid Columns. Default is 'box'
+$grid-offset-name: 'offset'; // Sets the Class Name for the Grid Column Offset. Default is 'offset'
 $grid-boxes: 16; // Sets the Max Number of Grid Boxes per Row (up to 24)
 $grid-gutter-width: 10px; // Sets the Gutter Width on Each Side of Each Box
 $grid-normal: 960px; // Sets Container Width
 $grid-wide: 1200px; // Sets Wide Screen Container Width
 $grid-row-with-spacing: 40px; // Extra Spacing Between Rows
+
+
+// Media Query Sizes
+$phone: 599px;
+$small-tablet: 600px;
+$tablet: 768px;
+$device: 959px;
+$desktop: 960px;
+$large-desktop: 1280px;
+
+
+// Set IE Support
+$ie8-support: false;
 
 
 // Fonts

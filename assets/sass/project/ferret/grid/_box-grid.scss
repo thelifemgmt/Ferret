@@ -5,13 +5,15 @@
 
 // Box Grid
 * {
-	@include box-sizing;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	
 	html .row {
 		height: 1%;
 	}
 	
-	@media #{$device} {
+	@include media(device) {
 		-webkit-text-size-adjust: none;
 	}
 }
@@ -20,26 +22,26 @@
 // Container
 .container {
 	position: relative;
-	margin: 0 auto;
 	width: 100%;
+	margin: 0 auto;
 	
 	.ie8 & {
 		width: $grid-normal;
 	}
 	
-	@media #{$device} {
+	@include media(device) {
 		padding: 0 10px;
 	}
 	
-	@media #{$tablet} {
+	@include media(tablet) {
 		width: 768px;
 	}
 	
-	@media #{$desktop} {
+	@include media(desktop) {
 		width: $grid-normal;
 	}
 	
-	@media #{$large-desktop} {
+	@include media(large-desktop) {
 		width: $grid-wide;
 	}
 }
@@ -106,21 +108,23 @@
 		height: 0;
 		overflow: hidden;
 		visibility: hidden;
-		content: "";
+		content: '';
 	}
 	
-	&:after {clear: both;}
+	&:after {
+		clear: both;
+	}
 }
 
 
-// Box Widths
-// Grid Loop Start
+// Box Widths - Grid Loop Start
 @for $i from 1 through $grid-boxes {
 	.#{$grid-box-name}-#{$i} {
 		width: 100% / $grid-boxes * $i;
 	}
 }
 // Grid Loop End
+
 
 .#{$grid-box-name}-full {
 	width: 100%;
@@ -146,14 +150,18 @@
 	width: (100% / 6);
 }
 
-@media #{$mobile} {
+@include media(phone) {
 	[class^="#{$grid-box-name}-"] {
 		width: 100%;
 		margin-bottom: 20px;
 	}
+	
+	.#{$grid-box-name}-half {
+		width: 50%;
+	}
 }
 
-@media #{$small-tablet} and #{$device} {
+@include media(only-tablet) {
 	[class^="#{$grid-box-name}-"] {
 		width: 100%;
 	}
@@ -174,12 +182,8 @@
 	padding: 0 $grid-gutter-width;
 	
 	@for $i from 1 through $grid-boxes {
-		&.left-#{$i} {
+		&.#{$grid-offset-name}-#{$i} {
 			margin-left: 100% / $grid-boxes * $i;
-		}
-		
-		&.right-#{$i} {
-			margin-right: 100% / $grid-boxes * $i;
 		}
 	}
 }

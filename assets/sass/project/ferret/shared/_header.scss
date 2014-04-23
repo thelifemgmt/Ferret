@@ -33,7 +33,7 @@ header {
 	nav {
 		
 		// Media
-		@media #{$device} {
+		@include media(device) {
 			position: relative;
 			height: $nav-bar-height;
 		}
@@ -42,20 +42,20 @@ header {
 			float: $nav-position;
 			
 			// Media
-			@media #{$mobile} {
+			@include media(phone) {
 				width: 100%;
 			}
 			
-			@media #{$small-tablet} {
+			@include media(small-tablet) {
 				width: 50%;
 			}
 			
-			@media #{$device} {
+			@include media(device) {
 				margin-top: $nav-bar-height + 10;
 				display: none;
 			}
 			
-			@media #{$desktop} {
+			@include media(desktop) {
 				display: block !important;
 				width: auto;
 			}
@@ -63,7 +63,7 @@ header {
 			&:before {
 				
 				// Media
-				@media #{$device} {
+				@include media(device) {
 					@include triangle(up, 7px, $mobile-nav-bg);
 				    top: $nav-bar-height + 3;
 				    right: 13px;
@@ -75,7 +75,7 @@ header {
 				margin: 0 $nav-spacing;
 				
 				// Media
-				@media #{$device} {
+				@include media(device) {
 					float: none !important;
 					display: block;
 				    height: $mobile-nav-menu-height;
@@ -90,7 +90,7 @@ header {
 					margin-left: 0;
 					
 					// Media
-					@media #{$device} {
+					@include media(device) {
 						border-top: 0; 
 						@include radius(3px 3px 0 0);
 					}
@@ -100,7 +100,7 @@ header {
 					margin-right: 0;
 					
 					// Media
-					@media #{$device} {
+					@include media(device) {
 						border-bottom: 0; 
 						@include radius(0 0 3px 3px);
 					}
@@ -115,7 +115,7 @@ header {
 					line-height: $nav-bar-height;
 					
 					// Media
-					@media #{$device} {
+					@include media(device) {
 						display: block;
 				    	width: 100%;
 				    	font-size: $mobile-nav-font-size;
@@ -151,7 +151,7 @@ header {
 	}
 	
 	// Media
-	@media #{$device} {
+	@include media(device) {
 		display: block;
 	}
 }

@@ -29,7 +29,7 @@
 		background: $input-bg-focus;
 	}
 	
-	@media #{$small-tablet} {
+	@include media(small-tablet) {
 		margin-bottom: $input-margin-bottom;
 	}
 }
@@ -76,7 +76,7 @@ textarea.inputfield {
 		background: $input-bg-focus;
 	}
 	
-	@media #{$small-tablet} {
+	@include media(small-tablet) {
 		margin-bottom: $input-margin-bottom;
 	}
 }

@@ -37,7 +37,7 @@
 			margin-left: -7px;
 		}
 		
-		@media #{$mobile} {
+		@include media(phone) {
 			display: none !important;
 		}
 	}
