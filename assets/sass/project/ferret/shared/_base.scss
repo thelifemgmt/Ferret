@@ -41,14 +41,15 @@ button {
 	outline: none;
 }
 
-.bold,
 b,
+.bold,
 strong {
 	font-weight: bold;
 }
 
-.italic,
-i {
+i,
+em,
+.italic {
 	font-style: italic;
 }
 

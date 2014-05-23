@@ -1,24 +1,24 @@
 // Project Helpers
 
 
-.position {
+.is-positioned {
 	position: relative;
 }
 
-.left,
-.floated {
+.is-left,
+.is-floated {
 	float: left;
 }
 
-.right {
+.is-right {
 	float: right;
 }
 
-.center {
+.is-center {
 	text-align: center;
 }
 
-.flush {
+.is-flush {
 	margin: 0;
 }
 
@@ -38,7 +38,7 @@
 	}
 }
 
-.clear {
+.is-clear {
 	clear: both;
 	display: block;
 	@include size(0);
@@ -53,12 +53,12 @@
 	user-select: none;
 }
 
-.hidden {
+.is-hidden {
 	display: none;
 	visibility: hidden;
 }
 
-.striped {
+.is-striped {
 	background: {
 		image: url(../images/ferret/bg_stripes.png);
 		repeat: repeat;

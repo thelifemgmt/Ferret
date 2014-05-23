@@ -4,22 +4,24 @@ Ferret
 The Fast and Simple, Mobile-first Responsive Framework for Rapid Development
 ---
 
-Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and supports both LESS and SASS. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid... it's totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns. 
+Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and supports both LESS and Sass. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid... it's totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns. 
 
-Ferret works in all modern browsers, and even not so modern browsers like IE 8. Need support in IE 6 or 7? All you have to do is include the ie6-7 LESS or SASS stylesheet and boom... full IE 6-7 support!
+Ferret works in all modern browsers, and even not so modern browsers like ie7 and ie8. Need support in one or both of those browsers? Just define it in the project-settings.scss file and BOOM... full ie support!
 
 * Fully Responsive
 * 100% Customizable
-* Your Choice of LESS or SASS
+* Built in Sass (and older LESS support)
 * Unlimited Grid Columns
-* Full Browser Support
+* Browser Support back to ie7
 * Built Mobile-First
 
 
-Updated (4/22/14)
+Updated (5/23/14)
 ---
 
-* Edit to Sass mixins file
+* Better ie7-8 support using optional settings variables (Sass only)
+* The LESS codebase will continue to live in this repo, but will no longer be supported. Use at your own risk
+* IE6 support is 100% removed
 
 
 How to Use
@@ -27,11 +29,11 @@ How to Use
 
 <b>Ferret Setup</b>
 
-Ferret is built in both LESS and SASS, giving you the option to choose what you prefer. Before using Ferret, make sure you have a LESS or SASS compiler setup and watching the project.  If you don't have a compiler, I suggest you try <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>.
+Ferret is built in both LESS and Sass, giving you the option to choose what you prefer. Before using Ferret, make sure you have a LESS or Sass compiler setup and watching the project. If you don't have a compiler, I suggest you try <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>.
 
-When setting up Ferret for your project, first start with the <i>project-settings</i> file in the <i>less/project</i> or <i>sass/project</i> folder. Inside is all the project settings and variables to control the look and feel of the default settings. You can set your colors, margins, fonts, typography, and many other things all in that file. 
+When setting up Ferret for your project, first start with the <i>project-settings</i> file in the <i>less/project</i> or <i>Sass/project</i> folder. Inside is all the project settings and variables to control the look and feel of the default settings. You can set your colors, margins, fonts, typography, and many other things all in that file. 
 
-You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 72 boxes... no problem! Most common box counts are 8, 12, 16, or 24. One note, if you are supporting ie6-7, Ferret only supports up to 16 boxes by default.
+You can also control the grid settings inside this file. Default setting is 16 boxes (columns) with 20px gutters. You can have as little or as many boxes as you want. You want 71 boxes... no problem! Most common box counts are 8, 12, 16, or 24.
 
 <b>Update:</b> I am no longer maintaining the LESS codebase. If you are new to Ferret, then I would suggest going with Sass.
 
@@ -178,4 +180,4 @@ Full-width button
 
 ---
 
-By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> or <i>ferret.scss</i> file inside the <i>less/</i> or <i>sass/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once that is done, recompile your LESS or SASS ferret file, and your good to go.
+By default, all these components are included and compiled into the your project CSS. If you know your project won't be needing a certain component, or you plan to use your own markup for a particular component, it is very easy to remove the unnecessary code from Ferret. In the <i>ferret.less</i> or <i>ferret.scss</i> file inside the <i>less/</i> or <i>Sass/</i> folder you will find all included components. All you need to do is remove (or comment out) the related imported files. Once that is done, recompile your LESS or Sass ferret file, and your good to go.

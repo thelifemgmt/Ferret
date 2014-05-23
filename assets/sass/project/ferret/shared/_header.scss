@@ -1,10 +1,9 @@
-// Demo Header Styles (OUT OF DATE CODE - NOT RECOMMENDED FOR USE)
+// Demo Header Styles (VERY OLD, OUT OF DATE CODE - NOT FOR USE)
 
 
 // I REPEAT - DO NOT USE
 
-
-// Header and Nav
+// Header and Nav Variables
 $nav-bar-position: fixed;
 $nav-bar-bg: $dark;
 $nav-bar-height: 60px;
@@ -22,6 +21,7 @@ $mobile-nav-menu-height: 60px;
 $mobile-nav-font-size: 12px;
 
 
+// Header
 header {
 	position: $nav-bar-position;
 	width: 100%;
