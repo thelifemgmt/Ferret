@@ -4,13 +4,13 @@ Ferret
 The Fast and Simple, Mobile-first Responsive Framework for Rapid Development
 ---
 
-Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is 100% customizable, fully scalable, and built in LESS (deprecated) and Sass. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid... it's totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns. 
+Ferret Framework is a fast and simple, mobile-first framework for rapid development. Ferret is modular, 100% customizable, fully scalable, and built in Sass. Ferret also utilizes a custom grid that allows you to define how many columns make up the rows of the grid, giving you complete control of your project. You can have a 1 column grid, or a 60 column grid... it's totally up to you! And since Ferret is percentage based, you can even have an odd amount of grid columns such as 13 columns, 19 columns, or 31 columns. 
 
 Ferret works in all modern browsers, and even not so modern browsers like ie7 and ie8. Need support in one or both of those browsers? Just define it in the project-settings.scss file and BOOM... full ie support!
 
 * Fully Responsive
 * 100% Customizable
-* Built in Sass (and older LESS support)
+* Built in Sass (older LESS version available)
 * Unlimited Grid Columns
 * Browser Support back to ie7
 * Built Mobile-First
@@ -21,7 +21,7 @@ Updated (5/23/14)
 
 * Better ie7-8 support using optional settings variables (Sass only)
 * The LESS codebase will continue to live in this repo, but will no longer be supported. Use at your own risk
-* IE6 support is 100% removed
+* ie6 support is 100% removed
 
 
 How to Use
