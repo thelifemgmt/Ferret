@@ -25,10 +25,6 @@
 	width: 100%;
 	margin: 0 auto;
 	
-	.ie8 & {
-		width: $grid-normal;
-	}
-	
 	@include media(device) {
 		padding: 0 10px;
 	}
@@ -119,8 +115,14 @@
 
 // Box Widths - Grid Loop Start
 @for $i from 1 through $grid-boxes {
+	$ie7-box-width: percentage($grid-gutter-width/$grid-normal);
+	
 	.#{$grid-box-name}-#{$i} {
 		width: 100% / $grid-boxes * $i;
+		
+		@if $ie7-support {
+			*width: percentage($i/$grid-boxes)-$ie7-box-width;
+		}
 	}
 }
 // Grid Loop End

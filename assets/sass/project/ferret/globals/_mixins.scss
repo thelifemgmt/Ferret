@@ -252,7 +252,7 @@
 		@media (min-width: $desktop) {
 			@content;
 		}
-		@if $ie8-support == true {
+		@if $ie8-support {
 			.ie8 & {
 				@content;
 			}
