@@ -14,25 +14,20 @@
 // Create Mixin for Each Font
 @mixin font-light {
 	font-family: 'OpenSansLight';
-	@include font-styles;
 }
 
 @mixin font-reg {
 	font-family: 'OpenSansReg';
-	@include font-styles;
 }
 
 @mixin font-semi {
 	font-family: 'OpenSansSemi';
-	@include font-styles;
 }
 
 @mixin font-bold {
 	font-family: 'OpenSansBold';
-	@include font-styles;
 }
 
 @mixin font-headline {
 	font-family: 'OpenSansBold';
-	@include font-styles;
 }

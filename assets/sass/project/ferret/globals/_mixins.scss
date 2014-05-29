@@ -195,7 +195,7 @@
 
 
 // Font Face
-@mixin font-face-mixin($font-name, $font-path, $font-file) {
+@mixin font-face-mixin($font-name, $font-path, $font-file, $font-weight: normal) {
 	@font-face {
 	    font-family: '#{$font-name}';
 	    src: url('#{$font-path}/#{$font-file}.eot');
@@ -203,13 +203,10 @@
 	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
 	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
 	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
-	}	
-}
-
-@mixin font-styles($weight: normal) {
-	font: {
-		weight: $weight;
-		style: normal;
+		font: {
+			weight: $font-weight;
+			style: normal;
+		}
 	}
 }
 
