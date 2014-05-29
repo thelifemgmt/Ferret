@@ -206,9 +206,9 @@
 	}	
 }
 
-@mixin font-styles {
+@mixin font-styles($weight: normal) {
 	font: {
-		weight: normal;
+		weight: $weight;
 		style: normal;
 	}
 }
