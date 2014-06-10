@@ -13,14 +13,10 @@
 
 // Transitions
 @mixin transition($speed: .15s) {
-	-webkit-transition: all $speed ease-in-out;
-	-moz-transition: all $speed ease-in-out;
 	transition: all $speed ease-in-out;
 }
 
 @mixin transition-more($transition...) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
 	transition: $transition;
 }
 
@@ -105,8 +101,6 @@
 
 // Box Sizing
 @mixin box-sizing($box: border-box) {
-	-webkit-box-sizing: $box;
-	-moz-box-sizing: $box;
 	box-sizing: $box;
 }
 
