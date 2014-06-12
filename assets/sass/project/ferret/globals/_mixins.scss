@@ -193,7 +193,7 @@
 	@font-face {
 	    font-family: '#{$font-name}';
 	    src: url('#{$font-path}/#{$font-file}.eot');
-	    src: url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
+	    src: url('#{$font-path}/#{$font-file}.eot?#iefix') format('embedded-opentype'),
 	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
 	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
 	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
