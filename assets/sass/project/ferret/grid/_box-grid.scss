@@ -1,13 +1,11 @@
 // Ferret Grid - Version 3.0
 // Written by: Sean Stopnik
-// Email: thelifemgmt$gmail.com
+// Email: thelifemgmt@gmail.com
 
 
 // Box Grid
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	@include box-sizing();
 	
 	html .row {
 		height: 1%;
@@ -44,11 +42,11 @@
 
 
 // Rows
-.row {
+.#{$grid-row-name} {
 	display: block;
 	width: 100%;
 	
-	.row {
+	.#{$grid-row-name} {
 		margin: 0 -10px;
 		width: auto;
 	}
@@ -113,9 +111,12 @@
 }
 
 
+// ie7 Percentage Calculator
+$ie7-box-width: percentage($grid-gutter-width/$grid-normal);
+
+
 // Box Widths - Grid Loop Start
 @for $i from 1 through $grid-boxes {
-	$ie7-box-width: percentage($grid-gutter-width/$grid-normal);
 	
 	.#{$grid-box-name}-#{$i} {
 		width: 100% / $grid-boxes * $i;
@@ -183,9 +184,13 @@
 	min-height: 1px;
 	padding: 0 $grid-gutter-width;
 	
-	@for $i from 1 through $grid-boxes {
+	@for $i from 1 through $grid-boxes - 1 {
 		&.#{$grid-offset-name}-#{$i} {
 			margin-left: 100% / $grid-boxes * $i;
+			
+			@if $ie7-support {
+			  *margin-left: percentage($i/$grid-boxes)-$ie7-box-width;
+      }
 		}
 	}
 }

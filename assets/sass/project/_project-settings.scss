@@ -2,6 +2,7 @@
 
 
 // Grid Settings
+$grid-row-name: 'row'; // Sets the Class Name for the Grid Rows. Default is 'row'
 $grid-box-name: 'box'; // Sets the Class Name for the Grid Columns. Default is 'box'
 $grid-offset-name: 'offset'; // Sets the Class Name for the Grid Column Offset. Default is 'offset'
 $grid-boxes: 16; // Sets the Max Number of Grid Boxes per Row (up to 24)
