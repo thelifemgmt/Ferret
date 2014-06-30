@@ -4,8 +4,12 @@
 // Button Base Mixin
 @mixin btn-bg($btn-bg: $button-bg, $btn-color: $button-color) {
 	color: $btn-color;
-	text-shadow: 0 1px 0 darken($btn-bg, 3%);
-	box-shadow: 0 4px 0 darken($btn-bg, 10%);
+	@if $button-text-shadow {
+	  text-shadow: 0 1px 0 darken($btn-bg, 3%);
+  }
+  @if $button-drop-shadow {
+	  box-shadow: 0 3px 0 darken($btn-bg, 10%);
+  }
 	background-color: $btn-bg;
 	
 	&:hover {
@@ -28,8 +32,8 @@ a.button {
 	font-weight: $button-font-weight;
 	font-size: $button-font-size;
 	line-height: $button-height;
-	@include radius;
-	@include btn-bg;
+	@include radius();
+	@include btn-bg();
 	@include transition;
 	-webkit-appearance: none;
 	
